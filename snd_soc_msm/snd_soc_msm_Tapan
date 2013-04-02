@@ -661,8 +661,8 @@ SectionDevice
 		'AIF1_CAP Mixer SLIM TX1':1:1
 		'SLIM_0_TX Channels':0:One
 		'SLIM TX1 MUX':0:DEC1
-		'DEC5 MUX':0:ADC2
-		'DEC5 Volume':1:67
+		'DEC1 MUX':0:ADC2
+		'DEC1 Volume':1:67
 		'ADC2 Volume':1:100
 		'IIR1 INP1 MUX':0:DEC1
 	EndSequence
