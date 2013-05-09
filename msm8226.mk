@@ -23,8 +23,8 @@ PRODUCT_COPY_FILES += \
 # Bluetooth configuration files
 PRODUCT_COPY_FILES += \
     system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf \
-	device/qcom/msm8226/snd_soc_msm/snd_soc_msm_Tapan:system/etc/snd_soc_msm/snd_soc_msm_Tapan \
-	device/qcom/msm8226/snd_soc_msm/snd_soc_msm_Tapan_SKUF:system/etc/snd_soc_msm/snd_soc_msm_Tapan_SKUF \
+    device/qcom/msm8226/snd_soc_msm/snd_soc_msm_Tapan:system/etc/snd_soc_msm/snd_soc_msm_Tapan \
+    device/qcom/msm8226/snd_soc_msm/snd_soc_msm_Tapan_SKUF:system/etc/snd_soc_msm/snd_soc_msm_Tapan_SKUF \
 
 #fstab.qcom
 PRODUCT_PACKAGES += fstab.qcom
@@ -69,3 +69,11 @@ PRODUCT_COPY_FILES += \
         device/qcom/msm8226/nfc/libnfc-nci.conf:system/etc/libnfc-nci.conf
 
 endif
+
+PRODUCT_PACKAGES += \
+    FileExplorer \
+    HomeLocation \
+    LEDFlashlight \
+    ProfileMgr \
+    StopTimer \
+    WorldClock
