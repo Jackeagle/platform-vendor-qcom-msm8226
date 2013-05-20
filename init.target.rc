@@ -27,6 +27,8 @@
 #
 #
 
+import init.qcom.spec.switch.rc
+
 on early-init
     mkdir /firmware 0771 system system
     symlink /data/tombstones /tombstones
