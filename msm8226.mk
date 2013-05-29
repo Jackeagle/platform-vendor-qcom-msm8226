@@ -27,3 +27,8 @@ PRODUCT_PACKAGES += \
     ProfileMgr \
     StopTimer \
     WorldClock
+#ANT stack
+PRODUCT_PACKAGES += \
+    AntHalService \
+    libantradio \
+    antradio_app
