@@ -13,7 +13,9 @@ PRODUCT_COPY_FILES += \
     device/qcom/msm8226/snd_soc_msm/snd_soc_msm_Tapan:system/etc/snd_soc_msm/snd_soc_msm_Tapan \
 
 #fstab.qcom
-PRODUCT_PACKAGES += fstab.qcom
+PRODUCT_PACKAGES += fstab.qcom \
+    init.qcom.spec.switch.rc
+
 #wlan driver
 PRODUCT_COPY_FILES += \
     device/qcom/msm8226/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
