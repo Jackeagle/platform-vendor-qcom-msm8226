@@ -86,14 +86,6 @@ PRODUCT_COPY_FILES += \
 
 endif
 
-PRODUCT_PACKAGES += \
-    FileExplorer \
-    HomeLocation \
-    LEDFlashlight \
-    ProfileMgr \
-    StopTimer \
-    WorldClock
-
 #LogSystem
 LogSystem := Logkit
 LogSystem += SystemAgent
