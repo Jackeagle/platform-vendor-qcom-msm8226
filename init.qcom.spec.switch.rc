@@ -27,22 +27,37 @@
 #
 #
 
+on post-fs-data
+    mount yaffs2 /dev/block/platform/msm_sdcc.1/by-name/system /system rw remount
+    exec /system/bin/sh /system/vendor/check_spec.sh /system/vendor /system/vendor/Default /
+    mount yaffs2 /dev/block/platform/msm_sdcc.1/by-name/system /system ro remount
+    user root
+    group root
+
 on property:persist.env.spec=Default
-    exec /system/bin/sh /system/vendor/Default/etc/switch_spec.sh
+    mount yaffs2 /dev/block/platform/msm_sdcc.1/by-name/system /system rw remount
+    exec /system/bin/sh /system/vendor/switch_spec.sh /system/vendor /system/vendor/Default /
+    mount yaffs2 /dev/block/platform/msm_sdcc.1/by-name/system /system ro remount
     user root
     group root
 
 on property:persist.env.spec=ChinaMobile
-    exec /system/bin/sh /system/vendor/ChinaMobile/etc/switch_spec.sh
+    mount yaffs2 /dev/block/platform/msm_sdcc.1/by-name/system /system rw remount
+    exec /system/bin/sh /system/vendor/switch_spec.sh /system/vendor /system/vendor/ChinaMobile /
+    mount yaffs2 /dev/block/platform/msm_sdcc.1/by-name/system /system ro remount
     user root
     group root
 
 on property:persist.env.spec=ChinaTelecom
-    exec /system/bin/sh /system/vendor/ChinaTelecom/etc/switch_spec.sh
+    mount yaffs2 /dev/block/platform/msm_sdcc.1/by-name/system /system rw remount
+    exec /system/bin/sh /system/vendor/switch_spec.sh /system/vendor /system/vendor/ChinaTelecom /
+    mount yaffs2 /dev/block/platform/msm_sdcc.1/by-name/system /system ro remount
     user root
     group root
 
 on property:persist.env.spec=ChinaUnicom
-    exec /system/bin/sh /system/vendor/ChinaUnicom/etc/switch_spec.sh
+    mount yaffs2 /dev/block/platform/msm_sdcc.1/by-name/system /system rw remount
+    exec /system/bin/sh /system/vendor/switch_spec.sh /system/vendor /system/vendor/ChinaUnicom /
+    mount yaffs2 /dev/block/platform/msm_sdcc.1/by-name/system /system ro remount
     user root
     group root
