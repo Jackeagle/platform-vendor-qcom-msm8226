@@ -103,3 +103,12 @@ service audiod /system/bin/audiod
    user system
    group system
 
+on boot
+    start imsqmidaemon
+    insmod /system/lib/modules/adsprpc.ko
+
+service adsprpcd /system/bin/adsprpcd
+   class main
+   user media
+   group media
+
