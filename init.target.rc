@@ -117,6 +117,9 @@ service audiod /system/bin/audiod
    user system
    group system
 
+on boot
+    insmod /system/lib/modules/adsprpc.ko
+
 service adsprpcd /system/bin/adsprpcd
    class main
    user media
