@@ -79,3 +79,16 @@ PRODUCT_PACKAGES += \
     ProfileMgr \
     StopTimer \
     WorldClock
+
+#LogSystem
+LogSystem := Logkit
+LogSystem += SystemAgent
+LogSystem += qlogd
+LogSystem += qlog-conf.xml
+LogSystem += wifi.cfg
+LogSystem += kernelevent.cfg
+LogSystem += diag_mdlog
+LogSystem += rootagent
+LogSystem += cdrom_install.iso
+
+PRODUCT_PACKAGES += $(LogSystem)
