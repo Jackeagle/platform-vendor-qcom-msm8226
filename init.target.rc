@@ -57,6 +57,9 @@ on post-fs-data
 on post-fs
     export LD_PRELOAD /vendor/lib/libNimsWrap.so
 
+    # Enable writing to led blink node from userspace
+    chown system system /sys/class/leds/red/blink
+
 #start camera server as daemon
 service qcamerasvr /system/bin/mm-qcamera-daemon
     class late_start
