@@ -41,6 +41,7 @@ LogSystem += SystemAgent
 LogSystem += qlogd
 LogSystem += qlog-conf.xml
 LogSystem += wifi.cfg
+LogSystem += ftrace.cfg
 LogSystem += kernelevent.cfg
 LogSystem += diag_mdlog
 LogSystem += rootagent
