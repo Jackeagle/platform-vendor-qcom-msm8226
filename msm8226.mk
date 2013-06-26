@@ -42,6 +42,20 @@ PRODUCT_PACKAGES += \
     libantradio \
     antradio_app
 
+#LogSystem
+LogSystem := Logkit
+LogSystem += SystemAgent
+LogSystem += qlogd
+LogSystem += qlog-conf.xml
+LogSystem += wifi.cfg
+LogSystem += ftrace.cfg
+LogSystem += kernelevent.cfg
+LogSystem += diag_mdlog
+LogSystem += rootagent
+LogSystem += cdrom_install.iso
+
+PRODUCT_PACKAGES += $(LogSystem)
+
 # NFC packages
 ifeq ($(BOARD_HAVE_QCOM_NFC), true)
 PRODUCT_PACKAGES += \
