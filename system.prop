@@ -91,3 +91,7 @@ ro.qualcomm.cabl=1
 
 # system prop for NFC DT
 ro.nfc.port=I2C
+
+#PPPOE config enable
+#
+ro.config.pppoe_enable=1
