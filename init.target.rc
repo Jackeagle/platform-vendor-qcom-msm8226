@@ -66,6 +66,9 @@ on post-fs
     # Enable writing to led blink node from userspace
     chown system system /sys/class/leds/red/blink
 
+on boot
+    insmod /system/lib/modules/adsprpc.ko
+
 #start camera server as daemon
 service qcamerasvr /system/bin/mm-qcamera-daemon
     class late_start
@@ -114,3 +117,7 @@ service audiod /system/bin/audiod
    user system
    group system
 
+service adsprpcd /system/bin/adsprpcd
+   class main
+   user media
+   group media
