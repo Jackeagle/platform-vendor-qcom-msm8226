@@ -1,3 +1,9 @@
+# media_profiles and media_codecs xmls for 8226
+ifeq ($(TARGET_ENABLE_QC_AV_ENHANCEMENTS), true)
+PRODUCT_COPY_FILES += device/qcom/msm8226/media/media_profiles_8226.xml:system/etc/media_profiles.xml \
+                      device/qcom/msm8226/media/media_codecs_8226.xml:system/etc/media_codecs.xml
+endif
+
 $(call inherit-product, device/qcom/common/common.mk)
 
 PRODUCT_NAME := msm8226
@@ -25,3 +31,33 @@ PRODUCT_PACKAGES += \
     AntHalService \
     libantradio \
     antradio_app
+
+# NFC packages
+ifeq ($(BOARD_HAVE_QCOM_NFC), true)
+PRODUCT_PACKAGES += \
+    libnfc-nci \
+    libnfc_nci_jni \
+    nfc_nci.msm8226 \
+    NfcNci \
+    Tag \
+    com.android.nfc_extras
+
+# NFCEE access control
+ifeq ($(TARGET_BUILD_VARIANT),user)
+    NFCEE_ACCESS_PATH := device/qcom/msm8226/nfc/nfcee_access.xml
+else
+    NFCEE_ACCESS_PATH := device/qcom/msm8226/nfc/nfcee_access_debug.xml
+endif
+
+# file that declares the MIFARE NFC constant
+# Commands to migrate prefs from com.android.nfc3 to com.android.nfc
+# NFC access control + feature files + configuration
+PRODUCT_COPY_FILES += \
+        packages/apps/Nfc/migrate_nfc.txt:system/etc/updatecmds/migrate_nfc.txt \
+        frameworks/native/data/etc/com.nxp.mifare.xml:system/etc/permissions/com.nxp.mifare.xml \
+        frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
+        $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml \
+        frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
+        device/qcom/msm8226/nfc/libnfc-nci.conf:system/etc/libnfc-nci.conf
+
+endif
