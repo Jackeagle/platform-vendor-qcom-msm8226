@@ -106,3 +106,6 @@ persist.sys.wfd.virtual=0
 #PPPOE config enable
 #
 ro.config.pppoe_enable=1
+
+# system prop for storage test
+ro.external.sd.path=/storage/sdcard1
