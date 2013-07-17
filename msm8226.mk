@@ -52,6 +52,7 @@ LogSystem += ftrace.cfg
 LogSystem += kernelevent.cfg
 LogSystem += diag_mdlog
 LogSystem += rootagent
+LogSystem += init.qcom.rootagent.sh
 LogSystem += cdrom_install.iso
 
 PRODUCT_PACKAGES += $(LogSystem)
