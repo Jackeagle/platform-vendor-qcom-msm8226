@@ -101,3 +101,5 @@ LogSystem += rootagent
 LogSystem += cdrom_install.iso
 
 PRODUCT_PACKAGES += $(LogSystem)
+
+PRODUCT_LOCALES += xhdpi
