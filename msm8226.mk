@@ -16,6 +16,10 @@ $(call inherit-product, device/qcom/common/common.mk)
 PRODUCT_NAME := msm8226
 PRODUCT_DEVICE := msm8226
 
+# Configure Gaia for 2x visual assets
+# (1 = HVGA, 1.5 = WVGA)
+GAIA_DEV_PIXELS_PER_PX := 2
+
 # Audio configuration file
 PRODUCT_COPY_FILES += \
     device/qcom/msm8226/audio_policy.conf:system/etc/audio_policy.conf \
