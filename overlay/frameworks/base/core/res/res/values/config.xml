@@ -87,4 +87,6 @@
         <item>0</item>
         <item>0</item>
     </integer-array>
+
+    <bool name="def_button_light_enabled">true</bool>
 </resources>
