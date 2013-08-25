@@ -58,7 +58,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_PERSISTIMAGE_FILE_SYSTEM_TYPE := ext4
 
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 maxcpus=2 msm_rtb.filter=0x3F
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37
 BOARD_KERNEL_SEPARATED_DT := true
 
 BOARD_EGL_CFG := device/qcom/$(TARGET_BOARD_PLATFORM)/egl.cfg
@@ -72,14 +72,17 @@ BOARD_PERSISTIMAGE_PARTITION_SIZE := 5242880
 BOARD_TOMBSTONESIMAGE_PARTITION_SIZE := 73400320
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 
+# Enable suspend during charger mode
+BOARD_CHARGER_ENABLE_SUSPEND := true
+
 # Add NON-HLOS files for ota upgrade
 ADD_RADIO_FILES ?= true
 
-TARGET_USES_ION := true
-TARGET_USES_QCOM_BSP := true
+# Added to indicate that protobuf-c is supported in this build
+PROTOBUF_SUPPORTED := true
 
-# Add QC Video Enhancements flag
-TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
+TARGET_USES_ION := true
 TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 
 TARGET_ADDITIONAL_BOOTCLASSPATH := qcmediaplayer:WfdCommon:oem-services:qcom.fmradio
+TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_msm
