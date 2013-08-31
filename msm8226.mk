@@ -5,6 +5,8 @@ ifeq ($(TARGET_USES_QCOM_BSP), true)
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 endif #TARGET_USES_QCOM_BSP
 
+DEVICE_PACKAGE_OVERLAYS := device/qcom/msm8226/overlay
+
 # media_profiles and media_codecs xmls for 8226
 ifeq ($(TARGET_ENABLE_QC_AV_ENHANCEMENTS), true)
 PRODUCT_COPY_FILES += device/qcom/msm8226/media/media_profiles_8226.xml:system/etc/media_profiles.xml \
@@ -36,6 +38,8 @@ PRODUCT_COPY_FILES += \
     device/qcom/msm8226/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
     device/qcom/msm8226/WCNSS_qcom_wlan_nv.bin:persist/WCNSS_qcom_wlan_nv.bin
 
+PRODUCT_PACKAGES += wcnss_service
+
 #ANT stack
 PRODUCT_PACKAGES += \
     AntHalService \
@@ -58,7 +62,6 @@ LogSystem += cdrom_install.iso
 PRODUCT_PACKAGES += $(LogSystem)
 
 # NFC packages
-ifeq ($(BOARD_HAVE_QCOM_NFC), true)
 PRODUCT_PACKAGES += \
     libnfc-nci \
     libnfc_nci_jni \
@@ -85,7 +88,6 @@ PRODUCT_COPY_FILES += \
         frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
         device/qcom/msm8226/nfc/libnfc-nci.conf:system/etc/libnfc-nci.conf
 
-endif
 
 #LogSystem
 LogSystem := Logkit
@@ -99,3 +101,5 @@ LogSystem += rootagent
 LogSystem += cdrom_install.iso
 
 PRODUCT_PACKAGES += $(LogSystem)
+
+PRODUCT_LOCALES += xhdpi

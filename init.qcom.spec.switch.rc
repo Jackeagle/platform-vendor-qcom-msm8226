@@ -27,37 +27,27 @@
 #
 #
 
-on post-fs-data
-    mount yaffs2 /dev/block/platform/msm_sdcc.1/by-name/system /system rw remount
-    exec /system/bin/sh /system/vendor/check_spec.sh /system/vendor /system/vendor/Default /
-    mount yaffs2 /dev/block/platform/msm_sdcc.1/by-name/system /system ro remount
+service carrier_switcher /system/bin/sh /system/vendor/speccfg/switch_spec.sh
+    socket carrier_switcher stream 660 system system
     user root
     group root
+    disabled
+    oneshot
 
-on property:persist.env.spec=Default
-    mount yaffs2 /dev/block/platform/msm_sdcc.1/by-name/system /system rw remount
-    exec /system/bin/sh /system/vendor/switch_spec.sh /system/vendor /system/vendor/Default /
-    mount yaffs2 /dev/block/platform/msm_sdcc.1/by-name/system /system ro remount
-    user root
-    group root
+on boot
+    start carrier_switcher
 
-on property:persist.env.spec=ChinaMobile
-    mount yaffs2 /dev/block/platform/msm_sdcc.1/by-name/system /system rw remount
-    exec /system/bin/sh /system/vendor/switch_spec.sh /system/vendor /system/vendor/ChinaMobile /
-    mount yaffs2 /dev/block/platform/msm_sdcc.1/by-name/system /system ro remount
+################################ CMCC APP ##################################
+# backupAppData
+service backupAppData /system/bin/sh /data/data/com.android.backup/cache/backupAppData.sh
     user root
     group root
+    disabled
+    oneshot
 
-on property:persist.env.spec=ChinaTelecom
-    mount yaffs2 /dev/block/platform/msm_sdcc.1/by-name/system /system rw remount
-    exec /system/bin/sh /system/vendor/switch_spec.sh /system/vendor /system/vendor/ChinaTelecom /
-    mount yaffs2 /dev/block/platform/msm_sdcc.1/by-name/system /system ro remount
+# recoverAppData
+service recoverAppData /system/bin/sh /data/data/com.android.backup/cache/recoverAppData.sh
     user root
     group root
-
-on property:persist.env.spec=ChinaUnicom
-    mount yaffs2 /dev/block/platform/msm_sdcc.1/by-name/system /system rw remount
-    exec /system/bin/sh /system/vendor/switch_spec.sh /system/vendor /system/vendor/ChinaUnicom /
-    mount yaffs2 /dev/block/platform/msm_sdcc.1/by-name/system /system ro remount
-    user root
-    group root
+    disabled
+    oneshot
