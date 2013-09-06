@@ -105,6 +105,9 @@ ro.qc.sdk.audio.fluencetype=none
 # Enable/disable cabl
 ro.qualcomm.cabl=1
 
+# Enable Fast Dormancy
+persist.env.fastdorm.enabled=true
+
 # system prop for NFC DT
 ro.nfc.port=I2C
 
