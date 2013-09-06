@@ -110,3 +110,12 @@ PRODUCT_LOCALES += xhdpi
 rp_pppoe := pppoe
 
 PRODUCT_PACKAGES += $(rp_pppoe)
+# Enable strict operation
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.sys.strict_op_enable=false
+
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.sys.whitelist=/system/etc/whitelist_appops.xml
+
+PRODUCT_COPY_FILES += \
+    device/qcom/msm8226/whitelist_appops.xml:system/etc/whitelist_appops.xml
