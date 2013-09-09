@@ -86,6 +86,11 @@ telephony.lteOnCdmaDevice=1
 persist.fuse_sdcard=true
 
 #
+# dirty ratio value when enable ums
+#
+persist.sys.umsdirtyratio=20
+
+#
 # System prop for enabling the cdrom feature
 #
 persist.service.cdrom.enable=1
