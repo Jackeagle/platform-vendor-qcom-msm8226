@@ -83,7 +83,7 @@ telephony.lteOnCdmaDevice=1
 
 # simulate sdcard on /data/media
 #
-persist.fuse_sdcard=false
+persist.fuse_sdcard=true
 
 #
 # System prop for enabling the cdrom feature
