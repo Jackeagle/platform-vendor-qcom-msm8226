@@ -72,6 +72,9 @@ BOARD_PERSISTIMAGE_PARTITION_SIZE := 5242880
 BOARD_TOMBSTONESIMAGE_PARTITION_SIZE := 73400320
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 
+# Enable suspend during charger mode
+BOARD_CHARGER_ENABLE_SUSPEND := true
+
 # Add NON-HLOS files for ota upgrade
 ADD_RADIO_FILES ?= true
 
@@ -81,4 +84,5 @@ PROTOBUF_SUPPORTED := true
 TARGET_USES_ION := true
 TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 
-TARGET_ADDITIONAL_BOOTCLASSPATH := qcmediaplayer:WfdCommon:oem-services:qcom.fmradio
+TARGET_ADDITIONAL_BOOTCLASSPATH := qcom.fmradio:oem-services:WfdCommon:qcmediaplayer
+TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_msm
