@@ -4325,7 +4325,8 @@ SectionDevice
 		'RX1 MIX2 INP1':0:IIR1
 		'CLASS_H_DSM MUX':0:RX_HPHL
 		'RX1 Digital Volume':1:68
-		'DAC1 Switch':1:1
+		'EAR PA Gain':0:POS_6_DB
+                'DAC1 Switch':1:1
 	EndSequence
 
 	DisableSequence
