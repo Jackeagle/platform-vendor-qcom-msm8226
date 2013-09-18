@@ -105,3 +105,8 @@ LogSystem += cdrom_install.iso
 PRODUCT_PACKAGES += $(LogSystem)
 
 PRODUCT_LOCALES += xhdpi
+
+#PPPOE
+rp_pppoe := pppoe
+
+PRODUCT_PACKAGES += $(rp_pppoe)
