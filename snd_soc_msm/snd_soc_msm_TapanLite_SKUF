@@ -4390,7 +4390,7 @@ SectionDevice
 		'RX1 MIX1 INP1':0:RX1
 		'CLASS_H_DSM MUX':0:RX_HPHL
 		'RX1 Digital Volume':1:68
-		'EAR PA Gain':0:POS_2_DB
+		'EAR PA Gain':0:POS_6_DB
 		'DAC1 Switch':1:1
 	EndSequence
 
@@ -4429,6 +4429,7 @@ SectionDevice
 		'RX1 MIX2 INP1':0:IIR1
 		'CLASS_H_DSM MUX':0:RX_HPHL
 		'RX1 Digital Volume':1:68
+		'EAR PA Gain':0:POS_6_DB
 		'DAC1 Switch':1:1
 	EndSequence
 
@@ -4849,7 +4850,7 @@ SectionDevice
 		'IIR1 INP1 MUX':0:ZERO
 	EndSequence
 
-	ACDBID	6:2
+	ACDBID	41:2
 	EffectsMixerCTL "SRS TruMedia"
 
 EndSection
@@ -4860,30 +4861,23 @@ SectionDevice
 
 	EnableSequence
 		'AIF1_CAP Mixer SLIM TX1':1:1
-		'AIF1_CAP Mixer SLIM TX2':1:1
+		'SLIM_0_TX Channels':0:One
 		'SLIM TX1 MUX':0:DEC1
-		'DEC1 MUX':0:ADC1
-		'ADC1 Volume':1:100
+		'DEC1 MUX':0:ADC3
+		'ADC3 Volume':1:65
 		'DEC1 Volume':1:68
-		'SLIM TX2 MUX':0:DEC2
-		'DEC2 MUX':0:ADC3
-		'ADC3 Volume':1:100
-		'DEC2 Volume':1:68
-		'SLIM_0_TX Channels':0:Two
 		'IIR1 INP1 MUX':0:DEC1
 	EndSequence
 
 	DisableSequence
 		'AIF1_CAP Mixer SLIM TX1':1:0
-		'AIF1_CAP Mixer SLIM TX2':1:0
 		'SLIM TX1 MUX':0:ZERO
 		'DEC1 MUX':0:ZERO
-		'SLIM TX2 MUX':0:ZERO
-		'DEC2 MUX':0:ZERO
+		'ADC3 Volume':1:0
 		'IIR1 INP1 MUX':0:ZERO
 	EndSequence
 
-	ACDBID	13:2
+	ACDBID	42:2
 	EffectsMixerCTL "SRS TruMedia"
 
 EndSection
