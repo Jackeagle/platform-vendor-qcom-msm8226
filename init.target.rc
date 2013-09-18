@@ -35,6 +35,19 @@ on early-init
 
 on init
     export BOOTCLASSPATH ${BOOTCLASSPATH}:/system/framework/oem-services.jar:/system/framework/WfdCommon.jar:/system/framework/qcmediaplayer.jar
+
+on early-boot
+    rm /storage/sdcard0
+    mkdir /storage/sdcard0 0000 system system
+    export EXTERNAL_STORAGE /storage/sdcard0
+    export EMULATED_STORAGE_SOURCE
+    export EMULATED_STORAGE_TARGET
+
+    rm /sdcard
+    symlink /storage/sdcard0 /sdcard
+    rm /mnt/sdcard
+    symlink /storage/sdcard0 /mnt/sdcard
+
 on fs
     mount_all fstab.qcom
 
