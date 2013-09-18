@@ -5,6 +5,7 @@ ifeq ($(TARGET_USES_QCOM_BSP), true)
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 endif #TARGET_USES_QCOM_BSP
 
+DEVICE_PACKAGE_OVERLAYS := device/qcom/msm8226/overlay
 
 # media_profiles and media_codecs xmls for 8226
 ifeq ($(TARGET_ENABLE_QC_AV_ENHANCEMENTS), true)
@@ -16,8 +17,6 @@ $(call inherit-product, device/qcom/common/common.mk)
 
 PRODUCT_NAME := msm8226
 PRODUCT_DEVICE := msm8226
-
-DEVICE_PACKAGE_OVERLAYS := device/qcom/msm8226/overlay
 
 # Audio configuration file
 PRODUCT_COPY_FILES += \
