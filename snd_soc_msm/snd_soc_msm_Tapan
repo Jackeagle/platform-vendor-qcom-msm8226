@@ -4380,6 +4380,28 @@ SectionVerb
 EndSection
 }
 
+SectionUseCase."Listen Voice Wakeup" {
+Comment "Listen Voice Wakeup use case"
+
+SectionVerb
+        Name "Listen Voice Wakeup"
+
+        EnableSequence
+		'LSM1 MUX':0:SLIMBUS_5_TX
+		'SLIMBUS_5_TX LSM Function':0:SWAUDIO
+        EndSequence
+
+        DisableSequence
+		'LSM1 MUX':0:None
+		'SLIMBUS_5_TX LSM Function':0:None
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 19
+
+EndSection
+}
+
 SectionDevice
 	Name "Earpiece"
 	Comment "Handset Rx device"
@@ -5176,6 +5198,31 @@ SectionDevice
 	EndSequence
 
 	ACDBID	4:2
+	EffectsMixerCTL "SRS TruMedia"
+
+EndSection
+
+SectionDevice
+	Name "ListenHandsetMic"
+	Comment "Listen Handset Tx Device"
+
+	EnableSequence
+		'AIF1_CAP Mixer SLIM TX1':1:1
+		'SLIM_0_TX Channels':0:One
+		'SLIM TX1 MUX':0:DEC1
+		'DEC1 MUX':0:ADC1
+		'ADC1 Volume':1:65
+		'DEC1 Volume':1:68
+	EndSequence
+
+	DisableSequence
+		'AIF1_CAP Mixer SLIM TX1':1:0
+		'SLIM TX1 MUX':0:ZERO
+		'DEC1 MUX':0:ZERO
+		'ADC1 Volume':1:0
+	EndSequence
+
+	ACDBID	127:2
 	EffectsMixerCTL "SRS TruMedia"
 
 EndSection
@@ -9765,6 +9812,24 @@ SectionModifier
 	# ALSA PCMs
 	PlaybackPCM 18
 	CapturePCM 18
+
+EndSection
+
+SectionModifier
+        Name "Listen Voice Wakeup Mod"
+
+        EnableSequence
+		'LSM1 MUX':0:SLIMBUS_5_TX
+		'SLIMBUS_5_TX LSM Function':0:SWAUDIO
+        EndSequence
+
+        DisableSequence
+		'LSM1 MUX':0:None
+		'SLIMBUS_5_TX LSM Function':0:None
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 19
 
 EndSection
 
