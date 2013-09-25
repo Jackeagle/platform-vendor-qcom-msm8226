@@ -41,9 +41,9 @@ dev.pm.dyn_samplingrate=1
 
 persist.demo.hdmirotationlock=false
 ro.hdmi.enable=true
-tunnel.decode=true
+tunnel.decode=false
 tunnel.audiovideo.decode=true
-lpa.decode=false
+lpa.decode=true
 lpa.use-stagefright=true
 qcom.hw.aac.encoder=true
 
