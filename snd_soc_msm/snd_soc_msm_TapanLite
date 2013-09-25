@@ -1,4 +1,4 @@
-# Master file for snd_soc_msm Tapan sound card
+# Master file for snd_soc_msm Tapan 9302 sound card
 # Lists all use case verbs
 SectionUseCase."HiFi" {
 Comment "Music playback use case"
@@ -4380,28 +4380,6 @@ SectionVerb
 EndSection
 }
 
-SectionUseCase."Listen Voice Wakeup" {
-Comment "Listen Voice Wakeup use case"
-
-SectionVerb
-        Name "Listen Voice Wakeup"
-
-        EnableSequence
-		'LSM1 MUX':0:SLIMBUS_5_TX
-		'SLIMBUS_5_TX LSM Function':0:SWAUDIO
-        EndSequence
-
-        DisableSequence
-		'LSM1 MUX':0:None
-		'SLIMBUS_5_TX LSM Function':0:None
-        EndSequence
-
-        # ALSA PCMs
-        CapturePCM 19
-
-EndSection
-}
-
 SectionDevice
 	Name "Earpiece"
 	Comment "Handset Rx device"
@@ -4528,8 +4506,8 @@ SectionDevice
 		'RX1 MIX1 INP1':0:ZERO
 		'CLASS_H_DSM MUX':0:ZERO
 		'DAC1 Switch':1:0
-		'ANC Slot':1:0
-		'ANC1 MUX':0:ZERO
+                'ANC Slot':1:0
+                'ANC1 MUX':0:ZERO
 		'ADC3 Volume':1:0
 		'ANC1 FB MUX':0:ZERO
 		'RX1 Digital Volume':1:0
@@ -4549,17 +4527,15 @@ SectionDevice
 	EnableSequence
 		'SLIM RX1 MUX':0:AIF1_PB
 		'SLIM_0_RX Channels':0:One
-		'RX4 MIX1 INP1':0:RX1
-		'RX4 Digital Volume':1:68
+		'RX3 MIX1 INP1':0:RX1
+		'RX3 Digital Volume':1:68
 		'SPK DAC Switch':1:1
-		'COMP0 Switch':1:1
 	EndSequence
 
 	DisableSequence
 		'SLIM RX1 MUX':0:ZERO
-		'RX4 MIX1 INP1':0:ZERO
+		'RX3 MIX1 INP1':0:ZERO
 		'SPK DAC Switch':1:0
-		'COMP0 Switch':1:0
 	EndSequence
 
 	ACDBID	15:1
@@ -4580,7 +4556,6 @@ SectionDevice
 		'RX2 MIX1 INP1':0:RX2
 		'CLASS_H_DSM MUX':0:RX_HPHL
 		'HPHL DAC Switch':1:1
-		'COMP1 Switch':1:1
 		'HPHL Volume':1:100
 		'HPHR Volume':1:100
 		'RX1 Digital Volume':1:68
@@ -4594,7 +4569,6 @@ SectionDevice
 		'RX2 MIX1 INP1':0:ZERO
 		'CLASS_H_DSM MUX':0:ZERO
 		'HPHL DAC Switch':1:0
-		'COMP1 Switch':1:0
 	EndSequence
 
 	ACDBID	10:1
@@ -4628,7 +4602,6 @@ SectionDevice
 		'RX2 MIX2 INP1':0:IIR1
 		'CLASS_H_DSM MUX':0:RX_HPHL
 		'HPHL DAC Switch':1:1
-		'COMP1 Switch':1:1
 		'HPHL Volume':1:100
 		'HPHR Volume':1:100
 		'RX1 Digital Volume':1:68
@@ -4655,7 +4628,6 @@ SectionDevice
 		'IIR1 INP1 Volume':1:0
 		'CLASS_H_DSM MUX':0:ZERO
 		'HPHL DAC Switch':1:0
-		'COMP1 Switch':1:0
 	EndSequence
 
 	ACDBID	10:1
@@ -4675,16 +4647,14 @@ SectionDevice
 		'RX2 MIX1 INP1':0:RX2
 		'CLASS_H_DSM MUX':0:RX_HPHL
 		'HPHL DAC Switch':1:1
-		'COMP1 Switch':1:1
 		'HPHL Volume':1:100
 		'HPHR Volume':1:100
 		'RX1 Digital Volume':1:68
 		'RX2 Digital Volume':1:68
-		'RX4 MIX1 INP1':0:RX1
-		'RX4 MIX1 INP2':0:RX2
-		'RX4 Digital Volume':1:68
+		'RX3 MIX1 INP1':0:RX1
+		'RX3 MIX1 INP2':0:RX2
+		'RX3 Digital Volume':1:68
                 'SPK DAC Switch':1:1
-		'COMP0 Switch':1:1
 	EndSequence
 
 	DisableSequence
@@ -4694,11 +4664,9 @@ SectionDevice
 		'RX2 MIX1 INP1':0:ZERO
 		'CLASS_H_DSM MUX':0:ZERO
 		'HPHL DAC Switch':1:0
-		'COMP1 Switch':1:0
-		'RX4 MIX1 INP1':0:ZERO
-		'RX4 MIX1 INP2':0:ZERO
+		'RX3 MIX1 INP1':0:ZERO
+		'RX3 MIX1 INP2':0:ZERO
 		'SPK DAC Switch':1:0
-		'COMP0 Switch':1:0
 	EndSequence
 
 	ACDBID	10:1
@@ -5181,17 +5149,15 @@ SectionDevice
 	EnableSequence
 		'SLIM RX1 MUX':0:AIF1_PB
 		'SLIM_0_RX Channels':0:One
-		'RX4 MIX1 INP1':0:RX1
-		'RX4 Digital Volume':1:68
+		'RX3 MIX1 INP1':0:RX1
+		'RX3 Digital Volume':1:68
 		'SPK DAC Switch':1:1
-		'COMP0 Switch':1:1
 	EndSequence
 
 	DisableSequence
 		'SLIM RX1 MUX':0:ZERO
-		'RX4 MIX1 INP1':0:ZERO
+		'RX3 MIX1 INP1':0:ZERO
 		'SPK DAC Switch':1:0
-		'COMP0 Switch':1:0
 	EndSequence
 
 	ACDBID	15:1
@@ -5249,31 +5215,6 @@ SectionDevice
 	EndSequence
 
 	ACDBID	4:2
-	EffectsMixerCTL "SRS TruMedia"
-
-EndSection
-
-SectionDevice
-	Name "ListenHandsetMic"
-	Comment "Listen Handset Tx Device"
-
-	EnableSequence
-		'AIF1_CAP Mixer SLIM TX1':1:1
-		'SLIM_0_TX Channels':0:One
-		'SLIM TX1 MUX':0:DEC1
-		'DEC1 MUX':0:ADC1
-		'ADC1 Volume':1:65
-		'DEC1 Volume':1:68
-	EndSequence
-
-	DisableSequence
-		'AIF1_CAP Mixer SLIM TX1':1:0
-		'SLIM TX1 MUX':0:ZERO
-		'DEC1 MUX':0:ZERO
-		'ADC1 Volume':1:0
-	EndSequence
-
-	ACDBID	127:2
 	EffectsMixerCTL "SRS TruMedia"
 
 EndSection
@@ -5413,7 +5354,6 @@ SectionDevice
 		'RX1 MIX1 INP1':0:RX1
 		'CLASS_H_DSM MUX':0:RX_HPHL
 		'HPHL DAC Switch':1:1
-		'COMP1 Switch':1:1
 		'HPHL Volume':1:100
 		'RX1 Digital Volume':1:68
 	EndSequence
@@ -5424,7 +5364,6 @@ SectionDevice
 		'RX1 MIX1 INP1':0:ZERO
 		'CLASS_H_DSM MUX':0:ZERO
 		'HPHL DAC Switch':1:0
-		'COMP1 Switch':1:0
 	EndSequence
 
 	ACDBID	17:1
@@ -5472,7 +5411,6 @@ SectionDevice
 		'RX1 MIX1 INP1':0:RX1
 		'CLASS_H_DSM MUX':0:RX_HPHL
 		'HPHL DAC Switch':1:1
-		'COMP1 Switch':1:1
 		'HPHL Volume':1:100
 		'RX1 Digital Volume':1:68
 	EndSequence
@@ -5483,7 +5421,6 @@ SectionDevice
 		'RX1 MIX1 INP1':0:ZERO
 		'CLASS_H_DSM MUX':0:ZERO
 		'HPHL DAC Switch':1:0
-		'COMP1 Switch':1:0
 	EndSequence
 
 	ACDBID	17:1
@@ -5600,17 +5537,15 @@ SectionDevice
 	EnableSequence
 		'SLIM RX1 MUX':0:AIF1_PB
 		'SLIM_0_RX Channels':0:One
-		'RX4 MIX1 INP1':0:RX1
-		'RX4 Digital Volume':1:68
+		'RX3 MIX1 INP1':0:RX1
+		'RX3 Digital Volume':1:68
 		'SPK DAC Switch':1:1
-		'COMP0 Switch':1:1
 	EndSequence
 
 	DisableSequence
 		'SLIM RX1 MUX':0:ZERO
-		'RX4 MIX1 INP1':0:ZERO
+		'RX3 MIX1 INP1':0:ZERO
 		'SPK DAC Switch':1:0
-		'COMP0 Switch':1:0
 	EndSequence
 
 	ACDBID  18:1
@@ -5769,17 +5704,15 @@ SectionDevice
 	EnableSequence
 		'SLIM RX1 MUX':0:AIF1_PB
 		'SLIM_0_RX Channels':0:One
-		'RX4 MIX1 INP1':0:RX1
-		'RX4 Digital Volume':1:68
+		'RX3 MIX1 INP1':0:RX1
+		'RX3 Digital Volume':1:68
 		'SPK DAC Switch':1:1
-		'COMP0 Switch':1:1
 	EndSequence
 
 	DisableSequence
 		'SLIM RX1 MUX':0:ZERO
-		'RX4 MIX1 INP1':0:RX1
+		'RX3 MIX1 INP1':0:RX1
 		'SPK DAC Switch':1:0
-		'COMP0 Switch':1:0
 	EndSequence
 
 	ACDBID	15:1
@@ -5800,7 +5733,6 @@ SectionDevice
 		'CLASS_H_DSM MUX':0:RX_HPHL
 		'HPHL DAC Switch':1:1
 		'HPHR DAC Switch':1:1
-		'COMP1 Switch':1:1
 		'HPHL Volume':1:100
 		'HPHR Volume':1:100
 	EndSequence
@@ -5812,7 +5744,6 @@ SectionDevice
 		'RX2 MIX1 INP1':0:ZERO
 		'CLASS_H_DSM MUX':0:ZERO
 		'HPHL DAC Switch':1:0
-		'COMP1 Switch':1:0
 		'HPHR DAC Switch':1:0
 	EndSequence
 
@@ -5874,15 +5805,13 @@ SectionDevice
 		'SLIM RX1 MUX':0:AIF1_PB
 		'SLIM RX2 MUX':0:AIF1_PB
 		'SLIM_0_RX Channels':0:Two
-		'RX4 MIX1 INP1':0:RX1
-		'RX4 Digital Volume':1:68
+		'RX3 MIX1 INP1':0:RX1
+		'RX3 Digital Volume':1:68
 		'SPK DAC Switch':1:1
-		'COMP0 Switch':1:1
 		'RX1 MIX1 INP1':0:RX1
 		'RX2 MIX1 INP1':0:RX2
 		'CLASS_H_DSM MUX':0:RX_HPHL
 		'HPHL DAC Switch':1:1
-		'COMP1 Switch':1:1
 		'HPHL Volume':1:100
 		'HPHR Volume':1:100
 		'RX1 Digital Volume':1:68
@@ -5892,14 +5821,12 @@ SectionDevice
 	DisableSequence
 		'SLIM RX1 MUX':0:ZERO
 		'SLIM RX2 MUX':0:ZERO
-		'RX4 MIX1 INP1':0:ZERO
+		'RX3 MIX1 INP1':0:ZERO
 		'SPK DAC Switch':1:0
-		'COMP0 Switch':1:0
 		'RX1 MIX1 INP1':0:ZERO
 		'RX2 MIX1 INP1':0:ZERO
 		'CLASS_H_DSM MUX':0:ZERO
 		'HPHL DAC Switch':1:0
-		'COMP1 Switch':1:0
 	EndSequence
 
 	ACDBID	10:1
@@ -5916,8 +5843,8 @@ SectionDevice
 		'SLIM RX1 MUX':0:AIF1_PB
 		'SLIM RX2 MUX':0:AIF1_PB
 		'SLIM_0_RX Channels':0:Two
-		'RX4 MIX1 INP1':0:RX1
-		'RX4 Digital Volume':1:68
+		'RX3 MIX1 INP1':0:RX1
+		'RX3 Digital Volume':1:68
 		'SPK DAC Switch':1:1
 		'RX1 MIX1 INP1':0:RX1
 		'RX2 MIX1 INP1':0:RX2
@@ -5938,7 +5865,7 @@ SectionDevice
 	DisableSequence
 		'SLIM RX1 MUX':0:ZERO
 		'SLIM RX2 MUX':0:ZERO
-		'RX4 MIX1 INP1':0:ZERO
+		'RX3 MIX1 INP1':0:ZERO
 		'SPK DAC Switch':1:0
 		'RX1 MIX1 INP1':0:ZERO
 		'RX2 MIX1 INP1':0:ZERO
@@ -6050,17 +5977,15 @@ SectionDevice
 	EnableSequence
 		'SLIM RX1 MUX':0:AIF1_PB
 		'SLIM_0_RX Channels':0:One
-		'RX4 MIX1 INP1':0:RX1
-		'RX4 Digital Volume':1:68
+		'RX3 MIX1 INP1':0:RX1
+		'RX3 Digital Volume':1:68
 		'SPK DAC Switch':1:1
-		'COMP0 Switch':1:1
 	EndSequence
 
 	DisableSequence
 		'SLIM RX1 MUX':0:ZERO
-		'RX4 MIX1 INP1':0:ZERO
+		'RX3 MIX1 INP1':0:ZERO
 		'SPK DAC Switch':1:0
-		'COMP0 Switch':1:0
 	EndSequence
 
 	ACDBID	15:1
@@ -6081,7 +6006,6 @@ SectionDevice
 		'RX2 MIX1 INP1':0:RX2
 		'CLASS_H_DSM MUX':0:RX_HPHL
 		'HPHL DAC Switch':1:1
-		'COMP1 Switch':1:1
 		'HPHL Volume':1:100
 		'HPHR Volume':1:100
 	EndSequence
@@ -6093,7 +6017,6 @@ SectionDevice
 		'RX2 MIX1 INP1':0:ZERO
 		'CLASS_H_DSM MUX':0:ZERO
 		'HPHL DAC Switch':1:0
-		'COMP1 Switch':1:0
 	EndSequence
 
 	ACDBID	10:1
@@ -6109,15 +6032,13 @@ SectionDevice
 		'SLIM RX1 MUX':0:AIF1_PB
 		'SLIM RX2 MUX':0:AIF1_PB
 		'SLIM_0_RX Channels':0:Two
-		'RX4 MIX1 INP1':0:RX1
-		'RX4 Digital Volume':1:68
+		'RX3 MIX1 INP1':0:RX1
+		'RX3 Digital Volume':1:68
 		'SPK DAC Switch':1:1
-		'COMP0 Switch':1:1
 		'RX1 MIX1 INP1':0:RX1
 		'RX2 MIX1 INP1':0:RX2
 		'CLASS_H_DSM MUX':0:RX_HPHL
 		'HPHL DAC Switch':1:1
-		'COMP1 Switch':1:1
 		'HPHL Volume':1:100
 		'HPHR Volume':1:100
 	EndSequence
@@ -6125,14 +6046,12 @@ SectionDevice
 	DisableSequence
 		'SLIM RX1 MUX':0:ZERO
 		'SLIM RX2 MUX':0:ZERO
-		'RX4 MIX1 INP1':0:ZERO
+		'RX3 MIX1 INP1':0:ZERO
 		'SPK DAC Switch':1:0
-		'COMP0 Switch':1:0
 		'RX1 MIX1 INP1':0:ZERO
 		'RX2 MIX1 INP1':0:ZERO
 		'CLASS_H_DSM MUX':0:ZERO
 		'HPHL DAC Switch':1:0
-		'COMP1 Switch':1:0
 	EndSequence
 
 	ACDBID	10:1
@@ -6149,8 +6068,8 @@ SectionDevice
 		'SLIM RX1 MUX':0:AIF1_PB
 		'SLIM RX2 MUX':0:AIF1_PB
 		'SLIM_0_RX Channels':0:Two
-		'RX4 MIX1 INP1':0:RX1
-		'RX4 Digital Volume':1:68
+		'RX3 MIX1 INP1':0:RX1
+		'RX3 Digital Volume':1:68
 		'SPK DAC Switch':1:1
 		'RX1 MIX1 INP1':0:RX1
 		'RX2 MIX1 INP1':0:RX2
@@ -6171,7 +6090,7 @@ SectionDevice
 	DisableSequence
 		'SLIM RX1 MUX':0:ZERO
 		'SLIM RX2 MUX':0:ZERO
-		'RX4 MIX1 INP1':0:ZERO
+		'RX3 MIX1 INP1':0:ZERO
 		'SPK DAC Switch':1:0
 		'RX1 MIX1 INP1':0:ZERO
 		'RX2 MIX1 INP1':0:ZERO
@@ -6290,17 +6209,15 @@ SectionDevice
 	EnableSequence
 		'SLIM RX1 MUX':0:AIF1_PB
 		'SLIM_0_RX Channels':0:One
-		'RX4 MIX1 INP1':0:RX1
-		'RX4 Digital Volume':1:68
+		'RX3 MIX1 INP1':0:RX1
+		'RX3 Digital Volume':1:68
 		'SPK DAC Switch':1:1
-		'COMP0 Switch':1:1
 	EndSequence
 
 	DisableSequence
 		'SLIM RX1 MUX':0:ZERO
-		'RX4 MIX1 INP1':0:ZERO
+		'RX3 MIX1 INP1':0:ZERO
 		'SPK DAC Switch':1:0
-		'COMP0 Switch':1:0
 	EndSequence
 
 	ACDBID	15:1
@@ -9910,24 +9827,6 @@ SectionModifier
 	# ALSA PCMs
 	PlaybackPCM 18
 	CapturePCM 18
-
-EndSection
-
-SectionModifier
-        Name "Listen Voice Wakeup Mod"
-
-        EnableSequence
-		'LSM1 MUX':0:SLIMBUS_5_TX
-		'SLIMBUS_5_TX LSM Function':0:SWAUDIO
-        EndSequence
-
-        DisableSequence
-		'LSM1 MUX':0:None
-		'SLIMBUS_5_TX LSM Function':0:None
-        EndSequence
-
-        # ALSA PCMs
-        CapturePCM 19
 
 EndSection
 
