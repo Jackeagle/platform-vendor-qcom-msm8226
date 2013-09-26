@@ -36,7 +36,7 @@ on early-init
 on init
     export BOOTCLASSPATH ${BOOTCLASSPATH}:/system/framework/oem-services.jar:/system/framework/WfdCommon.jar:/system/framework/qcmediaplayer.jar
 
-on early-boot
+on early-fs
     rm /storage/sdcard0
     mkdir /storage/sdcard0 0000 system system
     export EXTERNAL_STORAGE /storage/sdcard0
