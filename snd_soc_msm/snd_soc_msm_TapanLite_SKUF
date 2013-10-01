@@ -4850,21 +4850,21 @@ SectionDevice
 		'IIR1 INP1 MUX':0:ZERO
 	EndSequence
 
-	ACDBID	41:2
+	ACDBID	118:2
 	EffectsMixerCTL "SRS TruMedia"
 
 EndSection
 
 SectionDevice
 	Name "Speaker DMIC Endfire"
-	Comment "Dual MIC Endfire Tx device"
+	Comment "Handset Tx device"
 
 	EnableSequence
 		'AIF1_CAP Mixer SLIM TX1':1:1
 		'SLIM_0_TX Channels':0:One
 		'SLIM TX1 MUX':0:DEC1
-		'DEC1 MUX':0:ADC3
-		'ADC3 Volume':1:65
+		'DEC1 MUX':0:ADC1
+		'ADC1 Volume':1:65
 		'DEC1 Volume':1:68
 		'IIR1 INP1 MUX':0:DEC1
 	EndSequence
@@ -4873,11 +4873,11 @@ SectionDevice
 		'AIF1_CAP Mixer SLIM TX1':1:0
 		'SLIM TX1 MUX':0:ZERO
 		'DEC1 MUX':0:ZERO
-		'ADC3 Volume':1:0
+		'ADC1 Volume':1:0
 		'IIR1 INP1 MUX':0:ZERO
 	EndSequence
 
-	ACDBID	42:2
+	ACDBID	4:2
 	EffectsMixerCTL "SRS TruMedia"
 
 EndSection
