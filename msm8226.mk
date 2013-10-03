@@ -26,6 +26,7 @@ PRODUCT_COPY_FILES += \
 	device/qcom/msm8226/snd_soc_msm/snd_soc_msm_Tapan:system/etc/snd_soc_msm/snd_soc_msm_Tapan \
 	device/qcom/msm8226/snd_soc_msm/snd_soc_msm_Tapan_SKUF:system/etc/snd_soc_msm/snd_soc_msm_Tapan_SKUF \
 	device/qcom/msm8226/snd_soc_msm/snd_soc_msm_TapanLite:system/etc/snd_soc_msm/snd_soc_msm_TapanLite \
+    device/qcom/msm8226/snd_soc_msm/snd_soc_msm_TapanLite_SKUF:system/etc/snd_soc_msm/snd_soc_msm_TapanLite_SKUF \
 
 #fstab.qcom
 PRODUCT_PACKAGES += fstab.qcom
@@ -70,3 +71,12 @@ PRODUCT_COPY_FILES += \
         frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
         device/qcom/msm8226/nfc/libnfc-nci.conf:system/etc/libnfc-nci.conf
 
+# Enable strict operation
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.sys.strict_op_enable=false
+
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.sys.whitelist=/system/etc/whitelist_appops.xml
+
+PRODUCT_COPY_FILES += \
+    device/qcom/msm8226/whitelist_appops.xml:system/etc/whitelist_appops.xml
