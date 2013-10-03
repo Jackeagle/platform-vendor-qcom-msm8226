@@ -26,6 +26,7 @@ PRODUCT_COPY_FILES += \
 	device/qcom/msm8226/snd_soc_msm/snd_soc_msm_Tapan:system/etc/snd_soc_msm/snd_soc_msm_Tapan \
 	device/qcom/msm8226/snd_soc_msm/snd_soc_msm_Tapan_SKUF:system/etc/snd_soc_msm/snd_soc_msm_Tapan_SKUF \
 	device/qcom/msm8226/snd_soc_msm/snd_soc_msm_TapanLite:system/etc/snd_soc_msm/snd_soc_msm_TapanLite \
+    device/qcom/msm8226/snd_soc_msm/snd_soc_msm_TapanLite_SKUF:system/etc/snd_soc_msm/snd_soc_msm_TapanLite_SKUF \
 
 #fstab.qcom
 PRODUCT_PACKAGES += fstab.qcom
