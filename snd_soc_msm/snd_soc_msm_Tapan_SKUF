@@ -143,66 +143,66 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFiPROXY Rx"
+        Name "HiFiPROXY Rx"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
-
-EndSection
-
-SectionVerb
-	Name "HiFiPROXY Tx"
-
-	EnableSequence
-	EndSequence
-
-	DisableSequence
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 0
 
 EndSection
 
 SectionVerb
-	Name "HiFiUSB PROXY Rx"
+        Name "HiFiPROXY Tx"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
-	EndSequence
+        EnableSequence
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
-	EndSequence
+        DisableSequence
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 0
 
 EndSection
 
 SectionVerb
-	Name "HiFiUSB PROXY Tx"
+        Name "HiFiUSB PROXY Rx"
 
-	EnableSequence
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
+        EndSequence
 
-	DisableSequence
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 0
+
+EndSection
+
+SectionVerb
+        Name "HiFiUSB PROXY Tx"
+
+        EnableSequence
+        EndSequence
+
+        DisableSequence
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 0
 
 EndSection
 
@@ -324,154 +324,154 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFiPROXY Rx Speaker"
+        Name "HiFiPROXY Rx Speaker"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
-
-EndSection
-
-SectionVerb
-	Name "HiFiPROXY Rx Earpiece"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 0
 
 EndSection
 
 SectionVerb
-	Name "HiFiPROXY Rx Headphones"
+        Name "HiFiPROXY Rx Earpiece"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
-
-EndSection
-
-SectionVerb
-	Name "HiFiPROXY Rx ANC Headset"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 0
 
 EndSection
 
 SectionVerb
-	Name "HiFiPROXY Rx Speaker Headset"
+        Name "HiFiPROXY Rx Headphones"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
-
-EndSection
-
-SectionVerb
-	Name "HiFiPROXY Rx Speaker ANC Headset"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 0
 
 EndSection
 
 SectionVerb
-	Name "HiFiUSB PROXY Rx Speaker"
+        Name "HiFiPROXY Rx ANC Headset"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 0
 
 EndSection
 
 SectionVerb
-	Name "HiFiUSB PROXY Rx Earpiece"
+        Name "HiFiPROXY Rx Speaker Headset"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 0
+
+EndSection
+
+SectionVerb
+        Name "HiFiPROXY Rx Speaker ANC Headset"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 0
+
+EndSection
+
+SectionVerb
+        Name "HiFiUSB PROXY Rx Speaker"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 0
+
+EndSection
+
+SectionVerb
+        Name "HiFiUSB PROXY Rx Earpiece"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 0
 
 EndSection
 }
@@ -618,34 +618,34 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFi2PROXY Rx"
+        Name "HiFi2PROXY Rx"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia2':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia2':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia2':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia2':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 1
-	PlaybackPCM 1
+        # ALSA PCMs
+        CapturePCM 1
+        PlaybackPCM 1
 
 EndSection
 
 SectionVerb
-	Name "HiFi2PROXY Tx"
+        Name "HiFi2PROXY Tx"
 
-	EnableSequence
-	EndSequence
+        EnableSequence
+        EndSequence
 
-	DisableSequence
-	EndSequence
+        DisableSequence
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 1
-	PlaybackPCM 1
+        # ALSA PCMs
+        CapturePCM 1
+        PlaybackPCM 1
 
 EndSection
 
@@ -767,154 +767,154 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFi2PROXY Rx Speaker"
+        Name "HiFi2PROXY Rx Speaker"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia2':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia2':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia2':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia2':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 1
-	PlaybackPCM 1
-
-EndSection
-
-SectionVerb
-	Name "HiFi2PROXY Rx Earpiece"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia2':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia2':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 1
-	PlaybackPCM 1
+        # ALSA PCMs
+        CapturePCM 1
+        PlaybackPCM 1
 
 EndSection
 
 SectionVerb
-	Name "HiFi2PROXY Rx Headphones"
+        Name "HiFi2PROXY Rx Earpiece"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia2':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia2':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia2':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia2':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 1
-	PlaybackPCM 1
-
-EndSection
-
-SectionVerb
-	Name "HiFi2PROXY Rx ANC Headset"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia2':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia2':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 1
-	PlaybackPCM 1
+        # ALSA PCMs
+        CapturePCM 1
+        PlaybackPCM 1
 
 EndSection
 
 SectionVerb
-	Name "HiFi2PROXY Rx Speaker Headset"
+        Name "HiFi2PROXY Rx Headphones"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia2':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia2':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia2':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia2':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 1
-	PlaybackPCM 1
-
-EndSection
-
-SectionVerb
-	Name "HiFi2PROXY Rx Speaker ANC Headset"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia2':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia2':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 1
-	PlaybackPCM 1
+        # ALSA PCMs
+        CapturePCM 1
+        PlaybackPCM 1
 
 EndSection
 
 SectionVerb
-	Name "HiFi2USB PROXY Rx Speaker"
+        Name "HiFi2PROXY Rx ANC Headset"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia2':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia2':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia2':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia2':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 1
-	PlaybackPCM 1
+        # ALSA PCMs
+        CapturePCM 1
+        PlaybackPCM 1
 
 EndSection
 
 SectionVerb
-	Name "HiFi2USB PROXY Rx Earpiece"
+        Name "HiFi2PROXY Rx Speaker Headset"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia2':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia2':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia2':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia2':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 1
-	PlaybackPCM 1
+        # ALSA PCMs
+        CapturePCM 1
+        PlaybackPCM 1
+
+EndSection
+
+SectionVerb
+        Name "HiFi2PROXY Rx Speaker ANC Headset"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia2':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia2':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 1
+        PlaybackPCM 1
+
+EndSection
+
+SectionVerb
+        Name "HiFi2USB PROXY Rx Speaker"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia2':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia2':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 1
+        PlaybackPCM 1
+
+EndSection
+
+SectionVerb
+        Name "HiFi2USB PROXY Rx Earpiece"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia2':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia2':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 1
+        PlaybackPCM 1
 
 EndSection
 }
@@ -1042,34 +1042,34 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFi3PROXY Rx"
+        Name "HiFi3PROXY Rx"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 15
-	PlaybackPCM 15
+        # ALSA PCMs
+        CapturePCM 15
+        PlaybackPCM 15
 
 EndSection
 
 SectionVerb
-	Name "HiFi3PROXY Tx"
+        Name "HiFi3PROXY Tx"
 
-	EnableSequence
-	EndSequence
+        EnableSequence
+        EndSequence
 
-	DisableSequence
-	EndSequence
+        DisableSequence
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 15
-	PlaybackPCM 15
+        # ALSA PCMs
+        CapturePCM 15
+        PlaybackPCM 15
 
 EndSection
 
@@ -1191,154 +1191,154 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFi3PROXY Rx Speaker"
+        Name "HiFi3PROXY Rx Speaker"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 15
-	PlaybackPCM 15
-
-EndSection
-
-SectionVerb
-	Name "HiFi3PROXY Rx Earpiece"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 15
-	PlaybackPCM 15
+        # ALSA PCMs
+        CapturePCM 15
+        PlaybackPCM 15
 
 EndSection
 
 SectionVerb
-	Name "HiFi3PROXY Rx Headphones"
+        Name "HiFi3PROXY Rx Earpiece"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 15
-	PlaybackPCM 15
-
-EndSection
-
-SectionVerb
-	Name "HiFi3PROXY Rx ANC Headset"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 15
-	PlaybackPCM 15
+        # ALSA PCMs
+        CapturePCM 15
+        PlaybackPCM 15
 
 EndSection
 
 SectionVerb
-	Name "HiFi3PROXY Rx Speaker Headset"
+        Name "HiFi3PROXY Rx Headphones"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 15
-	PlaybackPCM 15
-
-EndSection
-
-SectionVerb
-	Name "HiFi3PROXY Rx Speaker ANC Headset"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 15
-	PlaybackPCM 15
+        # ALSA PCMs
+        CapturePCM 15
+        PlaybackPCM 15
 
 EndSection
 
 SectionVerb
-	Name "HiFi3USB PROXY Rx Speaker"
+        Name "HiFi3PROXY Rx ANC Headset"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 15
-	PlaybackPCM 15
+        # ALSA PCMs
+        CapturePCM 15
+        PlaybackPCM 15
 
 EndSection
 
 SectionVerb
-	Name "HiFi3USB PROXY Rx Earpiece"
+        Name "HiFi3PROXY Rx Speaker Headset"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 15
-	PlaybackPCM 15
+        # ALSA PCMs
+        CapturePCM 15
+        PlaybackPCM 15
+
+EndSection
+
+SectionVerb
+        Name "HiFi3PROXY Rx Speaker ANC Headset"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 15
+        PlaybackPCM 15
+
+EndSection
+
+SectionVerb
+        Name "HiFi3USB PROXY Rx Speaker"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 15
+        PlaybackPCM 15
+
+EndSection
+
+SectionVerb
+        Name "HiFi3USB PROXY Rx Earpiece"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 15
+        PlaybackPCM 15
 
 EndSection
 }
@@ -1411,20 +1411,20 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFi Low PowerHDMI Speaker"
+        Name "HiFi Low PowerHDMI Speaker"
 
-	EnableSequence
+        EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
-		'HDMI Mixer MultiMedia3':1:1
-	EndSequence
+                'HDMI Mixer MultiMedia3':1:1
+        EndSequence
 
-	DisableSequence
+        DisableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
-		'HDMI Mixer MultiMedia3':1:0
-	EndSequence
+                'HDMI Mixer MultiMedia3':1:0
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 4
+        # ALSA PCMs
+        PlaybackPCM 4
 
 EndSection
 
@@ -1461,142 +1461,142 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFi Low PowerPROXY Rx"
+        Name "HiFi Low PowerPROXY Rx"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 4
-
-EndSection
-
-SectionVerb
-	Name "HiFi Low PowerUSB PROXY Rx"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 4
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 4
 
 EndSection
 
 SectionVerb
-	Name "HiFi Low PowerPROXY Tx"
+        Name "HiFi Low PowerUSB PROXY Rx"
 
-	EnableSequence
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
+        EndSequence
 
-	DisableSequence
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 4
-
-EndSection
-
-SectionVerb
-	Name "HiFi Low PowerUSB PROXY Tx"
-
-	EnableSequence
-	EndSequence
-
-	DisableSequence
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 4
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 4
 
 EndSection
 
 SectionVerb
-	Name "HiFi Low PowerPROXY Rx Speaker"
+        Name "HiFi Low PowerPROXY Tx"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
-	EndSequence
+        EnableSequence
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
-	EndSequence
+        DisableSequence
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 4
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 4
 
 EndSection
 
 SectionVerb
-	Name "HiFi Low PowerPROXY Rx Earpiece"
+        Name "HiFi Low PowerUSB PROXY Tx"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
-	EndSequence
+        EnableSequence
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
-	EndSequence
+        DisableSequence
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 4
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 4
 
 EndSection
 
 SectionVerb
-	Name "HiFi Low PowerUSB PROXY Rx Speaker"
+        Name "HiFi Low PowerPROXY Rx Speaker"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 4
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 4
 
 EndSection
 
 SectionVerb
-	Name "HiFi Low PowerUSB PROXY Rx Earpiece"
+        Name "HiFi Low PowerPROXY Rx Earpiece"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 4
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 4
+
+EndSection
+
+SectionVerb
+        Name "HiFi Low PowerUSB PROXY Rx Speaker"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 4
+
+EndSection
+
+SectionVerb
+        Name "HiFi Low PowerUSB PROXY Rx Earpiece"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 4
 
 EndSection
 }
@@ -1654,66 +1654,66 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFi RecPROXY Rx"
+        Name "HiFi RecPROXY Rx"
 
-	EnableSequence
-	EndSequence
+        EnableSequence
+        EndSequence
 
-	DisableSequence
-	EndSequence
+        DisableSequence
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
-
-EndSection
-
-SectionVerb
-	Name "HiFi RecUSB PROXY Rx"
-
-	EnableSequence
-	EndSequence
-
-	DisableSequence
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 0
 
 EndSection
 
 SectionVerb
-	Name "HiFi RecPROXY Tx"
+        Name "HiFi RecUSB PROXY Rx"
 
-	EnableSequence
-		'MultiMedia1 Mixer AFE_PCM_TX':1:1
-	EndSequence
+        EnableSequence
+        EndSequence
 
-	DisableSequence
-		'MultiMedia1 Mixer AFE_PCM_TX':1:0
-	EndSequence
+        DisableSequence
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 0
 
 EndSection
 
 SectionVerb
-	Name "HiFi RecUSB PROXY Tx"
+        Name "HiFi RecPROXY Tx"
 
-	EnableSequence
-		'MultiMedia1 Mixer AFE_PCM_TX':1:1
-	EndSequence
+        EnableSequence
+                'MultiMedia1 Mixer AFE_PCM_TX':1:1
+        EndSequence
 
-	DisableSequence
-		'MultiMedia1 Mixer AFE_PCM_TX':1:0
-	EndSequence
+        DisableSequence
+                'MultiMedia1 Mixer AFE_PCM_TX':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 0
+
+EndSection
+
+SectionVerb
+        Name "HiFi RecUSB PROXY Tx"
+
+        EnableSequence
+                'MultiMedia1 Mixer AFE_PCM_TX':1:1
+        EndSequence
+
+        DisableSequence
+                'MultiMedia1 Mixer AFE_PCM_TX':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 0
 
 EndSection
 
@@ -1788,34 +1788,34 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFi Rec2PROXY Rx"
+        Name "HiFi Rec2PROXY Rx"
 
-	EnableSequence
-	EndSequence
+        EnableSequence
+        EndSequence
 
-	DisableSequence
-	EndSequence
+        DisableSequence
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 1
-	PlaybackPCM 1
+        # ALSA PCMs
+        CapturePCM 1
+        PlaybackPCM 1
 
 EndSection
 
 SectionVerb
-	Name "HiFi Rec2PROXY Tx"
+        Name "HiFi Rec2PROXY Tx"
 
-	EnableSequence
-		'MultiMedia2 Mixer AFE_PCM_TX':1:1
-	EndSequence
+        EnableSequence
+                'MultiMedia2 Mixer AFE_PCM_TX':1:1
+        EndSequence
 
-	DisableSequence
-		'MultiMedia2 Mixer AFE_PCM_TX':1:0
-	EndSequence
+        DisableSequence
+                'MultiMedia2 Mixer AFE_PCM_TX':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 1
-	PlaybackPCM 1
+        # ALSA PCMs
+        CapturePCM 1
+        PlaybackPCM 1
 
 EndSection
 
@@ -1892,161 +1892,161 @@ EndSection
 SectionUseCase."Voice2" {
 Comment "Voice2 use case"
 SectionVerb
-	Name "Voice2"
+        Name "Voice2"
 
-	EnableSequence
-		'SLIM_0_RX_Voice Mixer Voice2':1:1
-		'Voice2_Tx Mixer SLIM_0_TX_Voice2':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIM_0_RX_Voice Mixer Voice2':1:0
-		'Voice2_Tx Mixer SLIM_0_TX_Voice2':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 14
-	CapturePCM 14
-
-EndSection
-
-SectionVerb
-	Name "Voice2HDMI"
-
-	EnableSequence
-	EndSequence
-
-	DisableSequence
-		'HDMI_RX_Voice Mixer Voice2':1:0
-		'Voice2_Tx Mixer SLIM_0_TX_Voice2':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 14
-	CapturePCM 14
-
-EndSection
-
-SectionVerb
-	Name "Voice2HDMI Tx"
-
-	EnableSequence
-		'HDMI_RX_Voice Mixer Voice2':1:1
-		'Voice2_Tx Mixer SLIM_0_TX_Voice2':1:1
-	EndSequence
-
-	DisableSequence
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 14
-	CapturePCM 14
-
-EndSection
-
-SectionVerb
-	Name "Voice2BT SCO Rx"
-
-	EnableSequence
-	EndSequence
-
-	DisableSequence
-		'Internal BTSCO SampleRate':1:8000
-		'INTERNAL_BT_SCO_RX_Voice Mixer Voice2':1:0
-		'Voice2_Tx Mixer INTERNAL_BT_SCO_TX_Voice2':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 14
-	CapturePCM 14
-
-EndSection
-
-SectionVerb
-	Name "Voice2BT SCO Tx"
-
-	EnableSequence
-		'Internal BTSCO SampleRate':1:8000
-		'INTERNAL_BT_SCO_RX_Voice Mixer Voice2':1:1
-		'Voice2_Tx Mixer INTERNAL_BT_SCO_TX_Voice2':1:1
-	EndSequence
-
-	DisableSequence
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 14
-	CapturePCM 14
-
-EndSection
-
-SectionVerb
-	Name "Voice2BT SCO WB Rx"
-
-	EnableSequence
-	EndSequence
-
-	DisableSequence
-		'Internal BTSCO SampleRate':1:8000
-		'INTERNAL_BT_SCO_RX_Voice Mixer Voice2':1:0
-		'Voice2_Tx Mixer INTERNAL_BT_SCO_TX_Voice2':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 14
-	CapturePCM 14
-
-EndSection
-
-SectionVerb
-	Name "Voice2BT SCO WB Tx"
-
-	EnableSequence
-		'Internal BTSCO SampleRate':1:16000
-		'INTERNAL_BT_SCO_RX_Voice Mixer Voice2':1:1
-		'Voice2_Tx Mixer INTERNAL_BT_SCO_TX_Voice2':1:1
+        EnableSequence
+                'SLIM_0_RX_Voice Mixer Voice2':1:1
+                'Voice2_Tx Mixer SLIM_0_TX_Voice2':1:1
         EndSequence
 
-	DisableSequence
-	EndSequence
+        DisableSequence
+                'SLIM_0_RX_Voice Mixer Voice2':1:0
+                'Voice2_Tx Mixer SLIM_0_TX_Voice2':1:0
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 14
-	CapturePCM 14
-
-EndSection
-
-SectionVerb
-	Name "Voice2PROXY Rx"
-
-	EnableSequence
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX_Voice Mixer Voice2':1:0
-		'Voice2_Tx Mixer AFE_PCM_TX_Voice2':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 14
-	CapturePCM 14
+        # ALSA PCMs
+        PlaybackPCM 14
+        CapturePCM 14
 
 EndSection
 
 SectionVerb
-	Name "Voice2PROXY Tx"
+        Name "Voice2HDMI"
 
-	EnableSequence
-		'AFE_PCM_RX_Voice Mixer Voice2':1:1
-		'Voice2_Tx Mixer AFE_PCM_TX_Voice2':1:1
-	EndSequence
+        EnableSequence
+        EndSequence
 
-	DisableSequence
-	EndSequence
+        DisableSequence
+                'HDMI_RX_Voice Mixer Voice2':1:0
+                'Voice2_Tx Mixer SLIM_0_TX_Voice2':1:0
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 14
-	CapturePCM 14
+        # ALSA PCMs
+        PlaybackPCM 14
+        CapturePCM 14
+
+EndSection
+
+SectionVerb
+        Name "Voice2HDMI Tx"
+
+        EnableSequence
+                'HDMI_RX_Voice Mixer Voice2':1:1
+                'Voice2_Tx Mixer SLIM_0_TX_Voice2':1:1
+        EndSequence
+
+        DisableSequence
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 14
+        CapturePCM 14
+
+EndSection
+
+SectionVerb
+        Name "Voice2BT SCO Rx"
+
+        EnableSequence
+        EndSequence
+
+        DisableSequence
+                'Internal BTSCO SampleRate':1:8000
+                'INTERNAL_BT_SCO_RX_Voice Mixer Voice2':1:0
+                'Voice2_Tx Mixer INTERNAL_BT_SCO_TX_Voice2':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 14
+        CapturePCM 14
+
+EndSection
+
+SectionVerb
+        Name "Voice2BT SCO Tx"
+
+        EnableSequence
+                'Internal BTSCO SampleRate':1:8000
+                'INTERNAL_BT_SCO_RX_Voice Mixer Voice2':1:1
+                'Voice2_Tx Mixer INTERNAL_BT_SCO_TX_Voice2':1:1
+        EndSequence
+
+        DisableSequence
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 14
+        CapturePCM 14
+
+EndSection
+
+SectionVerb
+        Name "Voice2BT SCO WB Rx"
+
+        EnableSequence
+        EndSequence
+
+        DisableSequence
+                'Internal BTSCO SampleRate':1:8000
+                'INTERNAL_BT_SCO_RX_Voice Mixer Voice2':1:0
+                'Voice2_Tx Mixer INTERNAL_BT_SCO_TX_Voice2':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 14
+        CapturePCM 14
+
+EndSection
+
+SectionVerb
+        Name "Voice2BT SCO WB Tx"
+
+        EnableSequence
+                'Internal BTSCO SampleRate':1:16000
+                'INTERNAL_BT_SCO_RX_Voice Mixer Voice2':1:1
+                'Voice2_Tx Mixer INTERNAL_BT_SCO_TX_Voice2':1:1
+        EndSequence
+
+        DisableSequence
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 14
+        CapturePCM 14
+
+EndSection
+
+SectionVerb
+        Name "Voice2PROXY Rx"
+
+        EnableSequence
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX_Voice Mixer Voice2':1:0
+                'Voice2_Tx Mixer AFE_PCM_TX_Voice2':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 14
+        CapturePCM 14
+
+EndSection
+
+SectionVerb
+        Name "Voice2PROXY Tx"
+
+        EnableSequence
+                'AFE_PCM_RX_Voice Mixer Voice2':1:1
+                'Voice2_Tx Mixer AFE_PCM_TX_Voice2':1:1
+        EndSequence
+
+        DisableSequence
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 14
+        CapturePCM 14
 
 EndSection
 }
@@ -2112,7 +2112,7 @@ SectionVerb
 	EndSequence
 
 	DisableSequence
-		'Internal BTSCO SampleRate':1:8000
+                'Internal BTSCO SampleRate':1:8000
 		'INTERNAL_BT_SCO_RX_Voice Mixer CSVoice':1:0
 		'Voice_Tx Mixer INTERNAL_BT_SCO_TX_Voice':1:0
 	EndSequence
@@ -2127,7 +2127,7 @@ SectionVerb
 	Name "Voice CallBT SCO Tx"
 
 	EnableSequence
-		'Internal BTSCO SampleRate':1:8000
+                'Internal BTSCO SampleRate':1:8000
 		'INTERNAL_BT_SCO_RX_Voice Mixer CSVoice':1:1
 		'Voice_Tx Mixer INTERNAL_BT_SCO_TX_Voice':1:1
 	EndSequence
@@ -2148,7 +2148,7 @@ SectionVerb
 	EndSequence
 
 	DisableSequence
-		'Internal BTSCO SampleRate':1:8000
+                'Internal BTSCO SampleRate':1:8000
 		'INTERNAL_BT_SCO_RX_Voice Mixer CSVoice':1:0
 		'Voice_Tx Mixer INTERNAL_BT_SCO_TX_Voice':1:0
 	EndSequence
@@ -2163,7 +2163,7 @@ SectionVerb
 	Name "Voice CallBT SCO WB Tx"
 
 	EnableSequence
-		'Internal BTSCO SampleRate':1:16000
+                'Internal BTSCO SampleRate':1:16000
 		'INTERNAL_BT_SCO_RX_Voice Mixer CSVoice':1:1
 		'Voice_Tx Mixer INTERNAL_BT_SCO_TX_Voice':1:1
 	EndSequence
@@ -2290,7 +2290,7 @@ SectionVerb
 	EndSequence
 
 	DisableSequence
-		'Internal BTSCO SampleRate':1:8000
+                'Internal BTSCO SampleRate':1:8000
 		'INTERNAL_BT_SCO_RX_Voice Mixer Voip':1:0
 		'Voip_Tx Mixer INTERNAL_BT_SCO_TX_Voip':1:0
 	EndSequence
@@ -2305,9 +2305,9 @@ SectionVerb
 	Name "Voice Call IPBT SCO Tx"
 
 	EnableSequence
-		'Internal BTSCO SampleRate':1:8000
-		'INTERNAL_BT_SCO_RX_Voice Mixer Voip':1:1
-		'Voip_Tx Mixer INTERNAL_BT_SCO_TX_Voip':1:1
+                'Internal BTSCO SampleRate':1:8000
+                'INTERNAL_BT_SCO_RX_Voice Mixer Voip':1:1
+                'Voip_Tx Mixer INTERNAL_BT_SCO_TX_Voip':1:1
 	EndSequence
 
 	DisableSequence
@@ -2320,38 +2320,38 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "Voice Call IPBT SCO WB Rx"
+        Name "Voice Call IPBT SCO WB Rx"
 
-	EnableSequence
-	EndSequence
+        EnableSequence
+        EndSequence
 
-	DisableSequence
-		'Internal BTSCO SampleRate':1:8000
-		'INTERNAL_BT_SCO_RX_Voice Mixer Voip':1:0
-		'Voip_Tx Mixer INTERNAL_BT_SCO_TX_Voip':1:0
-	EndSequence
+        DisableSequence
+                'Internal BTSCO SampleRate':1:8000
+                'INTERNAL_BT_SCO_RX_Voice Mixer Voip':1:0
+                'Voip_Tx Mixer INTERNAL_BT_SCO_TX_Voip':1:0
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 3
-	CapturePCM 3
+        # ALSA PCMs
+        PlaybackPCM 3
+        CapturePCM 3
 
 EndSection
 
 SectionVerb
-	Name "Voice Call IPBT SCO WB Tx"
+        Name "Voice Call IPBT SCO WB Tx"
 
-	EnableSequence
-		'Internal BTSCO SampleRate':1:16000
-		'INTERNAL_BT_SCO_RX_Voice Mixer Voip':1:1
-		'Voip_Tx Mixer INTERNAL_BT_SCO_TX_Voip':1:1
-	EndSequence
+        EnableSequence
+                'Internal BTSCO SampleRate':1:16000
+                'INTERNAL_BT_SCO_RX_Voice Mixer Voip':1:1
+                'Voip_Tx Mixer INTERNAL_BT_SCO_TX_Voip':1:1
+        EndSequence
 
-	DisableSequence
-	EndSequence
+        DisableSequence
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 3
-	CapturePCM 3
+        # ALSA PCMs
+        PlaybackPCM 3
+        CapturePCM 3
 
 EndSection
 
@@ -2587,6 +2587,25 @@ SectionVerb
 
 EndSection
 }
+SectionUseCase."UL REC" {
+Comment "Voice Uplink Recording use case"
+SectionVerb
+	Name "UL REC"
+
+	EnableSequence
+		'MultiMedia1 Mixer VOC_REC_UL':1:1
+	EndSequence
+
+	DisableSequence
+		'MultiMedia1 Mixer VOC_REC_UL':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 0
+	CapturePCM 0
+
+EndSection
+}
 SectionUseCase."DL REC" {
 Comment "Voice Downlink Recording use case"
 SectionVerb
@@ -2624,6 +2643,44 @@ SectionVerb
 	# ALSA PCMs
 	PlaybackPCM 0
 	CapturePCM 0
+
+EndSection
+}
+SectionUseCase."Incall Delivery" {
+Comment "Voice farend playback use case"
+SectionVerb
+	Name "Incall Delivery"
+
+	EnableSequence
+		'Incall_Music Audio Mixer MultiMedia2':1:1
+	EndSequence
+
+	DisableSequence
+		'Incall_Music Audio Mixer MultiMedia2':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 1
+	CapturePCM 1
+
+EndSection
+}
+SectionUseCase."Incall Delivery2" {
+Comment "Voice farend playback2 use case"
+SectionVerb
+	Name "Incall Delivery2"
+
+	EnableSequence
+		'Incall_Music_2 Audio Mixer MultiMedia9':1:1
+	EndSequence
+
+	DisableSequence
+		'Incall_Music_2 Audio Mixer MultiMedia9':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 16
+	CapturePCM 16
 
 EndSection
 }
@@ -2715,18 +2772,18 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFi TunnelHDMI SPDIF"
+        Name "HiFi TunnelHDMI SPDIF"
 
-	EnableSequence
-		'HDMI Mixer MultiMedia4':1:1
-	EndSequence
+        EnableSequence
+                'HDMI Mixer MultiMedia4':1:1
+        EndSequence
 
-	DisableSequence
-		'HDMI Mixer MultiMedia4':1:0
-	EndSequence
+        DisableSequence
+                'HDMI Mixer MultiMedia4':1:0
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 9
+        # ALSA PCMs
+        PlaybackPCM 9
 
 EndSection
 
@@ -2763,62 +2820,62 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFi TunnelPROXY Rx"
+        Name "HiFi TunnelPROXY Rx"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 9
-
-EndSection
-
-SectionVerb
-	Name "HiFi TunnelPROXY Tx"
-
-	EnableSequence
-	EndSequence
-
-	DisableSequence
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
+        # ALSA PCMs
+        PlaybackPCM 9
 
 EndSection
 
 SectionVerb
-	Name "HiFi TunnelUSB PROXY Rx"
+        Name "HiFi TunnelPROXY Tx"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
+        EnableSequence
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
+        DisableSequence
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 9
+        # ALSA PCMs
+        PlaybackPCM 9
 
 EndSection
 
 SectionVerb
-	Name "HiFi TunnelUSB PROXY Tx"
+        Name "HiFi TunnelUSB PROXY Rx"
 
-	EnableSequence
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
+        EndSequence
 
-	DisableSequence
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 9
+        # ALSA PCMs
+        PlaybackPCM 9
+
+EndSection
+
+SectionVerb
+        Name "HiFi TunnelUSB PROXY Tx"
+
+        EnableSequence
+        EndSequence
+
+        DisableSequence
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 9
 
 EndSection
 
@@ -2968,146 +3025,146 @@ EndSection
 }
 
 SectionVerb
-	Name "HiFi TunnelPROXY Rx Speaker"
+        Name "HiFi TunnelPROXY Rx Speaker"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 9
-
-EndSection
-
-SectionVerb
-	Name "HiFi TunnelPROXY Rx Earpiece"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
+        # ALSA PCMs
+        PlaybackPCM 9
 
 EndSection
 
 SectionVerb
-	Name "HiFi TunnelPROXY Rx Headphones"
+        Name "HiFi TunnelPROXY Rx Earpiece"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 9
-
-EndSection
-
-SectionVerb
-	Name "HiFi TunnelPROXY Rx ANC Headset"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
+        # ALSA PCMs
+        PlaybackPCM 9
 
 EndSection
 
 SectionVerb
-	Name "HiFi TunnelPROXY Rx Speaker Headset"
+        Name "HiFi TunnelPROXY Rx Headphones"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 9
-
-EndSection
-
-SectionVerb
-	Name "HiFi TunnelPROXY Rx Speaker ANC Headset"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
+        # ALSA PCMs
+        PlaybackPCM 9
 
 EndSection
 
 SectionVerb
-	Name "HiFi TunnelUSB PROXY Rx Speaker"
+        Name "HiFi TunnelPROXY Rx ANC Headset"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 9
+        # ALSA PCMs
+        PlaybackPCM 9
 
 EndSection
 
 SectionVerb
-	Name "HiFi TunnelUSB PROXY Rx Earpiece"
+        Name "HiFi TunnelPROXY Rx Speaker Headset"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 9
+        # ALSA PCMs
+        PlaybackPCM 9
+
+EndSection
+
+SectionVerb
+        Name "HiFi TunnelPROXY Rx Speaker ANC Headset"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 9
+
+EndSection
+
+SectionVerb
+        Name "HiFi TunnelUSB PROXY Rx Speaker"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 9
+
+EndSection
+
+SectionVerb
+        Name "HiFi TunnelUSB PROXY Rx Earpiece"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 9
 
 EndSection
 }
@@ -3180,18 +3237,18 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFi Tunnel2HDMI SPDIF"
+        Name "HiFi Tunnel2HDMI SPDIF"
 
-	EnableSequence
-		'HDMI Mixer MultiMedia7':1:1
-	EndSequence
+        EnableSequence
+                'HDMI Mixer MultiMedia7':1:1
+        EndSequence
 
-	DisableSequence
-		'HDMI Mixer MultiMedia7':1:0
-	EndSequence
+        DisableSequence
+                'HDMI Mixer MultiMedia7':1:0
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 16
+        # ALSA PCMs
+        PlaybackPCM 16
 
 EndSection
 
@@ -3228,32 +3285,32 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFi Tunnel2PROXY Rx"
+        Name "HiFi Tunnel2PROXY Rx"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia7':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia7':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia7':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia7':1:0
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 16
+        # ALSA PCMs
+        PlaybackPCM 16
 
 EndSection
 
 SectionVerb
-	Name "HiFi Tunnel2PROXY Tx"
+        Name "HiFi Tunnel2PROXY Tx"
 
-	EnableSequence
-	EndSequence
+        EnableSequence
+        EndSequence
 
-	DisableSequence
-	EndSequence
+        DisableSequence
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 16
+        # ALSA PCMs
+        PlaybackPCM 16
 
 EndSection
 
@@ -3368,146 +3425,146 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFi Tunnel2PROXY Rx Speaker"
+        Name "HiFi Tunnel2PROXY Rx Speaker"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia7':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia7':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia7':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia7':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:0
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 16
-
-EndSection
-
-SectionVerb
-	Name "HiFi Tunnel2PROXY Rx Earpiece"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia7':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia7':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 16
+        # ALSA PCMs
+        PlaybackPCM 16
 
 EndSection
 
 SectionVerb
-	Name "HiFi Tunnel2PROXY Rx Headphones"
+        Name "HiFi Tunnel2PROXY Rx Earpiece"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia7':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia7':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia7':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia7':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:0
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 16
-
-EndSection
-
-SectionVerb
-	Name "HiFi Tunnel2PROXY Rx ANC Headset"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia7':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia7':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 16
+        # ALSA PCMs
+        PlaybackPCM 16
 
 EndSection
 
 SectionVerb
-	Name "HiFi Tunnel2PROXY Rx Speaker Headset"
+        Name "HiFi Tunnel2PROXY Rx Headphones"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia7':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia7':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia7':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia7':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:0
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 16
-
-EndSection
-
-SectionVerb
-	Name "HiFi Tunnel2PROXY Rx Speaker ANC Headset"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia7':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:1
-	EndSequence
-
-	DisableSequence
-			'AFE_PCM_RX Audio Mixer MultiMedia7':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 16
+        # ALSA PCMs
+        PlaybackPCM 16
 
 EndSection
 
 SectionVerb
-	Name "HiFi Tunnel2USB PROXY Rx Speaker"
+        Name "HiFi Tunnel2PROXY Rx ANC Headset"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia7':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia7':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia7':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia7':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:0
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 16
+        # ALSA PCMs
+        PlaybackPCM 16
 
 EndSection
 
 SectionVerb
-	Name "HiFi Tunnel2USB PROXY Rx Earpiece"
+        Name "HiFi Tunnel2PROXY Rx Speaker Headset"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia7':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia7':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia7':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia7':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:0
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 16
+        # ALSA PCMs
+        PlaybackPCM 16
+
+EndSection
+
+SectionVerb
+        Name "HiFi Tunnel2PROXY Rx Speaker ANC Headset"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia7':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia7':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 16
+
+EndSection
+
+SectionVerb
+        Name "HiFi Tunnel2USB PROXY Rx Speaker"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia7':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia7':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 16
+
+EndSection
+
+SectionVerb
+        Name "HiFi Tunnel2USB PROXY Rx Earpiece"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia7':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia7':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 16
 
 EndSection
 }
@@ -3573,7 +3630,7 @@ SectionVerb
 	EndSequence
 
 	DisableSequence
-		'Internal BTSCO SampleRate':1:8000
+                'Internal BTSCO SampleRate':1:8000
 		'INTERNAL_BT_SCO_RX_Voice Mixer VoLTE':1:0
 		'VoLTE_Tx Mixer INTERNAL_BT_SCO_TX_VoLTE':1:0
 	EndSequence
@@ -3588,7 +3645,7 @@ SectionVerb
 	Name "VoLTEBT SCO Tx"
 
 	EnableSequence
-		'Internal BTSCO SampleRate':1:8000
+                'Internal BTSCO SampleRate':1:8000
 		'INTERNAL_BT_SCO_RX_Voice Mixer VoLTE':1:1
 		'VoLTE_Tx Mixer INTERNAL_BT_SCO_TX_VoLTE':1:1
 	EndSequence
@@ -3609,7 +3666,7 @@ SectionVerb
 	EndSequence
 
 	DisableSequence
-		'Internal BTSCO SampleRate':1:8000
+                'Internal BTSCO SampleRate':1:8000
 		'INTERNAL_BT_SCO_RX_Voice Mixer VoLTE':1:0
 		'VoLTE_Tx Mixer INTERNAL_BT_SCO_TX_VoLTE':1:0
 	EndSequence
@@ -3624,7 +3681,7 @@ SectionVerb
 	Name "VoLTEBT SCO WB Tx"
 
 	EnableSequence
-		'Internal BTSCO SampleRate':1:16000
+                'Internal BTSCO SampleRate':1:16000
 		'INTERNAL_BT_SCO_RX_Voice Mixer VoLTE':1:1
 		'VoLTE_Tx Mixer INTERNAL_BT_SCO_TX_VoLTE':1:1
 	EndSequence
@@ -3642,70 +3699,70 @@ SectionUseCase."ADSP testfwk" {
 Comment "ADSP testfwk use case"
 
 SectionVerb
-	Name "ADSP testfwk"
+        Name "ADSP testfwk"
 
-	EnableSequence
+        EnableSequence
 		'SLIMBUS_DL_HL Switch':1:1
-	EndSequence
+        EndSequence
 
-	DisableSequence
+        DisableSequence
 		'SLIMBUS_DL_HL Switch':1:0
-	EndSequence
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 5
-	CapturePCM 5
+        # ALSA PCMs
+        PlaybackPCM 5
+        CapturePCM 5
 
 EndSection
 
 SectionVerb
-	Name "ADSP testfwk1"
+        Name "ADSP testfwk1"
 
-	EnableSequence
+        EnableSequence
 		'SLIMBUS1_DL_HL Switch':1:1
-	EndSequence
+        EndSequence
 
-	DisableSequence
+        DisableSequence
 		'SLIMBUS1_DL_HL Switch':1:0
-	EndSequence
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 11
-	CapturePCM 11
+        # ALSA PCMs
+        PlaybackPCM 11
+        CapturePCM 11
 
 EndSection
 
 SectionVerb
-	Name "ADSP testfwk3"
+        Name "ADSP testfwk3"
 
-	EnableSequence
+        EnableSequence
 		'SLIMBUS3_DL_HL Switch':1:1
-	EndSequence
+        EndSequence
 
-	DisableSequence
+        DisableSequence
 		'SLIMBUS3_DL_HL Switch':1:0
-	EndSequence
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 12
-	CapturePCM 12
+        # ALSA PCMs
+        PlaybackPCM 12
+        CapturePCM 12
 
 EndSection
 
 SectionVerb
-	Name "ADSP testfwk4"
+        Name "ADSP testfwk4"
 
-	EnableSequence
+        EnableSequence
 		'SLIMBUS4_DL_HL Switch':1:1
-	EndSequence
+        EndSequence
 
-	DisableSequence
+        DisableSequence
 		'SLIMBUS4_DL_HL Switch':1:0
-	EndSequence
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 13
-	CapturePCM 13
+        # ALSA PCMs
+        PlaybackPCM 13
+        CapturePCM 13
 
 EndSection
 }
@@ -3779,18 +3836,18 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFi LowlatencyHDMI SPDIF"
+        Name "HiFi LowlatencyHDMI SPDIF"
 
-	EnableSequence
-		'HDMI Mixer MultiMedia5':1:1
-	EndSequence
+        EnableSequence
+                'HDMI Mixer MultiMedia5':1:1
+        EndSequence
 
-	DisableSequence
-		'HDMI Mixer MultiMedia4':1:0
-	EndSequence
+        DisableSequence
+                'HDMI Mixer MultiMedia4':1:0
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 15
+        # ALSA PCMs
+        PlaybackPCM 15
 
 EndSection
 
@@ -3827,62 +3884,62 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFi LowlatencyPROXY Rx"
+        Name "HiFi LowlatencyPROXY Rx"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 15
-
-EndSection
-
-SectionVerb
-	Name "HiFi LowlatencyUSB PROXY Rx"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 15
+        # ALSA PCMs
+        PlaybackPCM 15
 
 EndSection
 
 SectionVerb
-	Name "HiFi LowlatencyPROXY Tx"
+        Name "HiFi LowlatencyUSB PROXY Rx"
 
-	EnableSequence
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
+        EndSequence
 
-	DisableSequence
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 15
+        # ALSA PCMs
+        PlaybackPCM 15
 
 EndSection
 
 SectionVerb
-	Name "HiFi LowlatencyUSB PROXY Tx"
+        Name "HiFi LowlatencyPROXY Tx"
 
-	EnableSequence
-	EndSequence
+        EnableSequence
+        EndSequence
 
-	DisableSequence
-	EndSequence
+        DisableSequence
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 15
+        # ALSA PCMs
+        PlaybackPCM 15
+
+EndSection
+
+SectionVerb
+        Name "HiFi LowlatencyUSB PROXY Tx"
+
+        EnableSequence
+        EndSequence
+
+        DisableSequence
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 15
 
 EndSection
 
@@ -4000,108 +4057,109 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFi LowlatencyPROXY Rx Speaker"
+        Name "HiFi LowlatencyPROXY Rx Speaker"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 15
-
-EndSection
-SectionVerb
-	Name "HiFi LowlatencyPROXY Rx Earpiece"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 15
+        # ALSA PCMs
+        PlaybackPCM 15
 
 EndSection
 SectionVerb
-	Name "HiFi LowlatencyPROXY Rx Headphones"
+        Name "HiFi LowlatencyPROXY Rx Earpiece"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 15
-
-EndSection
-SectionVerb
-	Name "HiFi LowlatencyPROXY Rx ANC Headset"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 15
+        # ALSA PCMs
+        PlaybackPCM 15
 
 EndSection
 SectionVerb
-	Name "HiFi LowlatencyPROXY Rx Speaker Headset"
+        Name "HiFi LowlatencyPROXY Rx Headphones"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 15
+        # ALSA PCMs
+        PlaybackPCM 15
 
 EndSection
 SectionVerb
-	Name "HiFi LowlatencyPROXY Rx Speaker ANC Headset"
+        Name "HiFi LowlatencyPROXY Rx ANC Headset"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 15
+        # ALSA PCMs
+        PlaybackPCM 15
+
+EndSection
+SectionVerb
+        Name "HiFi LowlatencyPROXY Rx Speaker Headset"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 15
+
+EndSection
+SectionVerb
+        Name "HiFi LowlatencyPROXY Rx Speaker ANC Headset"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 15
 
 EndSection
 }
+
 SectionUseCase."QCHAT" {
 Comment "QCHAT use case"
 SectionVerb
@@ -4267,7 +4325,8 @@ SectionDevice
 		'RX1 MIX2 INP1':0:IIR1
 		'CLASS_H_DSM MUX':0:RX_HPHL
 		'RX1 Digital Volume':1:68
-		'DAC1 Switch':1:1
+		'EAR PA Gain':0:POS_6_DB
+                'DAC1 Switch':1:1
 	EndSequence
 
 	DisableSequence
@@ -4332,6 +4391,7 @@ SectionDevice
 		'RX1 MIX1 INP1':0:RX1
 		'CLASS_H_DSM MUX':0:RX_HPHL
 		'DAC1 Switch':1:1
+
 		'RX1 Digital Volume':1:65
 		'ANC Slot':1:6
 		'ANC1 MUX':0:ADC3
@@ -4507,11 +4567,14 @@ SectionDevice
 		'HPHR Volume':1:100
 		'RX1 Digital Volume':1:68
 		'RX2 Digital Volume':1:68
-		'RX4 MIX1 INP1':0:RX1
-		'RX4 MIX1 INP2':0:RX2
+		'RX3 MIX1 INP1':0:RX1
+		'RX4 MIX1 INP1':0:RX2
+		'RX3 Digital Volume':1:68
 		'RX4 Digital Volume':1:68
-                'SPK DAC Switch':1:1
-		'COMP0 Switch':1:1
+        'RDAC5 MUX':0:DEM4
+		'COMP2 Switch':1:1
+		'LINEOUT1 Volume':1:100
+		'LINEOUT2 Volume':1:100
 	EndSequence
 
 	DisableSequence
@@ -4522,10 +4585,17 @@ SectionDevice
 		'CLASS_H_DSM MUX':0:ZERO
 		'HPHL DAC Switch':1:0
 		'COMP1 Switch':1:0
+		'RX3 MIX1 INP1':0:ZERO
 		'RX4 MIX1 INP1':0:ZERO
-		'RX4 MIX1 INP2':0:ZERO
-		'SPK DAC Switch':1:0
 		'COMP0 Switch':1:0
+		'SLIM RX1 MUX':0:ZERO
+		'SLIM RX2 MUX':0:ZERO
+		'RDAC5 MUX':0:DEM3_INV
+		'COMP2 Switch':1:0
+		'RX3 Digital Volume':1:0
+		'RX4 Digital Volume':1:0
+		'LINEOUT1 Volume':1:0
+		'LINEOUT2 Volume':1:0
 	EndSequence
 
 	ACDBID	10:1
@@ -4592,16 +4662,16 @@ SectionDevice
 		'RX2 MIX1 INP1':0:RX2
 		'CLASS_H_DSM MUX':0:RX_HPHL
 		'HPHL DAC Switch':1:1
-		'HPHL Volume':1:100
-		'HPHR Volume':1:100
+		'HPHL Volume':1:60
+		'HPHR Volume':1:60
 		'RX1 Digital Volume':1:68
 		'RX2 Digital Volume':1:68
 		'ANC Slot':1:1
 		'ANC1 FB MUX':0:EAR_HPH_L
 		'ANC1 MUX':0:ADC4
 		'ANC2 MUX':0:ADC5
-		'ADC5 Volume':1:65
-		'ADC4 Volume':1:65
+		'ADC5 Volume':1:40
+		'ADC4 Volume':1:40
 	EndSequence
 
 	DisableSequence
@@ -4792,18 +4862,18 @@ SectionDevice
 		'AIF1_CAP Mixer SLIM TX2':1:1
 		'AIF1_CAP Mixer SLIM TX3':1:1
 		'AIF1_CAP Mixer SLIM TX4':1:1
-		'SLIM_0_TX Channels':0:Four
-		'SLIM TX1 MUX':0:DEC1
-		'DEC1 MUX':0:DMIC1
+                'SLIM_0_TX Channels':0:Four
+                'SLIM TX1 MUX':0:DEC1
+                'DEC1 MUX':0:DMIC1
 		'DEC1 Volume':1:68
-		'SLIM TX2 MUX':0:DEC2
-		'DEC2 MUX':0:DMIC2
+                'SLIM TX2 MUX':0:DEC2
+                'DEC2 MUX':0:DMIC2
 		'DEC2 Volume':1:68
-		'SLIM TX3 MUX':0:DEC3
-		'DEC3 MUX':0:DMIC3
+                'SLIM TX3 MUX':0:DEC3
+                'DEC3 MUX':0:DMIC3
 		'DEC3 Volume':1:68
-		'SLIM TX4 MUX':0:DEC4
-		'DEC4 MUX':0:DMIC4
+                'SLIM TX4 MUX':0:DEC4
+                'DEC4 MUX':0:DMIC4
 		'DEC4 Volume':1:68
         EndSequence
 
@@ -4812,14 +4882,14 @@ SectionDevice
 		'AIF1_CAP Mixer SLIM TX2':1:0
 		'AIF1_CAP Mixer SLIM TX3':1:0
 		'AIF1_CAP Mixer SLIM TX4':1:0
-		'SLIM TX1 MUX':0:ZERO
-		'DEC1 MUX':0:ZERO
-		'SLIM TX2 MUX':0:ZERO
-		'DEC2 MUX':0:ZERO
-		'SLIM TX3 MUX':0:ZERO
-		'DEC3 MUX':0:ZERO
-		'SLIM TX4 MUX':0:ZERO
-		'DEC4 MUX':0:ZERO
+                'SLIM TX1 MUX':0:ZERO
+                'DEC1 MUX':0:ZERO
+                'SLIM TX2 MUX':0:ZERO
+                'DEC2 MUX':0:ZERO
+                'SLIM TX3 MUX':0:ZERO
+                'DEC3 MUX':0:ZERO
+                'SLIM TX4 MUX':0:ZERO
+                'DEC4 MUX':0:ZERO
         EndSequence
 
         ACDBID  19:2
@@ -4955,16 +5025,16 @@ SectionDevice
 		'RX2 MIX2 INP1':0:IIR1
 		'CLASS_H_DSM MUX':0:RX_HPHL
 		'HPHL DAC Switch':1:1
-		'HPHL Volume':1:100
-		'HPHR Volume':1:100
+		'HPHL Volume':1:60
+		'HPHR Volume':1:60
 		'RX1 Digital Volume':1:68
 		'RX2 Digital Volume':1:68
 		'ANC Slot':1:1
 		'ANC1 MUX':0:ADC4
 		'ANC2 MUX':0:ADC5
 		'ANC1 FB MUX':0:EAR_HPH_L
-		'ADC5 Volume':1:65
-		'ADC4 Volume':1:65
+		'ADC5 Volume':1:40
+		'ADC4 Volume':1:40
 	EndSequence
 
 	DisableSequence
@@ -5426,18 +5496,29 @@ SectionDevice
 
 	EnableSequence
 		'SLIM RX1 MUX':0:AIF1_PB
-		'SLIM_0_RX Channels':0:One
-		'RX4 MIX1 INP1':0:RX1
+		'SLIM RX2 MUX':0:AIF1_PB
+		'SLIM_0_RX Channels':0:Two
+		'RX3 MIX1 INP1':0:RX1
+		'RX4 MIX1 INP1':0:RX2
+		'RDAC5 MUX':0:DEM4
+		'COMP2 Switch':1:1
+		'RX3 Digital Volume':1:68
 		'RX4 Digital Volume':1:68
-		'SPK DAC Switch':1:1
-		'COMP0 Switch':1:1
+		'LINEOUT1 Volume':1:100
+		'LINEOUT2 Volume':1:100
 	EndSequence
 
 	DisableSequence
 		'SLIM RX1 MUX':0:ZERO
+		'SLIM RX2 MUX':0:ZERO
+		'RX3 MIX1 INP1':0:ZERO
 		'RX4 MIX1 INP1':0:ZERO
-		'SPK DAC Switch':1:0
-		'COMP0 Switch':1:0
+		'RDAC5 MUX':0:DEM3_INV
+		'COMP2 Switch':1:0
+		'RX3 Digital Volume':1:0
+		'RX4 Digital Volume':1:0
+		'LINEOUT1 Volume':1:0
+		'LINEOUT2 Volume':1:0
 	EndSequence
 
 	ACDBID  18:1
@@ -5796,16 +5877,16 @@ SectionDevice
 		'RX2 MIX1 INP1':0:RX2
 		'CLASS_H_DSM MUX':0:RX_HPHL
 		'HPHL DAC Switch':1:1
-		'HPHL Volume':1:100
-		'HPHR Volume':1:100
+		'HPHL Volume':1:60
+		'HPHR Volume':1:60
 		'RX1 Digital Volume':1:68
 		'RX2 Digital Volume':1:68
 		'ANC Slot':1:1
 		'ANC1 MUX':0:ADC4
 		'ANC2 MUX':0:ADC5
 		'ANC1 FB MUX':0:EAR_HPH_L
-		'ADC5 Volume':1:65
-		'ADC4 Volume':1:65
+		'ADC5 Volume':1:40
+		'ADC4 Volume':1:40
 	EndSequence
 
 	DisableSequence
@@ -5876,18 +5957,29 @@ SectionDevice
 
 	EnableSequence
 		'SLIM RX1 MUX':0:AIF1_PB
-		'SLIM_0_RX Channels':0:One
-		'RX4 MIX1 INP1':0:RX1
+		'SLIM RX2 MUX':0:AIF1_PB
+		'SLIM_0_RX Channels':0:Two
+		'RX3 MIX1 INP1':0:RX1
+		'RX4 MIX1 INP1':0:RX2
+		'RDAC5 MUX':0:DEM4
+		'COMP2 Switch':1:1
+		'RX3 Digital Volume':1:68
 		'RX4 Digital Volume':1:68
-		'SPK DAC Switch':1:1
-		'COMP0 Switch':1:1
+		'LINEOUT1 Volume':1:100
+		'LINEOUT2 Volume':1:100
 	EndSequence
 
 	DisableSequence
 		'SLIM RX1 MUX':0:ZERO
+		'SLIM RX2 MUX':0:ZERO
+		'RX3 MIX1 INP1':0:ZERO
 		'RX4 MIX1 INP1':0:ZERO
-		'SPK DAC Switch':1:0
-		'COMP0 Switch':1:0
+		'RDAC5 MUX':0:DEM3_INV
+		'COMP2 Switch':1:0
+		'RX3 Digital Volume':1:0
+		'RX4 Digital Volume':1:0
+		'LINEOUT1 Volume':1:0
+		'LINEOUT2 Volume':1:0
 	EndSequence
 
 	ACDBID	15:1
@@ -6076,16 +6168,16 @@ SectionDevice
 		'CLASS_H_DSM MUX':0:RX_HPHL
 		'HPHL DAC Switch':1:1
 		'HPHR DAC Switch':1:1
-		'HPHL Volume':1:100
-		'HPHR Volume':1:100
+		'HPHL Volume':1:60
+		'HPHR Volume':1:60
 		'RX1 Digital Volume':1:68
 		'RX2 Digital Volume':1:68
 		'ANC Slot':1:1
 		'ANC1 MUX':0:ADC4
 		'ANC2 MUX':0:ADC5
 		'ANC1 FB MUX':0:EAR_HPH_L
-		'ADC5 Volume':1:65
-		'ADC4 Volume':1:65
+		'ADC5 Volume':1:40
+		'ADC4 Volume':1:40
 	EndSequence
 
 	DisableSequence
@@ -6116,18 +6208,29 @@ SectionDevice
 
 	EnableSequence
 		'SLIM RX1 MUX':0:AIF1_PB
-		'SLIM_0_RX Channels':0:One
-		'RX4 MIX1 INP1':0:RX1
+		'SLIM RX2 MUX':0:AIF1_PB
+		'SLIM_0_RX Channels':0:Two
+		'RX3 MIX1 INP1':0:RX1
+		'RX4 MIX1 INP1':0:RX2
+		'RDAC5 MUX':0:DEM4
+		'COMP2 Switch':1:1
+		'RX3 Digital Volume':1:68
 		'RX4 Digital Volume':1:68
-		'SPK DAC Switch':1:1
-		'COMP0 Switch':1:1
+		'LINEOUT1 Volume':1:100
+		'LINEOUT2 Volume':1:100
 	EndSequence
 
 	DisableSequence
 		'SLIM RX1 MUX':0:ZERO
+		'SLIM RX2 MUX':0:ZERO
+		'RX3 MIX1 INP1':0:ZERO
 		'RX4 MIX1 INP1':0:ZERO
-		'SPK DAC Switch':1:0
-		'COMP0 Switch':1:0
+		'RDAC5 MUX':0:DEM3_INV
+		'COMP2 Switch':1:0
+		'RX3 Digital Volume':1:0
+		'RX4 Digital Volume':1:0
+		'LINEOUT1 Volume':1:0
+		'LINEOUT2 Volume':1:0
 	EndSequence
 
 	ACDBID	15:1
@@ -6782,7 +6885,7 @@ SectionModifier
 	EndSequence
 
 	DisableSequence
-		'Internal BTSCO SampleRate':1:8000
+                'Internal BTSCO SampleRate':1:8000
 		'INTERNAL_BT_SCO_RX_Voice Mixer CSVoice':1:0
 		'Voice_Tx Mixer INTERNAL_BT_SCO_TX_Voice':1:0
 	EndSequence
@@ -6797,7 +6900,7 @@ SectionModifier
 	Name "Play VoiceBT SCO Tx"
 
 	EnableSequence
-		'Internal BTSCO SampleRate':1:8000
+                'Internal BTSCO SampleRate':1:8000
 		'INTERNAL_BT_SCO_RX_Voice Mixer CSVoice':1:1
 		'Voice_Tx Mixer INTERNAL_BT_SCO_TX_Voice':1:1
 	EndSequence
@@ -6818,7 +6921,7 @@ SectionModifier
 	EndSequence
 
 	DisableSequence
-		'Internal BTSCO SampleRate':1:8000
+                'Internal BTSCO SampleRate':1:8000
 		'INTERNAL_BT_SCO_RX_Voice Mixer CSVoice':1:0
 		'Voice_Tx Mixer INTERNAL_BT_SCO_TX_Voice':1:0
 	EndSequence
@@ -6833,7 +6936,7 @@ SectionModifier
 	Name "Play VoiceBT SCO WB Tx"
 
 	EnableSequence
-		'Internal BTSCO SampleRate':1:16000
+                'Internal BTSCO SampleRate':1:16000
 		'INTERNAL_BT_SCO_RX_Voice Mixer CSVoice':1:1
 		'Voice_Tx Mixer INTERNAL_BT_SCO_TX_Voice':1:1
 	EndSequence
@@ -6863,17 +6966,17 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Capture A2DP FM"
+        Name "Capture A2DP FM"
 
-	EnableSequence
-		'MultiMedia2 Mixer INTERNAL_FM_TX':1:1
-	EndSequence
+        EnableSequence
+                'MultiMedia2 Mixer INTERNAL_FM_TX':1:1
+        EndSequence
 
-	DisableSequence
-		'MultiMedia2 Mixer INTERNAL_FM_TX':1:0
-	EndSequence
+        DisableSequence
+                'MultiMedia2 Mixer INTERNAL_FM_TX':1:0
+        EndSequence
 
-	# ALSA PCMs
+        # ALSA PCMs
 	PlaybackPCM 1
 	CapturePCM 1
 
@@ -6892,7 +6995,7 @@ SectionModifier
 		'Voip_Tx Mixer SLIM_0_TX_Voip':1:0
 	EndSequence
 
-	# ALSA PCMs
+       # ALSA PCMs
 	PlaybackPCM 3
 	CapturePCM 3
 
@@ -6905,9 +7008,9 @@ SectionModifier
 	EndSequence
 
 	DisableSequence
-		'Internal BTSCO SampleRate':1:8000
-		'INTERNAL_BT_SCO_RX_Voice Mixer Voip':1:0
-		'Voip_Tx Mixer INTERNAL_BT_SCO_TX_Voip':1:0
+                'Internal BTSCO SampleRate':1:8000
+                'INTERNAL_BT_SCO_RX_Voice Mixer Voip':1:0
+                'Voip_Tx Mixer INTERNAL_BT_SCO_TX_Voip':1:0
 	EndSequence
 
 	# ALSA PCMs
@@ -6920,9 +7023,9 @@ SectionModifier
 	Name "Play VOIPBT SCO Tx"
 
 	EnableSequence
-		'Internal BTSCO SampleRate':1:8000
-		'INTERNAL_BT_SCO_RX_Voice Mixer Voip':1:1
-		'Voip_Tx Mixer INTERNAL_BT_SCO_TX_Voip':1:1
+                'Internal BTSCO SampleRate':1:8000
+                'INTERNAL_BT_SCO_RX_Voice Mixer Voip':1:1
+                'Voip_Tx Mixer INTERNAL_BT_SCO_TX_Voip':1:1
 	EndSequence
 
 	DisableSequence
@@ -6935,38 +7038,38 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play VOIPBT SCO WB Rx"
+        Name "Play VOIPBT SCO WB Rx"
 
-	EnableSequence
-	EndSequence
+        EnableSequence
+        EndSequence
 
-	DisableSequence
-		'Internal BTSCO SampleRate':1:8000
-		'INTERNAL_BT_SCO_RX_Voice Mixer Voip':1:0
-		'Voip_Tx Mixer INTERNAL_BT_SCO_TX_Voip':1:0
-	EndSequence
+        DisableSequence
+                'Internal BTSCO SampleRate':1:8000
+                'INTERNAL_BT_SCO_RX_Voice Mixer Voip':1:0
+                'Voip_Tx Mixer INTERNAL_BT_SCO_TX_Voip':1:0
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 3
-	CapturePCM 3
+        # ALSA PCMs
+        PlaybackPCM 3
+        CapturePCM 3
 
 EndSection
 
 SectionModifier
-	Name "Play VOIPBT SCO WB Tx"
+        Name "Play VOIPBT SCO WB Tx"
 
-	EnableSequence
-		'Internal BTSCO SampleRate':1:16000
-		'INTERNAL_BT_SCO_RX_Voice Mixer Voip':1:1
-		'Voip_Tx Mixer INTERNAL_BT_SCO_TX_Voip':1:1
-	EndSequence
+        EnableSequence
+                'Internal BTSCO SampleRate':1:16000
+                'INTERNAL_BT_SCO_RX_Voice Mixer Voip':1:1
+                'Voip_Tx Mixer INTERNAL_BT_SCO_TX_Voip':1:1
+        EndSequence
 
-	DisableSequence
-	EndSequence
+        DisableSequence
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 3
-	CapturePCM 3
+        # ALSA PCMs
+        PlaybackPCM 3
+        CapturePCM 3
 
 EndSection
 
@@ -7005,14 +7108,14 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Capture Voice Downlink"
+	Name "Capture Voice Uplink"
 
 	EnableSequence
-		'MultiMedia1 Mixer VOC_REC_DL':1:1
+		'MultiMedia1 Mixer VOC_REC_UL':1:1
 	EndSequence
 
 	DisableSequence
-			'MultiMedia1 Mixer VOC_REC_DL':1:0
+		'MultiMedia1 Mixer VOC_REC_UL':1:0
 	EndSequence
 
 	# ALSA PCMs
@@ -7022,21 +7125,72 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Capture Voice Uplink Downlink"
+        Name "Capture Voice Downlink"
+
+        EnableSequence
+                'MultiMedia1 Mixer VOC_REC_DL':1:1
+        EndSequence
+
+        DisableSequence
+                'MultiMedia1 Mixer VOC_REC_DL':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 0
+        CapturePCM 0
+
+EndSection
+
+SectionModifier
+        Name "Capture Voice Uplink Downlink"
+
+        EnableSequence
+                'MultiMedia1 Mixer VOC_REC_UL':1:1
+                'MultiMedia1 Mixer VOC_REC_DL':1:1
+        EndSequence
+
+        DisableSequence
+                'MultiMedia1 Mixer VOC_REC_UL':1:0
+                'MultiMedia1 Mixer VOC_REC_DL':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 0
+        CapturePCM 0
+
+EndSection
+
+SectionModifier
+	Name "Play Incall Delivery"
 
 	EnableSequence
-		'MultiMedia1 Mixer VOC_REC_UL':1:1
-		'MultiMedia1 Mixer VOC_REC_DL':1:1
+		'Incall_Music Audio Mixer MultiMedia2':1:1
 	EndSequence
 
 	DisableSequence
-		'MultiMedia1 Mixer VOC_REC_UL':1:0
-		'MultiMedia1 Mixer VOC_REC_DL':1:0
+		'Incall_Music Audio Mixer MultiMedia2':1:0
 	EndSequence
 
 	# ALSA PCMs
-	PlaybackPCM 0
-	CapturePCM 0
+	PlaybackPCM 1
+	CapturePCM 1
+
+EndSection
+
+SectionModifier
+	Name "Play Incall Delivery2"
+
+	EnableSequence
+		'Incall_Music_2 Audio Mixer MultiMedia9':1:1
+	EndSequence
+
+	DisableSequence
+		'Incall_Music_2 Audio Mixer MultiMedia9':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 16
+	CapturePCM 16
 
 EndSection
 
@@ -7126,15 +7280,15 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play TunnelHDMI SPDIF"
+        Name "Play TunnelHDMI SPDIF"
 
-	EnableSequence
-		'HDMI Mixer MultiMedia4':1:1
-	EndSequence
+        EnableSequence
+                'HDMI Mixer MultiMedia4':1:1
+        EndSequence
 
-	DisableSequence
-		'HDMI Mixer MultiMedia4':1:0
-	EndSequence
+        DisableSequence
+                'HDMI Mixer MultiMedia4':1:0
+        EndSequence
 
 	# ALSA PCMs
 	PlaybackPCM 9
@@ -7174,34 +7328,34 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play TunnelPROXY Rx"
+        Name "Play TunnelPROXY Rx"
 
-	EnableSequence
+        EnableSequence
 		'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
+        EndSequence
 
-	DisableSequence
+        DisableSequence
 		'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 9
+        # ALSA PCMs
+        PlaybackPCM 9
 
 EndSection
 
 SectionModifier
-	Name "Play TunnelUSB PROXY Rx"
+        Name "Play TunnelUSB PROXY Rx"
 
-	EnableSequence
+        EnableSequence
 		'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
+        EndSequence
 
-	DisableSequence
+        DisableSequence
 		'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 9
+        # ALSA PCMs
+        PlaybackPCM 9
 
 EndSection
 
@@ -7550,55 +7704,55 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Capture MusicPROXY Tx"
+        Name "Capture MusicPROXY Tx"
 
-	EnableSequence
-		'MultiMedia1 Mixer AFE_PCM_TX':1:1
-	EndSequence
+        EnableSequence
+                'MultiMedia1 Mixer AFE_PCM_TX':1:1
+        EndSequence
 
-	DisableSequence
+        DisableSequence
                 'MultiMedia1 Mixer AFE_PCM_TX':1:0
-	EndSequence
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
-
-EndSection
-
-SectionModifier
-	Name "Capture MusicUSB PROXY Tx"
-
-	EnableSequence
-		'MultiMedia1 Mixer AFE_PCM_TX':1:1
-	EndSequence
-
-	DisableSequence
-		'MultiMedia1 Mixer AFE_PCM_TX':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 0
 
 EndSection
 
 SectionModifier
-	Name "Play SGLTE"
+        Name "Capture MusicUSB PROXY Tx"
 
-	EnableSequence
-		'SLIM_0_RX_Voice Mixer SGLTE':1:1
-		'SGLTE_Tx Mixer SLIM_0_TX_SGLTE':1:1
-	EndSequence
+        EnableSequence
+                'MultiMedia1 Mixer AFE_PCM_TX':1:1
+        EndSequence
 
-	DisableSequence
-		'SLIM_0_RX_Voice Mixer SGLTE':1:0
-		'SGLTE_Tx Mixer SLIM_0_TX_SGLTE':1:0
-	EndSequence
+        DisableSequence
+                'MultiMedia1 Mixer AFE_PCM_TX':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 13
-	PlaybackPCM 13
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 0
+
+EndSection
+
+SectionModifier
+        Name "Play SGLTE"
+
+        EnableSequence
+                'SLIM_0_RX_Voice Mixer SGLTE':1:1
+                'SGLTE_Tx Mixer SLIM_0_TX_SGLTE':1:1
+        EndSequence
+
+        DisableSequence
+                'SLIM_0_RX_Voice Mixer SGLTE':1:0
+                'SGLTE_Tx Mixer SLIM_0_TX_SGLTE':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 13
+        PlaybackPCM 13
 
 EndSection
 
@@ -8066,34 +8220,34 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Capture Music2PROXY Rx"
+        Name "Capture Music2PROXY Rx"
 
-	EnableSequence
-	EndSequence
+        EnableSequence
+        EndSequence
 
-	DisableSequence
-	EndSequence
+        DisableSequence
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 1
-	PlaybackPCM 1
+        # ALSA PCMs
+        CapturePCM 1
+        PlaybackPCM 1
 
 EndSection
 
 SectionModifier
-	Name "Capture Music2PROXY Tx"
+        Name "Capture Music2PROXY Tx"
 
-	EnableSequence
-		'MultiMedia2 Mixer AFE_PCM_TX':1:1
-	EndSequence
+        EnableSequence
+                'MultiMedia2 Mixer AFE_PCM_TX':1:1
+        EndSequence
 
-	DisableSequence
-		'MultiMedia2 Mixer AFE_PCM_TX':1:0
-	EndSequence
+        DisableSequence
+                'MultiMedia2 Mixer AFE_PCM_TX':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 1
-	PlaybackPCM 1
+        # ALSA PCMs
+        CapturePCM 1
+        PlaybackPCM 1
 
 EndSection
 
@@ -8166,340 +8320,340 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play MusicPROXY Rx Speaker"
+        Name "Play MusicPROXY Rx Speaker"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
-
-EndSection
-
-SectionModifier
-	Name "Play MusicPROXY Rx Earpiece"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 0
 
 EndSection
 
 SectionModifier
-	Name "Play MusicPROXY Rx Headphones"
+        Name "Play MusicPROXY Rx Earpiece"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
-
-EndSection
-
-SectionModifier
-	Name "Play MusicPROXY Rx ANC Headset"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 0
 
 EndSection
 
 SectionModifier
-	Name "Play MusicPROXY Rx Speaker Headset"
+        Name "Play MusicPROXY Rx Headphones"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
+        EndSequence
 
-	DisableSequence
-			'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
-
-EndSection
-
-SectionModifier
-	Name "Play MusicPROXY Rx Speaker ANC Headset"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
-
-EndSection
-
-
-SectionModifier
-	Name "Play Music2PROXY Rx Speaker"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia2':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia2':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 1
-	PlaybackPCM 1
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 0
 
 EndSection
 
 SectionModifier
-	Name "Play Music2PROXY Rx Earpiece"
+        Name "Play MusicPROXY Rx ANC Headset"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia2':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia2':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 1
-	PlaybackPCM 1
-
-EndSection
-
-SectionModifier
-	Name "Play Music2PROXY Rx Headphones"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia2':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia2':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 1
-	PlaybackPCM 1
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 0
 
 EndSection
 
 SectionModifier
-	Name "Play Music2PROXY Rx ANC Headset"
+        Name "Play MusicPROXY Rx Speaker Headset"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia2':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia2':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 1
-	PlaybackPCM 1
-
-EndSection
-
-SectionModifier
-	Name "Play Music2PROXY Rx Speaker Headset"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia2':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia2':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 1
-	PlaybackPCM 1
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 0
 
 EndSection
 
 SectionModifier
-	Name "Play Music2PROXY Rx Speaker ANC Headset"
+        Name "Play MusicPROXY Rx Speaker ANC Headset"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia2':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia2':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 1
-	PlaybackPCM 1
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 0
+
+EndSection
+
+
+SectionModifier
+        Name "Play Music2PROXY Rx Speaker"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia2':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia2':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 1
+        PlaybackPCM 1
+
+EndSection
+
+SectionModifier
+        Name "Play Music2PROXY Rx Earpiece"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia2':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia2':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 1
+        PlaybackPCM 1
+
+EndSection
+
+SectionModifier
+        Name "Play Music2PROXY Rx Headphones"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia2':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia2':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 1
+        PlaybackPCM 1
+
+EndSection
+
+SectionModifier
+        Name "Play Music2PROXY Rx ANC Headset"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia2':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia2':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 1
+        PlaybackPCM 1
+
+EndSection
+
+SectionModifier
+        Name "Play Music2PROXY Rx Speaker Headset"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia2':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia2':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 1
+        PlaybackPCM 1
+
+EndSection
+
+SectionModifier
+        Name "Play Music2PROXY Rx Speaker ANC Headset"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia2':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia2':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 1
+        PlaybackPCM 1
 
 EndSection
 
 SectionModifier
 
-	Name "Play TunnelPROXY Rx Speaker"
+        Name "Play TunnelPROXY Rx Speaker"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 9
-
-EndSection
-
-SectionModifier
-	Name "Play TunnelPROXY Rx Earpiece"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
+        # ALSA PCMs
+        PlaybackPCM 9
 
 EndSection
 
 SectionModifier
-	Name "Play Tunnel TunnelPROXY Rx Headphones"
+        Name "Play TunnelPROXY Rx Earpiece"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 9
-
-EndSection
-
-SectionModifier
-	Name "Play TunnelPROXY Rx ANC Headset"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
+        # ALSA PCMs
+        PlaybackPCM 9
 
 EndSection
 
 SectionModifier
-	Name "Play TunnelPROXY Rx Speaker Headset"
+        Name "Play Tunnel TunnelPROXY Rx Headphones"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 9
+        # ALSA PCMs
+        PlaybackPCM 9
 
 EndSection
 
 SectionModifier
-	Name "Play TunnelPROXY Rx Speaker ANC Headset"
+        Name "Play TunnelPROXY Rx ANC Headset"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 9
+        # ALSA PCMs
+        PlaybackPCM 9
+
+EndSection
+
+SectionModifier
+        Name "Play TunnelPROXY Rx Speaker Headset"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 9
+
+EndSection
+
+SectionModifier
+        Name "Play TunnelPROXY Rx Speaker ANC Headset"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 9
 
 EndSection
 
@@ -8625,34 +8779,34 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play Music3PROXY Rx"
+        Name "Play Music3PROXY Rx"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 15
-	PlaybackPCM 15
+        # ALSA PCMs
+        CapturePCM 15
+        PlaybackPCM 15
 
 EndSection
 
 SectionModifier
-	Name "Play Music3PROXY Tx"
+        Name "Play Music3PROXY Tx"
 
-	EnableSequence
-	EndSequence
+        EnableSequence
+        EndSequence
 
-	DisableSequence
-	EndSequence
+        DisableSequence
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 15
-	PlaybackPCM 15
+        # ALSA PCMs
+        CapturePCM 15
+        PlaybackPCM 15
 
 EndSection
 
@@ -8774,116 +8928,116 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play Music3PROXY Rx Speaker"
+        Name "Play Music3PROXY Rx Speaker"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 15
-	PlaybackPCM 15
-
-EndSection
-
-SectionModifier
-	Name "Play Music3PROXY Rx Earpiece"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 15
-	PlaybackPCM 15
+        # ALSA PCMs
+        CapturePCM 15
+        PlaybackPCM 15
 
 EndSection
 
 SectionModifier
-	Name "Play Music3PROXY Rx Headphones"
+        Name "Play Music3PROXY Rx Earpiece"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 15
-	PlaybackPCM 15
-
-EndSection
-
-SectionModifier
-	Name "Play Music3PROXY Rx ANC Headset"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
-	EndSequence
-
-	DisableSequence
-			'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
-			'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 15
-	PlaybackPCM 15
+        # ALSA PCMs
+        CapturePCM 15
+        PlaybackPCM 15
 
 EndSection
 
 SectionModifier
-	Name "Play Music3PROXY Rx Speaker Headset"
+        Name "Play Music3PROXY Rx Headphones"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 15
-	PlaybackPCM 15
+        # ALSA PCMs
+        CapturePCM 15
+        PlaybackPCM 15
 
 EndSection
 
 SectionModifier
-	Name "Play Music3PROXY Rx Speaker ANC Headset"
+        Name "Play Music3PROXY Rx ANC Headset"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 15
-	PlaybackPCM 15
+        # ALSA PCMs
+        CapturePCM 15
+        PlaybackPCM 15
+
+EndSection
+
+SectionModifier
+        Name "Play Music3PROXY Rx Speaker Headset"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 15
+        PlaybackPCM 15
+
+EndSection
+
+SectionModifier
+        Name "Play Music3PROXY Rx Speaker ANC Headset"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 15
+        PlaybackPCM 15
 
 EndSection
 
@@ -8904,267 +9058,267 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play Tunnel2USB PROXY Rx Speaker"
+        Name "Play Tunnel2USB PROXY Rx Speaker"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia7':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia7':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia7':1:0
-			'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia7':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:0
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 16
-
-EndSection
-
-SectionModifier
-	Name "Play Tunnel2USB PROXY Rx Earpiece"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia7':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia7':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 16
+        # ALSA PCMs
+        PlaybackPCM 16
 
 EndSection
 
 SectionModifier
-	Name "Play MusicUSB PROXY Rx Speaker"
+        Name "Play Tunnel2USB PROXY Rx Earpiece"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia7':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:1
+        EndSequence
 
-	DisableSequence
-			'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
-			'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia7':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
-
-EndSection
-
-SectionModifier
-	Name "Play MusicUSB PROXY Rx Earpiece"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
+        # ALSA PCMs
+        PlaybackPCM 16
 
 EndSection
 
 SectionModifier
-	Name "Play Music2USB PROXY Rx Speaker"
+        Name "Play MusicUSB PROXY Rx Speaker"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia2':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia2':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 1
-	PlaybackPCM 1
-
-EndSection
-
-SectionModifier
-	Name "Play Music2USB PROXY Rx Earpiece"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia2':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia2':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 1
-	PlaybackPCM 1
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 0
 
 EndSection
 
 SectionModifier
+        Name "Play MusicUSB PROXY Rx Earpiece"
 
-	Name "Play LPAPROXY Rx Speaker"
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
+        EndSequence
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 4
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 0
 
 EndSection
 
 SectionModifier
-	Name "Play LPAPROXY Rx Earpiece"
+        Name "Play Music2USB PROXY Rx Speaker"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia2':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia2':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 4
+        # ALSA PCMs
+        CapturePCM 1
+        PlaybackPCM 1
+
+EndSection
+
+SectionModifier
+        Name "Play Music2USB PROXY Rx Earpiece"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia2':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia2':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 1
+        PlaybackPCM 1
 
 EndSection
 
 SectionModifier
 
-	Name "Play LPAUSB PROXY Rx Speaker"
+        Name "Play LPAPROXY Rx Speaker"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 4
-
-EndSection
-
-SectionModifier
-	Name "Play LPAUSB PROXY Rx Earpiece"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 4
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 4
 
 EndSection
 
 SectionModifier
+        Name "Play LPAPROXY Rx Earpiece"
 
-	Name "Play TunnelUSB PROXY Rx Speaker"
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
+        EndSequence
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-
-EndSection
-
-SectionModifier
-	Name "Play Music3USB PROXY Rx Speaker"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 15
-	PlaybackPCM 15
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 4
 
 EndSection
 
 SectionModifier
-	Name "Play Music3USB PROXY Rx Earpiece"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
-	EndSequence
+        Name "Play LPAUSB PROXY Rx Speaker"
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 15
-	PlaybackPCM 15
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 4
 
 EndSection
 
 SectionModifier
-	Name "Play TunnelUSB PROXY Rx Earpiece"
+        Name "Play LPAUSB PROXY Rx Earpiece"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 9
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 4
+
+EndSection
+
+SectionModifier
+
+        Name "Play TunnelUSB PROXY Rx Speaker"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 9
+
+EndSection
+
+SectionModifier
+        Name "Play Music3USB PROXY Rx Speaker"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 15
+        PlaybackPCM 15
+
+EndSection
+
+SectionModifier
+        Name "Play Music3USB PROXY Rx Earpiece"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 15
+        PlaybackPCM 15
+
+EndSection
+
+SectionModifier
+        Name "Play TunnelUSB PROXY Rx Earpiece"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
+                'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
+                'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 9
 
 EndSection
 
@@ -9331,39 +9485,39 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play MusicPROXY Rx"
+        Name "Play MusicPROXY Rx"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
-	EndSequence
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
+        EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
-	EndSequence
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
+        EndSequence
 
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 0
 
 EndSection
 
 SectionModifier
-	Name "Play FM"
+        Name "Play FM"
 
-	EnableSequence
-		'Internal FM RX Volume':1:0
-		'SLIMBUS_0_RX Port Mixer INTERNAL_FM_TX':1:1
-		'SLIMBUS_DL_HL Switch':1:1
-	EndSequence
+        EnableSequence
+                'Internal FM RX Volume':1:0
+                'SLIMBUS_0_RX Port Mixer INTERNAL_FM_TX':1:1
+                'SLIMBUS_DL_HL Switch':1:1
+        EndSequence
 
-	DisableSequence
-		'SLIMBUS_0_RX Port Mixer INTERNAL_FM_TX':1:0
-		'SLIMBUS_DL_HL Switch':1:0
-	EndSequence
+        DisableSequence
+                'SLIMBUS_0_RX Port Mixer INTERNAL_FM_TX':1:0
+                'SLIMBUS_DL_HL Switch':1:0
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 5
-	CapturePCM 6
+        # ALSA PCMs
+        PlaybackPCM 5
+        CapturePCM 6
 
 EndSection
 
@@ -9527,74 +9681,74 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "ADSP testfwk mod"
+        Name "ADSP testfwk mod"
 	Comment "Modifier for ADSP testfwk"
 
-	EnableSequence
+        EnableSequence
 		'SLIMBUS_DL_HL Switch':1:1
-	EndSequence
+        EndSequence
 
-	DisableSequence
+        DisableSequence
 		'SLIMBUS_DL_HL Switch':1:0
-	EndSequence
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 5
-	CapturePCM 5
+        # ALSA PCMs
+        PlaybackPCM 5
+        CapturePCM 5
 
 EndSection
 
 SectionModifier
-	Name "ADSP testfwk1 mod"
+        Name "ADSP testfwk1 mod"
 	Comment "Modifier for ADSP testfwk1"
 
-	EnableSequence
+        EnableSequence
 		'SLIMBUS1_DL_HL Switch':1:1
-	EndSequence
+        EndSequence
 
-	DisableSequence
+        DisableSequence
 		'SLIMBUS1_DL_HL Switch':1:0
-	EndSequence
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 11
-	CapturePCM 11
+        # ALSA PCMs
+        PlaybackPCM 11
+        CapturePCM 11
 
 EndSection
 
 SectionModifier
-	Name "ADSP testfwk3 mod"
+        Name "ADSP testfwk3 mod"
 	Comment "Modifier for ADSP testfwk3"
 
-	EnableSequence
+        EnableSequence
 		'SLIMBUS3_DL_HL Switch':1:1
-	EndSequence
+        EndSequence
 
-	DisableSequence
+        DisableSequence
 		'SLIMBUS3_DL_HL Switch':1:0
-	EndSequence
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 12
-	CapturePCM 12
+        # ALSA PCMs
+        PlaybackPCM 12
+        CapturePCM 12
 
 EndSection
 
 SectionModifier
-	Name "ADSP testfwk4 mod"
+        Name "ADSP testfwk4 mod"
 	Comment "Modifier for ADSP testfwk4"
 
-	EnableSequence
+        EnableSequence
 		'SLIMBUS4_DL_HL Switch':1:1
-	EndSequence
+        EndSequence
 
-	DisableSequence
+        DisableSequence
 		'SLIMBUS4_DL_HL Switch':1:0
-	EndSequence
+        EndSequence
 
-	# ALSA PCMs
-	PlaybackPCM 13
-	CapturePCM 13
+        # ALSA PCMs
+        PlaybackPCM 13
+        CapturePCM 13
 
 EndSection
 
