@@ -91,18 +91,6 @@ PRODUCT_COPY_FILES += \
         frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
         device/qcom/msm8226/nfc/libnfc-nci.conf:system/etc/libnfc-nci.conf
 
-
-#LogSystem
-LogSystem := Logkit
-LogSystem += SystemAgent
-LogSystem += qlogd
-LogSystem += qlog-conf.xml
-LogSystem += wifi.cfg
-LogSystem += kernelevent.cfg
-LogSystem += diag_mdlog
-LogSystem += rootagent
-LogSystem += cdrom_install.iso
-
 PRODUCT_PACKAGES += $(LogSystem)
 
 PRODUCT_LOCALES += xhdpi
