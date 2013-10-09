@@ -9,6 +9,7 @@ endif
 
 BOARD_USES_GENERIC_AUDIO := true
 USE_CAMERA_STUB := true
+SCVE_T2T_DISABLE := true
 
 -include $(QCPATH)/common/msm8226/BoardConfigVendor.mk
 
