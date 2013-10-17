@@ -41,7 +41,8 @@ PRODUCT_COPY_FILES += \
     device/qcom/msm8226/WCNSS_qcom_wlan_nv.bin:persist/WCNSS_qcom_wlan_nv.bin
 
 PRODUCT_PACKAGES += wcnss_service \
-		    pronto_wlan.ko
+		    pronto_wlan.ko \
+		    fm_qsoc_patches
 
 #ANT stack
 PRODUCT_PACKAGES += \
