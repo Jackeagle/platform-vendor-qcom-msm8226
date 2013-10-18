@@ -20,6 +20,13 @@ PRODUCT_DEVICE := msm8226
 
 -include $(QCPATH)/common/config/rendering-engine.mk
 
+#This is font rendering engine feature switch
+ifneq ($(strip($(PRODUCT_RENDERING_ENGINE_REVLOAD))),)
+ifeq (exist,$(shell if test -f $(PRODUCT_RENDERING_ENGINE_REVLOAD); then echo "exist"; else echo "noexist"; fi))
+    MULTI_LANG_ENGINE := REVERIE
+endif
+endif
+
 # Audio configuration file
 PRODUCT_COPY_FILES += \
     device/qcom/msm8226/audio_policy.conf:system/etc/audio_policy.conf \
