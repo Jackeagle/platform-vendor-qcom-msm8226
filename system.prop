@@ -19,7 +19,7 @@ ril.subscription.types=NV,RUIM
 DEVICE_PROVISIONED=1
 persist.radio.msgtunnel.start=false
 # Start in cdma mode
-ro.telephony.default_network=5
+# ro.telephony.default_network=5
 
 #
 # system props for the cne module
