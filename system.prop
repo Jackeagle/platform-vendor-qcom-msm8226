@@ -98,7 +98,7 @@ persist.service.cdrom.enable=1
 #
 # System prop for default USB configuration
 #
-persist.sys.usb.config=diag,serial_smd,serial_tty,rmnet_bam,mass_storage
+persist.sys.usb.config=diag,serial_smd,serial_tty,rmnet_bam,mass_storage,adb
 
 #
 #snapdragon value add features
