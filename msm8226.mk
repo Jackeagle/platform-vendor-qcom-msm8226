@@ -18,8 +18,6 @@ $(call inherit-product, device/qcom/common/common.mk)
 PRODUCT_NAME := msm8226
 PRODUCT_DEVICE := msm8226
 
-DEVICE_PACKAGE_OVERLAYS := device/qcom/msm8226/overlay
-
 -include $(QCPATH)/common/config/rendering-engine.mk
 
 # Audio configuration file
