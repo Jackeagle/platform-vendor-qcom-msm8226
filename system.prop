@@ -109,6 +109,7 @@ ro.qc.sdk.audio.fluencetype=none
 
 # Enable/disable cabl
 ro.qualcomm.cabl=1
+ro.qualcomm.svi=1
 
 # Enable Fast Dormancy
 persist.env.fastdorm.enabled=true
