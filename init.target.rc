@@ -35,6 +35,19 @@ on early-init
 
 on init
     export BOOTCLASSPATH ${BOOTCLASSPATH}:/system/framework/oem-services.jar:/system/framework/WfdCommon.jar:/system/framework/qcmediaplayer.jar
+
+on early-fs
+    rm /storage/sdcard0
+    mkdir /storage/sdcard0 0000 system system
+    export EXTERNAL_STORAGE /storage/sdcard0
+    export EMULATED_STORAGE_SOURCE
+    export EMULATED_STORAGE_TARGET
+
+    rm /sdcard
+    symlink /storage/sdcard0 /sdcard
+    rm /mnt/sdcard
+    symlink /storage/sdcard0 /mnt/sdcard
+
 on fs
     mount_all fstab.qcom
 
@@ -70,8 +83,8 @@ on boot
     chown system system /sys/class/leds/red/blink
     chown system system /sys/class/leds/green/blink
     write /proc/sys/kernel/printk 3
-    # Enable writing to brightness node under led:flash_torch from userspace
-    chown system system /sys/class/leds/led:flash_torch/brightness
+    # Enable writing to brightness node under torch-light from userspace
+    chown system system /sys/class/leds/torch-light/brightness
 
 #Start the qcom-system-daemon service
 service qcomsysd /system/bin/qcom-system-daemon

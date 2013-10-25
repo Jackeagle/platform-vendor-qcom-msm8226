@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--Copyright (c) 2012, The Linux Foundation. All rights reserved.
+<!--
+     Copyright (c) 2013, The Linux Foundation. All rights reserved.
+     Not a Contribution.
 
-    Not a Contribution
+     Copyright (C) 2006 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -16,11 +18,11 @@
      limitations under the License.
 -->
 
-<resources>
-    <!-- Whether to enable ETWS settings (Japan) -->
-    <bool name="show_etws_settings">true</bool>
-    <!-- Whether to enable CMAS settings (United States) -->
-    <bool name="show_cmas_settings">true</bool>
-    <!-- Whether to enable channel 50 settings (Brazil) -->
-    <bool name="show_brazil_settings">true</bool>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="TextAppearance.StatusBar.Expanded.Clock">
+        <item name="android:textSize">23dp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
 </resources>

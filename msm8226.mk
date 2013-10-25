@@ -5,6 +5,7 @@ ifeq ($(TARGET_USES_QCOM_BSP), true)
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 endif #TARGET_USES_QCOM_BSP
 
+DEVICE_PACKAGE_OVERLAYS := device/qcom/msm8226/overlay
 
 # media_profiles and media_codecs xmls for 8226
 ifeq ($(TARGET_ENABLE_QC_AV_ENHANCEMENTS), true)
@@ -17,7 +18,7 @@ $(call inherit-product, device/qcom/common/common.mk)
 PRODUCT_NAME := msm8226
 PRODUCT_DEVICE := msm8226
 
-DEVICE_PACKAGE_OVERLAYS := device/qcom/msm8226/overlay
+-include $(QCPATH)/common/config/rendering-engine.mk
 
 # Audio configuration file
 PRODUCT_COPY_FILES += \
@@ -29,6 +30,7 @@ PRODUCT_COPY_FILES += \
 	device/qcom/msm8226/snd_soc_msm/snd_soc_msm_Tapan:system/etc/snd_soc_msm/snd_soc_msm_Tapan \
 	device/qcom/msm8226/snd_soc_msm/snd_soc_msm_Tapan_SKUF:system/etc/snd_soc_msm/snd_soc_msm_Tapan_SKUF \
 	device/qcom/msm8226/snd_soc_msm/snd_soc_msm_TapanLite:system/etc/snd_soc_msm/snd_soc_msm_TapanLite \
+    device/qcom/msm8226/snd_soc_msm/snd_soc_msm_TapanLite_SKUF:system/etc/snd_soc_msm/snd_soc_msm_TapanLite_SKUF \
 
 #fstab.qcom
 PRODUCT_PACKAGES += fstab.qcom \
@@ -59,7 +61,7 @@ LogSystem += kernelevent.cfg
 LogSystem += diag_mdlog
 LogSystem += rootagent
 LogSystem += init.qcom.rootagent.sh
-LogSystem += cdrom_install.iso
+LogSystem += dynamic_debug_mask.cfg
 
 PRODUCT_PACKAGES += $(LogSystem)
 
@@ -90,18 +92,25 @@ PRODUCT_COPY_FILES += \
         frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
         device/qcom/msm8226/nfc/libnfc-nci.conf:system/etc/libnfc-nci.conf
 
-
-#LogSystem
-LogSystem := Logkit
-LogSystem += SystemAgent
-LogSystem += qlogd
-LogSystem += qlog-conf.xml
-LogSystem += wifi.cfg
-LogSystem += kernelevent.cfg
-LogSystem += diag_mdlog
-LogSystem += rootagent
-LogSystem += cdrom_install.iso
-
 PRODUCT_PACKAGES += $(LogSystem)
 
 PRODUCT_LOCALES += xhdpi
+
+#PPPOE
+rp_pppoe := pppoe
+
+PRODUCT_PACKAGES += $(rp_pppoe)
+
+# Enable strict operation
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.sys.strict_op_enable=false
+
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.sys.whitelist=/system/etc/whitelist_appops.xml
+
+PRODUCT_COPY_FILES += \
+    device/qcom/msm8226/whitelist_appops.xml:system/etc/whitelist_appops.xml
+# Add 14 languages for localization
+PRODUCT_LOCALES += th_TH vi_VN tl_PH hi_IN ar_EG ru_RU tr_TR pt_BR bn_IN mr_IN ta_IN te_IN zh_HK in_ID
+
+PRODUCT_PACKAGE_OVERLAYS := $(QCPATH)/qrdplus/globalization/multi-language/res-overlay

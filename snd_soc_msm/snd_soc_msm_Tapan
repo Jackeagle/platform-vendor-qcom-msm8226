@@ -4380,6 +4380,28 @@ SectionVerb
 EndSection
 }
 
+SectionUseCase."Listen Voice Wakeup" {
+Comment "Listen Voice Wakeup use case"
+
+SectionVerb
+        Name "Listen Voice Wakeup"
+
+        EnableSequence
+		'LSM1 MUX':0:SLIMBUS_5_TX
+		'SLIMBUS_5_TX LSM Function':0:SWAUDIO
+        EndSequence
+
+        DisableSequence
+		'LSM1 MUX':0:None
+		'SLIMBUS_5_TX LSM Function':0:None
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 19
+
+EndSection
+}
+
 SectionDevice
 	Name "Earpiece"
 	Comment "Handset Rx device"
@@ -4429,6 +4451,7 @@ SectionDevice
 		'RX1 MIX2 INP1':0:IIR1
 		'CLASS_H_DSM MUX':0:RX_HPHL
 		'RX1 Digital Volume':1:68
+                'EAR PA Gain':0:POS_6_DB
 		'DAC1 Switch':1:1
 	EndSequence
 
@@ -4494,8 +4517,11 @@ SectionDevice
 		'RX1 MIX1 INP1':0:RX1
 		'CLASS_H_DSM MUX':0:RX_HPHL
 		'DAC1 Switch':1:1
-                'ANC Slot':1:6
-                'ANC1 MUX':0:DMIC1
+		'RX1 Digital Volume':1:65
+		'ANC Slot':1:6
+		'ANC1 MUX':0:ADC3
+		'ADC3 Volume':1:85
+		'ANC1 FB MUX':0:EAR_HPH_L
 	EndSequence
 
 	DisableSequence
@@ -4503,11 +4529,15 @@ SectionDevice
 		'RX1 MIX1 INP1':0:ZERO
 		'CLASS_H_DSM MUX':0:ZERO
 		'DAC1 Switch':1:0
-                'ANC Slot':1:0
-                'ANC1 MUX':0:ZERO
+		'ANC Slot':1:0
+		'ANC1 MUX':0:ZERO
+		'ADC3 Volume':1:0
+		'ANC1 FB MUX':0:ZERO
+		'RX1 Digital Volume':1:0
+		'ANC Function':0:OFF
 	EndSequence
 
-	ACDBID	30:1
+	ACDBID	103:1
 	EffectsMixerCTL "SRS TruMedia"
 	EC_REF_RXMixerCTL "SLIM_RX"
 
@@ -4691,16 +4721,16 @@ SectionDevice
 		'RX2 MIX1 INP1':0:RX2
 		'CLASS_H_DSM MUX':0:RX_HPHL
 		'HPHL DAC Switch':1:1
-		'HPHL Volume':1:100
-		'HPHR Volume':1:100
+		'HPHL Volume':1:60
+		'HPHR Volume':1:60
 		'RX1 Digital Volume':1:68
 		'RX2 Digital Volume':1:68
 		'ANC Slot':1:0
 		'ANC1 FB MUX':0:EAR_HPH_L
 		'ANC1 MUX':0:ADC4
 		'ANC2 MUX':0:ADC5
-		'ADC5 Volume':1:65
-		'ADC4 Volume':1:65
+		'ADC5 Volume':1:40
+		'ADC4 Volume':1:40
 	EndSequence
 
 	DisableSequence
@@ -4736,16 +4766,16 @@ SectionDevice
 		'RX2 MIX1 INP1':0:RX2
 		'CLASS_H_DSM MUX':0:RX_HPHL
 		'HPHL DAC Switch':1:1
-		'HPHL Volume':1:100
-		'HPHR Volume':1:100
+		'HPHL Volume':1:60
+		'HPHR Volume':1:60
 		'RX1 Digital Volume':1:68
 		'RX2 Digital Volume':1:68
 		'ANC Slot':1:1
 		'ANC1 FB MUX':0:EAR_HPH_L
 		'ANC1 MUX':0:ADC4
 		'ANC2 MUX':0:ADC5
-		'ADC5 Volume':1:65
-		'ADC4 Volume':1:65
+		'ADC5 Volume':1:40
+		'ADC4 Volume':1:40
 	EndSequence
 
 	DisableSequence
@@ -4815,6 +4845,50 @@ SectionDevice
 EndSection
 
 SectionDevice
+	Name "AANC DMIC Endfire"
+	Comment "Dual MIC Endfire Tx device for AANC"
+
+	EnableSequence
+		'AIF1_CAP Mixer SLIM TX1':1:1
+		'AIF1_CAP Mixer SLIM TX2':1:1
+		'AIF1_CAP Mixer SLIM TX3':1:1
+		'SLIM_0_RX AANC MUX':0:SLIMBUS_0_TX
+		'SLIM TX1 MUX':0:DEC1
+		'DEC1 MUX':0:ADC1
+		'ADC1 Volume':1:65
+		'DEC1 Volume':1:68
+		'SLIM TX2 MUX':0:DEC2
+		'DEC2 MUX':0:ADC3
+		'ADC3 Volume':1:65
+		'DEC2 Volume':1:68
+		'SLIM TX3 MUX':0:DEC4
+		'DEC3 MUX':0:ADC4
+		'ADC4 Volume':1:65
+		'DEC3 Volume':1:68
+		'SLIM_0_TX Channels':0:Three
+		'IIR1 INP1 MUX':0:DEC1
+	EndSequence
+
+	DisableSequence
+		'AIF1_CAP Mixer SLIM TX1':1:0
+		'AIF1_CAP Mixer SLIM TX2':1:0
+		'AIF1_CAP Mixer SLIM TX3':1:0
+		'SLIM_0_RX AANC MUX':0:ZERO
+		'SLIM TX1 MUX':0:ZERO
+		'DEC1 MUX':0:ZERO
+		'SLIM TX2 MUX':0:ZERO
+		'DEC2 MUX':0:ZERO
+		'SLIM TX3 MUX':0:ZERO
+		'DEC3 MUX':0:ZERO
+		'IIR1 INP1 MUX':0:ZERO
+	EndSequence
+
+	ACDBID  105:2
+	EffectsMixerCTL "SRS TruMedia"
+
+EndSection
+
+SectionDevice
 	Name "DMIC Endfire"
 	Comment "Dual MIC Endfire Tx device"
 
@@ -4843,41 +4917,34 @@ SectionDevice
 		'IIR1 INP1 MUX':0:ZERO
 	EndSequence
 
-	ACDBID	6:2
+	ACDBID	118:2
 	EffectsMixerCTL "SRS TruMedia"
 
 EndSection
 
 SectionDevice
 	Name "Speaker DMIC Endfire"
-	Comment "Dual MIC Endfire Tx device"
+	Comment "Handset Tx device"
 
 	EnableSequence
 		'AIF1_CAP Mixer SLIM TX1':1:1
-		'AIF1_CAP Mixer SLIM TX2':1:1
+		'SLIM_0_TX Channels':0:One
 		'SLIM TX1 MUX':0:DEC1
 		'DEC1 MUX':0:ADC1
-		'ADC1 Volume':1:100
+		'ADC1 Volume':1:65
 		'DEC1 Volume':1:68
-		'SLIM TX2 MUX':0:DEC2
-		'DEC2 MUX':0:ADC3
-		'ADC3 Volume':1:100
-		'DEC2 Volume':1:68
-		'SLIM_0_TX Channels':0:Two
 		'IIR1 INP1 MUX':0:DEC1
 	EndSequence
 
 	DisableSequence
 		'AIF1_CAP Mixer SLIM TX1':1:0
-		'AIF1_CAP Mixer SLIM TX2':1:0
 		'SLIM TX1 MUX':0:ZERO
 		'DEC1 MUX':0:ZERO
-		'SLIM TX2 MUX':0:ZERO
-		'DEC2 MUX':0:ZERO
+		'ADC1 Volume':1:0
 		'IIR1 INP1 MUX':0:ZERO
 	EndSequence
 
-	ACDBID	13:2
+	ACDBID	4:2
 	EffectsMixerCTL "SRS TruMedia"
 
 EndSection
@@ -4985,16 +5052,16 @@ SectionDevice
 		'RX2 MIX2 INP1':0:IIR1
 		'CLASS_H_DSM MUX':0:RX_HPHL
 		'HPHL DAC Switch':1:1
-		'HPHL Volume':1:100
-		'HPHR Volume':1:100
+		'HPHL Volume':1:60
+		'HPHR Volume':1:60
 		'RX1 Digital Volume':1:68
 		'RX2 Digital Volume':1:68
 		'ANC Slot':1:0
 		'ANC1 MUX':0:ADC4
 		'ANC2 MUX':0:ADC5
 		'ANC1 FB MUX':0:EAR_HPH_L
-		'ADC5 Volume':1:65
-		'ADC4 Volume':1:65
+		'ADC5 Volume':1:40
+		'ADC4 Volume':1:40
 	EndSequence
 
 	DisableSequence
@@ -5055,16 +5122,16 @@ SectionDevice
 		'RX2 MIX2 INP1':0:IIR1
 		'CLASS_H_DSM MUX':0:RX_HPHL
 		'HPHL DAC Switch':1:1
-		'HPHL Volume':1:100
-		'HPHR Volume':1:100
+		'HPHL Volume':1:60
+		'HPHR Volume':1:60
 		'RX1 Digital Volume':1:68
 		'RX2 Digital Volume':1:68
 		'ANC Slot':1:1
 		'ANC1 MUX':0:ADC4
 		'ANC2 MUX':0:ADC5
 		'ANC1 FB MUX':0:EAR_HPH_L
-		'ADC5 Volume':1:65
-		'ADC4 Volume':1:65
+		'ADC5 Volume':1:40
+		'ADC4 Volume':1:40
 	EndSequence
 
 	DisableSequence
@@ -5181,6 +5248,31 @@ SectionDevice
 EndSection
 
 SectionDevice
+	Name "ListenHandsetMic"
+	Comment "Listen Handset Tx Device"
+
+	EnableSequence
+		'AIF1_CAP Mixer SLIM TX1':1:1
+		'SLIM_0_TX Channels':0:One
+		'SLIM TX1 MUX':0:DEC1
+		'DEC1 MUX':0:ADC1
+		'ADC1 Volume':1:65
+		'DEC1 Volume':1:68
+	EndSequence
+
+	DisableSequence
+		'AIF1_CAP Mixer SLIM TX1':1:0
+		'SLIM TX1 MUX':0:ZERO
+		'DEC1 MUX':0:ZERO
+		'ADC1 Volume':1:0
+	EndSequence
+
+	ACDBID	127:2
+	EffectsMixerCTL "SRS TruMedia"
+
+EndSection
+
+SectionDevice
 	Name "TTY Handset Analog Tx"
 	Comment "TTY Handset Analog Tx device"
 
@@ -5201,6 +5293,53 @@ SectionDevice
 	EndSequence
 
 	ACDBID  36:2
+	EffectsMixerCTL "SRS TruMedia"
+
+EndSection
+
+SectionDevice
+	Name "AANC Line"
+	Comment "Speaker Tx device for AANC"
+
+	EnableSequence
+		'AIF1_CAP Mixer SLIM TX1':1:1
+		'AIF1_CAP Mixer SLIM TX2':1:1
+		'AIF1_CAP Mixer SLIM TX3':1:1
+		'SLIM_0_TX Channels':0:Three
+		'SLIM_0_RX AANC MUX':0:SLIMBUS_0_TX
+		'SLIM TX1 MUX':0:DEC1
+		'DEC1 MUX':0:ADC1
+		'ADC1 Volume':1:65
+		'DEC1 Volume':1:68
+		'SLIM TX2 MUX':0:DEC2
+		'DEC2 MUX':0:ADC3
+		'ADC3 Volume':1:65
+		'DEC2 Volume':1:68
+		'SLIM TX3 MUX':0:DEC3
+		'DEC3 MUX':0:ADC4
+		'ADC4 Volume':1:65
+		'DEC3 Volume':1:68
+		'IIR1 INP1 MUX':0:DEC1
+	EndSequence
+
+	DisableSequence
+		'AIF1_CAP Mixer SLIM TX1':1:0
+		'AIF1_CAP Mixer SLIM TX2':1:0
+		'AIF1_CAP Mixer SLIM TX3':1:0
+		'SLIM_0_RX AANC MUX':0:ZERO
+		'SLIM TX1 MUX':0:ZERO
+		'DEC1 MUX':0:ZERO
+		'ADC1 Volume':1:0
+		'SLIM TX2 MUX':0:ZERO
+		'DEC2 MUX':0:ZERO
+		'ADC3 Volume':1:0
+		'SLIM TX3 MUX':0:ZERO
+		'DEC3 MUX':0:ZERO
+		'ADC4 Volume':1:0
+		'IIR1 INP1 MUX':0:ZERO
+	EndSequence
+
+	ACDBID	104:2
 	EffectsMixerCTL "SRS TruMedia"
 
 EndSection
@@ -5689,16 +5828,16 @@ SectionDevice
 		'RX2 MIX1 INP1':0:RX2
 		'CLASS_H_DSM MUX':0:RX_HPHL
 		'HPHL DAC Switch':1:1
-		'HPHL Volume':1:100
-		'HPHR Volume':1:100
+		'HPHL Volume':1:60
+		'HPHR Volume':1:60
 		'RX1 Digital Volume':1:68
 		'RX2 Digital Volume':1:68
 		'ANC Slot':1:0
 		'ANC1 MUX':0:ADC4
 		'ANC2 MUX':0:ADC5
 		'ANC1 FB MUX':0:EAR_HPH_L
-		'ADC5 Volume':1:65
-		'ADC4 Volume':1:65
+		'ADC5 Volume':1:40
+		'ADC4 Volume':1:40
 	EndSequence
 
 	DisableSequence
@@ -5778,16 +5917,16 @@ SectionDevice
 		'RX2 MIX1 INP1':0:RX2
 		'CLASS_H_DSM MUX':0:RX_HPHL
 		'HPHL DAC Switch':1:1
-		'HPHL Volume':1:100
-		'HPHR Volume':1:100
+		'HPHL Volume':1:60
+		'HPHR Volume':1:60
 		'RX1 Digital Volume':1:68
 		'RX2 Digital Volume':1:68
 		'ANC Slot':1:0
 		'ANC1 FB MUX':0:EAR_HPH_L
 		'ANC1 MUX':0:ADC4
 		'ANC2 MUX':0:ADC5
-		'ADC5 Volume':1:65
-		'ADC4 Volume':1:65
+		'ADC5 Volume':1:40
+		'ADC4 Volume':1:40
 	EndSequence
 
 	DisableSequence
@@ -5824,16 +5963,16 @@ SectionDevice
 		'RX2 MIX1 INP1':0:RX2
 		'CLASS_H_DSM MUX':0:RX_HPHL
 		'HPHL DAC Switch':1:1
-		'HPHL Volume':1:100
-		'HPHR Volume':1:100
+		'HPHL Volume':1:60
+		'HPHR Volume':1:60
 		'RX1 Digital Volume':1:68
 		'RX2 Digital Volume':1:68
 		'ANC Slot':1:1
 		'ANC1 MUX':0:ADC4
 		'ANC2 MUX':0:ADC5
 		'ANC1 FB MUX':0:EAR_HPH_L
-		'ADC5 Volume':1:65
-		'ADC4 Volume':1:65
+		'ADC5 Volume':1:40
+		'ADC4 Volume':1:40
 	EndSequence
 
 	DisableSequence
@@ -6011,16 +6150,16 @@ SectionDevice
 		'RX2 MIX1 INP1':0:RX2
 		'CLASS_H_DSM MUX':0:RX_HPHL
 		'HPHL DAC Switch':1:1
-		'HPHL Volume':1:100
-		'HPHR Volume':1:100
+		'HPHL Volume':1:60
+		'HPHR Volume':1:60
 		'RX1 Digital Volume':1:68
 		'RX2 Digital Volume':1:68
 		'ANC Slot':1:0
 		'ANC1 FB MUX':0:EAR_HPH_L
 		'ANC1 MUX':0:ADC4
 		'ANC2 MUX':0:ADC5
-		'ADC5 Volume':1:65
-		'ADC4 Volume':1:65
+		'ADC5 Volume':1:40
+		'ADC4 Volume':1:40
 	EndSequence
 
 	DisableSequence
@@ -6058,16 +6197,16 @@ SectionDevice
 		'CLASS_H_DSM MUX':0:RX_HPHL
 		'HPHL DAC Switch':1:1
 		'HPHR DAC Switch':1:1
-		'HPHL Volume':1:100
-		'HPHR Volume':1:100
+		'HPHL Volume':1:60
+		'HPHR Volume':1:60
 		'RX1 Digital Volume':1:68
 		'RX2 Digital Volume':1:68
 		'ANC Slot':1:0
 		'ANC1 MUX':0:ADC4
 		'ANC2 MUX':0:ADC5
 		'ANC1 FB MUX':0:EAR_HPH_L
-		'ADC5 Volume':1:65
-		'ADC4 Volume':1:65
+		'ADC5 Volume':1:40
+		'ADC4 Volume':1:40
 	EndSequence
 
 	DisableSequence
@@ -6104,16 +6243,16 @@ SectionDevice
 		'CLASS_H_DSM MUX':0:RX_HPHL
 		'HPHL DAC Switch':1:1
 		'HPHR DAC Switch':1:1
-		'HPHL Volume':1:100
-		'HPHR Volume':1:100
+		'HPHL Volume':1:60
+		'HPHR Volume':1:60
 		'RX1 Digital Volume':1:68
 		'RX2 Digital Volume':1:68
 		'ANC Slot':1:1
 		'ANC1 MUX':0:ADC4
 		'ANC2 MUX':0:ADC5
 		'ANC1 FB MUX':0:EAR_HPH_L
-		'ADC5 Volume':1:65
-		'ADC4 Volume':1:65
+		'ADC5 Volume':1:40
+		'ADC4 Volume':1:40
 	EndSequence
 
 	DisableSequence
@@ -9765,6 +9904,24 @@ SectionModifier
 	# ALSA PCMs
 	PlaybackPCM 18
 	CapturePCM 18
+
+EndSection
+
+SectionModifier
+        Name "Listen Voice Wakeup Mod"
+
+        EnableSequence
+		'LSM1 MUX':0:SLIMBUS_5_TX
+		'SLIMBUS_5_TX LSM Function':0:SWAUDIO
+        EndSequence
+
+        DisableSequence
+		'LSM1 MUX':0:None
+		'SLIMBUS_5_TX LSM Function':0:None
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 19
 
 EndSection
 
