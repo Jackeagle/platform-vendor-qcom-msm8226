@@ -60,6 +60,7 @@ LogSystem += diag_mdlog
 LogSystem += rootagent
 LogSystem += init.qcom.rootagent.sh
 LogSystem += dynamic_debug_mask.cfg
+LogSystem += cdrom_install.iso
 
 PRODUCT_PACKAGES += $(LogSystem)
 
