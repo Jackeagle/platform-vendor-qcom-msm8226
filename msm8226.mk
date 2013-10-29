@@ -21,10 +21,8 @@ PRODUCT_DEVICE := msm8226
 -include $(QCPATH)/common/config/rendering-engine.mk
 
 #This is font rendering engine feature switch
-ifneq ($(strip($(PRODUCT_RENDERING_ENGINE_REVLOAD))),)
-ifeq (exist,$(shell if test -f $(PRODUCT_RENDERING_ENGINE_REVLOAD); then echo "exist"; else echo "noexist"; fi))
+ifneq (,$(strip $(wildcard $(PRODUCT_RENDERING_ENGINE_REVLOAD))))
     MULTI_LANG_ENGINE := REVERIE
-endif
 endif
 
 # Audio configuration file
