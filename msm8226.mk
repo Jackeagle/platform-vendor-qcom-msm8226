@@ -112,6 +112,9 @@ PRODUCT_PACKAGES += $(rp_pppoe)
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.strict_op_enable=false
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.com.android.mobiledata=false
+
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.whitelist=/system/etc/whitelist_appops.xml
 
