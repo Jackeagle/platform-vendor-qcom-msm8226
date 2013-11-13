@@ -101,9 +101,9 @@
              frameRate="30" />
 
       <Audio codec="amrnb"
-             bitRate="12200"
-             sampleRate="8000"
-             channels="1" />
+             bitRate="156000"
+             sampleRate="48000"
+             channels="2" />
     </EncoderProfile>
 
     <EncoderProfile quality="high" fileFormat="mp4" duration="30">
@@ -140,9 +140,9 @@
              frameRate="30" />
 
       <Audio codec="amrnb"
-             bitRate="12200"
-             sampleRate="8000"
-             channels="1" />
+             bitRate="156000"
+             sampleRate="48000"
+             channels="2" />
     </EncoderProfile>
 
     <EncoderProfile quality="480p" fileFormat="mp4" duration="30">
@@ -192,9 +192,9 @@
              frameRate="30" />
 
       <Audio codec="amrnb"
-             bitRate="12200"
-             sampleRate="8000"
-             channels="1" />
+             bitRate="156000"
+             sampleRate="48000"
+             channels="2" />
     </EncoderProfile>
 
     <EncoderProfile quality="wvga" fileFormat="mp4" duration="30">
@@ -409,9 +409,9 @@
              frameRate="30" />
 
       <Audio codec="amrnb"
-             bitRate="12200"
-             sampleRate="8000"
-             channels="1" />
+             bitRate="156000"
+             sampleRate="48000"
+             channels="2" />
     </EncoderProfile>
 
     <EncoderProfile quality="high" fileFormat="mp4" duration="30">
@@ -448,9 +448,9 @@
              frameRate="30" />
 
       <Audio codec="amrnb"
-             bitRate="12200"
-             sampleRate="8000"
-             channels="1" />
+             bitRate="156000"
+             sampleRate="48000"
+             channels="2" />
     </EncoderProfile>
 
     <EncoderProfile quality="480p" fileFormat="mp4" duration="30">
@@ -487,9 +487,9 @@
              frameRate="30" />
 
       <Audio codec="amrnb"
-             bitRate="12200"
-             sampleRate="8000"
-             channels="1" />
+             bitRate="156000"
+             sampleRate="48000"
+             channels="2" />
     </EncoderProfile>
 
     <EncoderProfile quality="wvga" fileFormat="mp4" duration="30">
