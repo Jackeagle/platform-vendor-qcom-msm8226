@@ -21,9 +21,9 @@ PRODUCT_DEVICE := msm8226
 -include $(QCPATH)/common/config/rendering-engine.mk
 
 #This is font rendering engine feature switch
-ifneq (,$(strip $(wildcard $(PRODUCT_RENDERING_ENGINE_REVLOAD))))
-    MULTI_LANG_ENGINE := REVERIE
-endif
+#ifneq (,$(strip $(wildcard $(PRODUCT_RENDERING_ENGINE_REVLOAD))))
+#    MULTI_LANG_ENGINE := REVERIE
+#endif
 
 # Audio configuration file
 PRODUCT_COPY_FILES += \
