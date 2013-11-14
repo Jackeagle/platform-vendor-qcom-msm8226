@@ -86,3 +86,7 @@ TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 
 TARGET_ADDITIONAL_BOOTCLASSPATH := qcom.fmradio:oem-services:WfdCommon:qcmediaplayer
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_msm
+
+#Add support for firmare upgrade on 8226
+HAVE_FT_FW_UPGRADE := true
+HAVE_SYNAPTICS_I2C_RMI4_FW_UPGRADE := true
