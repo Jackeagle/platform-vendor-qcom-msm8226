@@ -21,10 +21,8 @@ PRODUCT_DEVICE := msm8226
 -include $(QCPATH)/common/config/rendering-engine.mk
 
 #This is font rendering engine feature switch
-ifneq ($(strip($(PRODUCT_RENDERING_ENGINE_REVLOAD))),)
-ifeq (exist,$(shell if test -f $(PRODUCT_RENDERING_ENGINE_REVLOAD); then echo "exist"; else echo "noexist"; fi))
+ifneq (,$(strip $(wildcard $(PRODUCT_RENDERING_ENGINE_REVLOAD))))
     MULTI_LANG_ENGINE := REVERIE
-endif
 endif
 
 # Audio configuration file
@@ -49,7 +47,8 @@ PRODUCT_COPY_FILES += \
     device/qcom/msm8226/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
     device/qcom/msm8226/WCNSS_qcom_wlan_nv.bin:persist/WCNSS_qcom_wlan_nv.bin
 
-PRODUCT_PACKAGES += wcnss_service
+PRODUCT_PACKAGES += wcnss_service \
+		    pronto_wlan.ko
 
 #ANT stack
 PRODUCT_PACKAGES += \
@@ -69,6 +68,7 @@ LogSystem += diag_mdlog
 LogSystem += rootagent
 LogSystem += init.qcom.rootagent.sh
 LogSystem += dynamic_debug_mask.cfg
+LogSystem += cdrom_install.iso
 
 PRODUCT_PACKAGES += $(LogSystem)
 
