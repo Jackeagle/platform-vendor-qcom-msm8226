@@ -47,7 +47,8 @@ PRODUCT_COPY_FILES += \
     device/qcom/msm8226/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
     device/qcom/msm8226/WCNSS_qcom_wlan_nv.bin:persist/WCNSS_qcom_wlan_nv.bin
 
-PRODUCT_PACKAGES += wcnss_service
+PRODUCT_PACKAGES += wcnss_service \
+		    pronto_wlan.ko
 
 #ANT stack
 PRODUCT_PACKAGES += \
@@ -110,6 +111,9 @@ PRODUCT_PACKAGES += $(rp_pppoe)
 # Enable strict operation
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.strict_op_enable=false
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.com.android.mobiledata=false
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.whitelist=/system/etc/whitelist_appops.xml

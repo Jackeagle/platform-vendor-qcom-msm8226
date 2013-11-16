@@ -24,8 +24,8 @@ persist.radio.msgtunnel.start=false
 #
 # system props for the cne module
 #
-persist.cne.feature=1
-
+persist.cne.feature=4
+persist.cne.override.memlimit=1
 
 # Skip /sys/power/wait_for_fb_* nodes and
 # force FB to be always on
@@ -41,9 +41,9 @@ dev.pm.dyn_samplingrate=1
 
 persist.demo.hdmirotationlock=true
 ro.hdmi.enable=true
-tunnel.decode=true
+tunnel.decode=false
 tunnel.audiovideo.decode=true
-lpa.decode=false
+lpa.decode=true
 lpa.use-stagefright=true
 qcom.hw.aac.encoder=true
 
