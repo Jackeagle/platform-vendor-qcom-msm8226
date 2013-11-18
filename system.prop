@@ -36,6 +36,7 @@ debug.egl.hw=1
 debug.composition.type=c2d
 persist.hwc.mdpcomp.enable=true
 debug.mdpcomp.logs=0
+debug.mdpcomp.bw=1.66
 dalvik.vm.heapsize=36m
 dev.pm.dyn_samplingrate=1
 
