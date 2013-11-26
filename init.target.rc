@@ -84,6 +84,7 @@ on boot
     write /proc/sys/kernel/printk 3
     # Enable writing to brightness node under torch-light from userspace
     chown system system /sys/class/leds/torch-light/brightness
+    write /sys/bus/i2c/drivers/ft5x06_ts/5-0038/update_fw 1
 
 #Start the qcom-system-daemon service
 service qcomsysd /system/bin/qcom-system-daemon
