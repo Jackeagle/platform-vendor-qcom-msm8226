@@ -128,6 +128,8 @@
     <ctl name="HDMI_RX_Voice Mixer VoLTE" value="0" />
     <ctl name="INTERNAL_BT_SCO_RX_Voice Mixer VoLTE" value="0" />
     <ctl name="VoLTE_Tx Mixer INTERNAL_BT_SCO_TX_VoLTE" value="0" />
+    <ctl name="AFE_PCM_RX_Voice Mixer VoLTE" value="0" />
+    <ctl name="VoLTE_Tx Mixer AFE_PCM_TX_VoLTE" value="0" />
     <!-- VoLTE -->
 
     <!-- Voice2 -->
@@ -214,6 +216,10 @@
     <ctl name="MultiMedia8 Mixer INTERNAL_BT_SCO_TX" value="0" />
     <ctl name="MultiMedia8 Mixer AFE_PCM_TX" value="0" />
     <!-- audio record compress end-->
+    <!-- listen -->
+    <ctl name="LSM1 MUX" value="None" />
+    <ctl name="SLIMBUS_5_TX LSM Function" value="None" />
+    <!-- listen end-->
 
     <!-- These are audio route (FE to BE) specific mixer settings -->
     <path name="deep-buffer-playback">
@@ -421,6 +427,11 @@
         <path name="volte-call bt-sco" />
     </path>
 
+    <path name="volte-call usb-headphones">
+        <ctl name="AFE_PCM_RX_Voice Mixer VoLTE" value="1" />
+        <ctl name="VoLTE_Tx Mixer AFE_PCM_TX_VoLTE" value="1" />
+    </path>
+
    <path name="incall-rec-uplink">
        <ctl name="MultiMedia1 Mixer VOC_REC_UL" value="1" />
    </path>
@@ -455,6 +466,11 @@
     <path name="compress-voip-call bt-sco-wb">
         <ctl name="Internal BTSCO SampleRate" value="16000" />
         <path name="compress-voip-call bt-sco" />
+    </path>
+
+    <path name="listen-high-power">
+        <ctl name="LSM1 MUX" value="SLIMBUS_5_TX" />
+        <ctl name="SLIMBUS_5_TX LSM Function" value="SWAUDIO" />
     </path>
 
     <!-- These are actual sound device specific mixer settings -->
@@ -928,6 +944,10 @@
     </path>
 
     <path name="voice-tty-vco-handset-mic">
+        <path name="adc1" />
+    </path>
+
+    <path name="listen-handset-mic">
         <path name="adc1" />
     </path>
 
