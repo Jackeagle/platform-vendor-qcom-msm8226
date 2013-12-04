@@ -63,6 +63,7 @@ on boot
     # Enable writing to led blink node from userspace
     chown system system /sys/class/leds/red/blink
     chown system system /sys/class/leds/green/blink
+    write /sys/bus/i2c/drivers/ft5x06_ts/5-0038/update_fw 1
 
 #Start the qcom-system-daemon service
 service qcomsysd /system/bin/qcom-system-daemon
@@ -93,8 +94,8 @@ service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
 #start GNSS/Sensor interface daemon
 service gsiff_daemon /system/bin/gsiff_daemon
    class late_start
-   user system
-   group gps net_raw
+   user gps
+   group gps net_raw misc
 
 service thermal-engine /system/bin/thermal-engine
    class main
