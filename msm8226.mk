@@ -21,9 +21,9 @@ PRODUCT_DEVICE := msm8226
 -include $(QCPATH)/common/config/rendering-engine.mk
 
 #This is font rendering engine feature switch
-#ifneq (,$(strip $(wildcard $(PRODUCT_RENDERING_ENGINE_REVLOAD))))
-#    MULTI_LANG_ENGINE := REVERIE
-#endif
+ifneq (,$(strip $(wildcard $(PRODUCT_RENDERING_ENGINE_REVLOAD))))
+    MULTI_LANG_ENGINE := REVERIE
+endif
 
 # Audio configuration file
 PRODUCT_COPY_FILES += \
@@ -36,6 +36,10 @@ PRODUCT_COPY_FILES += \
 	device/qcom/msm8226/snd_soc_msm/snd_soc_msm_Tapan_SKUF:system/etc/snd_soc_msm/snd_soc_msm_Tapan_SKUF \
 	device/qcom/msm8226/snd_soc_msm/snd_soc_msm_TapanLite:system/etc/snd_soc_msm/snd_soc_msm_TapanLite \
     device/qcom/msm8226/snd_soc_msm/snd_soc_msm_TapanLite_SKUF:system/etc/snd_soc_msm/snd_soc_msm_TapanLite_SKUF \
+
+# splash img
+PRODUCT_COPY_FILES += \
+    device/qcom/msm8226/splash.img:splash.img
 
 #fstab.qcom
 PRODUCT_PACKAGES += fstab.qcom \
