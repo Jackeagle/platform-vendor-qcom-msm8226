@@ -83,15 +83,15 @@ ADD_RADIO_FILES ?= true
 # Added to indicate that protobuf-c is supported in this build
 PROTOBUF_SUPPORTED := true
 
-VSYNC_EVENT_PHASE_OFFSET_NS := 7500000
-SF_VSYNC_EVENT_PHASE_OFFSET_NS := 5000000
-
 TARGET_USES_ION := true
 TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 TARGET_USES_INTERACTION_BOOST := true
 
 TARGET_INIT_VENDOR_LIB := libinit_msm
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_msm
+
+#Add support for firmare upgrade on 8226
+HAVE_SYNAPTICS_I2C_RMI4_FW_UPGRADE := true
 
 # Board specific SELinux policy variable definitions
 BOARD_SEPOLICY_DIRS := \
