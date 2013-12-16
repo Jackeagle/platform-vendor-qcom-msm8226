@@ -89,4 +89,7 @@
     </integer-array>
 
     <bool name="def_button_light_enabled">true</bool>
+
+   <!-- Whether cpu boost is enabled for overscroller fling. -->
+   <bool name="config_enableCpuBoostForOverScrollerFling">true</bool>
 </resources>
