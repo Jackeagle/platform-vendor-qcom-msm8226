@@ -41,6 +41,10 @@ PRODUCT_COPY_FILES += \
 
 #fstab.qcom
 PRODUCT_PACKAGES += fstab.qcom
+
+#spec service
+PRODUCT_PACKAGES += init.qti.carrier.rc
+
 #wlan driver
 PRODUCT_COPY_FILES += \
     device/qcom/msm8226/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
