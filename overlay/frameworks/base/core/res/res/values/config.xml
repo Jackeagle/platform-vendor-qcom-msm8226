@@ -31,4 +31,7 @@
    <!-- Whether cpu boost is enabled for overscroller fling. -->
    <bool name="config_enableCpuBoostForOverScrollerFling">true</bool>
    <bool name="config_button_light_enabled">true</bool>
+   <!-- Configuartion to support 7bit Ascii encoding and decoding
+       for long messages. -->
+   <bool name="config_ascii_7bit_support_for_long_message">true</bool>
 </resources>
