@@ -60,21 +60,37 @@ PRODUCT_PACKAGES += \
     libantradio \
     antradio_app
 
-# NFC packages
 ifeq ($(BOARD_HAVE_QCA_NFC),true)
-PRODUCT_PACKAGES += \
-    libnfc-nci \
-    libnfc_nci_jni \
-    nfc_nci.msm8226 \
-    NfcNci \
-    Tag \
-    com.android.nfc_extras
+
+NFC_D := true
+# NFC packages
+ifeq ($(NFC_D), true)
+    PRODUCT_PACKAGES += \
+        libnfcD-nci \
+        libnfcD_nci_jni \
+        nfcD_nci.msm8226 \
+        NfcDNci \
+        Tag \
+        com.android.nfc_extras \
+        com.android.nfc.helper
+else
+    PRODUCT_PACKAGES += \
+        libnfc-nci \
+        libnfc_nci_jni \
+        nfc_nci.msm8226 \
+        NfcNci \
+        Tag \
+        com.android.nfc_extras
+endif
 
 # file that declares the MIFARE NFC constant
 # Commands to migrate prefs from com.android.nfc3 to com.android.nfc
 # NFC access control + feature files + configuration
+
 PRODUCT_COPY_FILES += \
-        packages/apps/Nfc/migrate_nfc.txt:system/etc/updatecmds/migrate_nfc.txt \
+	packages/apps/Nfc/migrate_nfc.txt:system/etc/updatecmds/migrate_nfc.txt
+
+PRODUCT_COPY_FILES += \
         frameworks/native/data/etc/com.nxp.mifare.xml:system/etc/permissions/com.nxp.mifare.xml \
         frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
         frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
@@ -82,6 +98,7 @@ PRODUCT_COPY_FILES += \
         frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:system/etc/permissions/android.hardware.sensor.stepdetector.xml
 
 endif # BOARD_HAVE_QCA_NFC
+
 # Enable strict operation
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.strict_op_enable=false
