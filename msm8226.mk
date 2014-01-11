@@ -28,7 +28,8 @@ PRODUCT_BOOT_JARS += qcmediaplayer:WfdCommon:oem-services:qcom.fmradio:org.codea
 PRODUCT_COPY_FILES += \
     device/qcom/msm8226/audio_policy.conf:system/etc/audio_policy.conf \
     device/qcom/msm8226/audio_effects.conf:system/vendor/etc/audio_effects.conf \
-    device/qcom/msm8226/mixer_paths.xml:system/etc/mixer_paths.xml
+    device/qcom/msm8226/mixer_paths.xml:system/etc/mixer_paths.xml \
+    device/qcom/msm8226/audio_platform_info.xml:system/etc/audio_platform_info.xml
 
 PRODUCT_PACKAGES += \
     libqcomvisualizer \
