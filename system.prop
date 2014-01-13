@@ -118,6 +118,9 @@ persist.env.fastdorm.enabled=true
 # system props for restore modem_pref support
 persist.radio.restore_mode_pref=1
 
+# Enable RST packet drop
+persist.data.tcp_rst_drop=true
+
 # system prop for NFC DT
 ro.nfc.port=I2C
 
