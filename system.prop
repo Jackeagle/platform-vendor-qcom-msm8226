@@ -100,6 +100,9 @@ ro.qualcomm.cabl=1
 # Enable Fast Dormancy
 persist.env.fastdorm.enabled=true
 
+# Enable RST packet drop
+persist.data.tcp_rst_drop=true
+
 # system prop for NFC DT
 ro.nfc.port=I2C
 
