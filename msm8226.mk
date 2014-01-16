@@ -28,7 +28,7 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth configuration files
 PRODUCT_COPY_FILES += \
-    system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf \
+    system/bluetooth/data/main.conf:system/etc/bluetooth/main.conf \
     system/bluetooth/data/audio.conf:system/etc/bluetooth/audio.conf \
 	device/qcom/msm8226/snd_soc_msm/snd_soc_msm_Tapan:system/etc/snd_soc_msm/snd_soc_msm_Tapan \
 	device/qcom/msm8226/snd_soc_msm/snd_soc_msm_Tapan_SKUF:system/etc/snd_soc_msm/snd_soc_msm_Tapan_SKUF \
