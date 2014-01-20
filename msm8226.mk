@@ -1,5 +1,4 @@
 TARGET_USES_QCOM_BSP := true
-TARGET_HAS_NFC := true
 
 ifeq ($(TARGET_USES_QCOM_BSP), true)
 # Add QC Video Enhancements flag
@@ -77,28 +76,14 @@ LogSystem += cdrom_install.iso
 
 PRODUCT_PACKAGES += $(LogSystem)
 
-ifeq ($(TARGET_HAS_NFC), true)
-
-NFC_D := true
 # NFC packages
-ifeq ($(NFC_D), true)
-    PRODUCT_PACKAGES += \
-        libnfcD-nci \
-        libnfcD_nci_jni \
-        nfcD_nci.msm8226 \
-        NfcDNci \
-        Tag \
-        com.android.nfc_extras \
-        com.android.nfc.helper
-else
-    PRODUCT_PACKAGES += \
-        libnfc-nci \
-        libnfc_nci_jni \
-        nfc_nci.msm8226 \
-        NfcNci \
-        Tag \
-        com.android.nfc_extras
-endif
+PRODUCT_PACKAGES += \
+    libnfc-nci \
+    libnfc_nci_jni \
+    nfc_nci.msm8226 \
+    NfcNci \
+    Tag \
+    com.android.nfc_extras
 
 # NFCEE access control
 ifeq ($(TARGET_BUILD_VARIANT),user)
@@ -110,19 +95,13 @@ endif
 # file that declares the MIFARE NFC constant
 # Commands to migrate prefs from com.android.nfc3 to com.android.nfc
 # NFC access control + feature files + configuration
-
 PRODUCT_COPY_FILES += \
-	packages/apps/Nfc/migrate_nfc.txt:system/etc/updatecmds/migrate_nfc.txt
-
-PRODUCT_COPY_FILES += \
+        packages/apps/Nfc/migrate_nfc.txt:system/etc/updatecmds/migrate_nfc.txt \
         frameworks/native/data/etc/com.nxp.mifare.xml:system/etc/permissions/com.nxp.mifare.xml \
         frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
         $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml \
         frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
         device/qcom/msm8226/nfc/libnfc-nci.conf:system/etc/libnfc-nci.conf
-
-endif
-#TARGET_HAS_NFC
 
 PRODUCT_PACKAGES += $(LogSystem)
 
