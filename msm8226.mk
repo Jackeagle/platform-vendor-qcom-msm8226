@@ -119,7 +119,8 @@ PRODUCT_COPY_FILES += \
         frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
         $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml \
         frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
-        device/qcom/msm8226/nfc/libnfc-nci.conf:system/etc/libnfc-nci.conf
+        device/qcom/msm8226/nfc/libnfc-nci.conf:system/etc/libnfc-nci.conf \
+        device/qcom/msm8226/nfc/hardfault.cfg:system/etc/nfc/hardfault.cfg
 
 endif
 #TARGET_HAS_NFC
