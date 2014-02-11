@@ -103,6 +103,9 @@ persist.env.fastdorm.enabled=true
 # Enable RST packet drop
 persist.data.tcp_rst_drop=true
 
+# Enable cdrom
+persist.service.cdrom.enable=1
+
 # system prop for NFC DT
 ro.nfc.port=I2C
 
