@@ -32,6 +32,7 @@ persist.hwc.mdpcomp.enable=true
 debug.mdpcomp.mixedmode.disable=1
 debug.mdpcomp.logs=0
 debug.mdpcomp.idletime=-1
+debug.mdpcomp.bw=1.66
 dalvik.vm.heapsize=36m
 dev.pm.dyn_samplingrate=1
 
