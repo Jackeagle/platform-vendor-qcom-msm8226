@@ -5872,7 +5872,7 @@ SectionDevice
 	EndSequence
 
 	ACDBID	20:1
-	EffectsMixerCTL "SRS TruMedia"
+	EffectsMixerCTL "SRS TruMedia Proxy"
 
 EndSection
 
