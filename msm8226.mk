@@ -74,6 +74,14 @@ PRODUCT_PACKAGES += \
     Tag \
     com.android.nfc_extras
 
+# IMS SDK packages
+PRODUCT_PACKAGES += \
+    imsapi.xml \
+    imsapi \
+    imssdkservice \
+    libsdkimscamera_jni \
+    libsdkvt_jni
+
 # file that declares the MIFARE NFC constant
 # Commands to migrate prefs from com.android.nfc3 to com.android.nfc
 # NFC access control + feature files + configuration
