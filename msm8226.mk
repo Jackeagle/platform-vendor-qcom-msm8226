@@ -74,6 +74,14 @@ PRODUCT_PACKAGES += \
     Tag \
     com.android.nfc_extras
 
+# IMS SDK packages
+PRODUCT_PACKAGES += \
+    imsapi.xml \
+    imsapi \
+    imssdkservice \
+    libsdkimscamera_jni \
+    libsdkvt_jni
+
 # file that declares the MIFARE NFC constant
 # Commands to migrate prefs from com.android.nfc3 to com.android.nfc
 # NFC access control + feature files + configuration
@@ -101,3 +109,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.logkit.ctrlcode=1
 
 PRODUCT_LOCALES += th_TH vi_VN tl_PH hi_IN ar_EG ru_RU tr_TR pt_BR bn_IN mr_IN ta_IN te_IN zh_HK in_ID
+
+PRODUCT_PACKAGE_OVERLAYS := $(QCPATH)/qrdplus/globalization/multi-language/res-overlay \
+        $(PRODUCT_PACKAGE_OVERLAYS)
