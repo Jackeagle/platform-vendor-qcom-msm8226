@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-    Copyright (c) 2013, The Linux Foundation. All rights reserved.
+    Copyright (c) 2014, The Linux Foundation. All rights reserved.
 
     Redistribution and use in source and binary forms, with or without
     modification, are permitted provided that the following conditions are
@@ -27,15 +27,8 @@
     OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
     IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE
 -->
-<resources>
-   <!-- Whether cpu boost is enabled for overscroller fling. -->
-   <bool name="config_enableCpuBoostForOverScrollerFling">true</bool>
-   <bool name="config_button_light_enabled">true</bool>
-   <!-- Configuartion to support 7bit Ascii encoding and decoding
-       for long messages. -->
-   <bool name="config_ascii_7bit_support_for_long_message">true</bool>
-   <!-- Remote server that can provide NTP responses. -->
-   <string translatable="false" name="config_ntpServer">asia.pool.ntp.org</string>
-   <!-- Whether camera shutter sound is forced or not  (country specific). -->
-   <bool name="config_camera_sound_forced">true</bool>
-</resources>
+
+<device name="Android">
+  <item name="screen.on">42</item>
+  <item name="screen.full">297</item>
+</device>
