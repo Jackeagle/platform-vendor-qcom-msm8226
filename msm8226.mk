@@ -35,6 +35,10 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessing \
     libqcompostprocbundle
 
+# Listen configuration file
+PRODUCT_COPY_FILES += \
+    device/qcom/msm8226/listen_platform_info.xml:system/etc/listen_platform_info.xml
+
 # Bluetooth configuration files
 PRODUCT_COPY_FILES += \
     system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf
