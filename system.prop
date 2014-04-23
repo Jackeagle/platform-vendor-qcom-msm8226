@@ -132,3 +132,6 @@ use.voice.path.for.pcm.voip=true
 
 #enable dsp gapless mode by default
 audio.offload.gapless.enabled=true
+
+#Set read only default composition for USB
+ro.sys.usb.default.config=diag,serial_smd,serial_tty,rmnet_bam,mass_storage,adb
