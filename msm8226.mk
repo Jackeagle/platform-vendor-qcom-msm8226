@@ -22,6 +22,13 @@ $(call inherit-product, device/qcom/common/common.mk)
 PRODUCT_NAME := msm8226
 PRODUCT_DEVICE := msm8226
 
+-include $(QCPATH)/common/config/rendering-engine.mk
+
+# font rendering engine feature switch
+ifneq (,$(strip $(wildcard $(PRODUCT_RENDERING_ENGINE_REVLOAD))))
+    MULTI_LANG_ENGINE := REVERIE
+endif
+
 PRODUCT_BOOT_JARS += qcmediaplayer:WfdCommon:oem-services:qcom.fmradio:org.codeaurora.Performance:vcard
 
 # Audio configuration file
