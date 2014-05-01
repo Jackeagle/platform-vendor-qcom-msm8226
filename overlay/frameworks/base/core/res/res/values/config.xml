@@ -30,4 +30,7 @@
 <resources>
    <!-- Whether cpu boost is enabled for overscroller fling. -->
    <bool name="config_enableCpuBoostForOverScrollerFling">true</bool>
+
+   <!-- Is the device LTE capable -->
+   <bool name="config_lte_capable">false</bool>
 </resources>
