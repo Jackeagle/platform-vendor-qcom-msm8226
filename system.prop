@@ -129,10 +129,12 @@ persist.debug.wfd.enable=1
 ##property to choose between virtual/external wfd display
 persist.sys.wfd.virtual=0
 tunnel.audio.encode = true
-
 #PPPOE config enable
 #
 ro.config.pppoe_enable=1
 
 # system prop for storage test
 ro.external.sd.path=/storage/sdcard1
+#min_freq for 8226
+ro.min_freq=787200
+ro.opti_freq=787200
