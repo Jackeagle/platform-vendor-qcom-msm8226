@@ -106,3 +106,6 @@ persist.sys.wfd.virtual=0
 ##property to check if downscale is disabled for external/virtual display
 persist.sys.downscale.disable=1
 tunnel.audio.encode = true
+#min_freq for 8226
+ro.min_freq=787200
+ro.opti_freq=787200
