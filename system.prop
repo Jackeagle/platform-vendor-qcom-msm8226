@@ -138,3 +138,6 @@ ro.sys.usb.default.config=diag,serial_smd,serial_tty,rmnet_bam,mass_storage,adb
 
 # set max background services
 ro.config.max_starting_bg=8
+
+#property to set minimum frequency as 787Mhz by default
+ro.min_freq=787000
