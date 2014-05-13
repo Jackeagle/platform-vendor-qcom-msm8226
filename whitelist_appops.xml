@@ -42,7 +42,6 @@
 <pkg name="com.android.cellbroadcastreceiver"/>
 <pkg name="com.android.providers.calendar"/>
 <pkg name="com.android.calendar"/>
-<pkg name="com.android.browser"/>
 <pkg name="com.android.music"/>
 <pkg name="com.android.onetimeinitializer"/>
 <pkg name="com.android.providers.downloads.ui"/>
