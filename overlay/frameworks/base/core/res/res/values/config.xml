@@ -28,6 +28,16 @@
     IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE
 -->
 <resources>
-   <!-- Whether cpu boost is enabled for overscroller fling. -->
-   <bool name="config_enableCpuBoostForOverScrollerFling">true</bool>
+
+    <!-- If this is true, the screen will come on when you unplug usb/power/whatever. -->
+    <bool name="config_unplugTurnsOnScreen">true</bool>
+
+    <!-- Shutdown if the battery temperature exceeds (this value * 0.1) Celsius. -->
+    <integer name="config_shutdownBatteryTemperature">600</integer>
+
+    <!-- Default screen brightness setting. -->
+    <integer name="config_screenBrightnessSettingDefault">76</integer>
+
+    <!-- Reduce lowmemorykiller threshold -->
+    <integer name="config_lowMemoryKillerMinFreeKbytesAbsolute">16384</integer>
 </resources>

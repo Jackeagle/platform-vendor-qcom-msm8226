@@ -5,6 +5,8 @@ LOCAL_PATH := $(call my-dir)
 #----------------------------------------------------------------------
 ifneq ($(strip $(TARGET_NO_BOOTLOADER)),true)
 
+INSTALLED_BOOTLOADER_MODULE := $(PRODUCT_OUT)/bootloader
+
 # Compile
 include bootable/bootloader/lk/AndroidBoot.mk
 
@@ -23,6 +25,10 @@ ifeq ($(KERNEL_DEFCONFIG),)
 endif
 
 include kernel/AndroidKernel.mk
+
+ifeq ($(INSTALLED_KERNEL_TARGET),)
+	INSTALLED_KERNEL_TARGET := out/target/product/msm8226/kernel
+endif
 
 $(INSTALLED_KERNEL_TARGET): $(TARGET_PREBUILT_KERNEL) | $(ACP)
 	$(transform-prebuilt-to-target)
