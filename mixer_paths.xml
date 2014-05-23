@@ -161,6 +161,9 @@
     <ctl name="Voip_Tx Mixer AFE_PCM_TX_Voip" value="0" />
     <!-- compress-voip-call End-->
 
+    <!-- echo reference -->
+    <ctl name="AUDIO_REF_EC_UL1 MUX" value="None" />
+
     <!-- fm -->
     <ctl name="SLIMBUS_0_RX Port Mixer INTERNAL_FM_TX" value="0" />
     <ctl name="SLIMBUS_DL_HL Switch" value="0" />
@@ -448,6 +451,10 @@
         <ctl name="Voice_Tx Mixer AFE_PCM_TX_Voice" value="1" />
     </path>
 
+    <path name="echo-reference">
+        <ctl name="AUDIO_REF_EC_UL1 MUX" value="SLIM_RX" />
+    </path>
+
     <path name="voice2-call">
         <ctl name="SLIM_0_RX_Voice Mixer Voice2" value="1" />
         <ctl name="Voice2_Tx Mixer SLIM_0_TX_Voice2" value="1" />
@@ -649,8 +656,40 @@
        <ctl name="Incall_Music Audio Mixer MultiMedia2" value="1" />
    </path>
 
+   <path name="incall_music_uplink bt-sco">
+       <path name="incall_music_uplink" />
+   </path>
+
+   <path name="incall_music_uplink bt-sco-wb">
+       <path name="incall_music_uplink" />
+   </path>
+
+   <path name="incall_music_uplink usb-headphones">
+       <path name="incall_music_uplink" />
+   </path>
+
+   <path name="incall_music_uplink hdmi">
+       <path name="incall_music_uplink" />
+   </path>
+
    <path name="incall_music_uplink2">
        <ctl name="Incall_Music_2 Audio Mixer MultiMedia9" value="1" />
+    </path>
+
+   <path name="incall_music_uplink2 bt-sco">
+       <path name="incall_music_uplink2" />
+   </path>
+
+   <path name="incall_music_uplink2 bt-sco-wb">
+       <path name="incall_music_uplink2" />
+   </path>
+
+   <path name="incall_music_uplink2 usb-headphones">
+       <path name="incall_music_uplink2" />
+   </path>
+
+   <path name="incall_music_uplink2 hdmi">
+       <path name="incall_music_uplink2" />
    </path>
 
     <path name="compress-voip-call">
