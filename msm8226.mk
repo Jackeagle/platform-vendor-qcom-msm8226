@@ -24,6 +24,8 @@ PRODUCT_BRAND := ANDROID
 
 # Audio configuration file
 PRODUCT_COPY_FILES += \
+    device/qcom/msm8226/synaptics_rmi4_i2c.kcm:system/usr/keychars/synaptics_rmi4_i2c.kcm \
+    device/qcom/msm8226/synaptics_rmi4_i2c.idc:system/usr/idc/synaptics_rmi4_i2c.idc \
     device/qcom/msm8226/audio_policy.conf:system/etc/audio_policy.conf \
     device/qcom/msm8226/audio_effects.conf:system/vendor/etc/audio_effects.conf \
     device/qcom/msm8226/mixer_paths.xml:system/etc/mixer_paths.xml
