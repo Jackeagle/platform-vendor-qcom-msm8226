@@ -85,7 +85,7 @@ service time_daemon /system/bin/time_daemon
    user root
    group root
 
-service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
+service mpdecision /system/bin/mpdecision --avg_comp
    user root
    disabled
 
@@ -158,16 +158,20 @@ on property:sys.ims.DATA_DAEMON_STATUS=1
     start ims_rtp_daemon
 
 service wcnss-service /system/bin/wcnss_service
-   class late_start
+   class main
    user system
-   group system wifi
+   group system wifi radio
    oneshot
 
 service ppd /system/bin/mm-pp-daemon
     class late_start
+    disabled
     user system
     socket pps stream 0660 system system
     group system graphics
 
 on property:init.svc.surfaceflinger=stopped
     stop ppd
+
+on property:init.svc.surfaceflinger=running
+    start ppd
