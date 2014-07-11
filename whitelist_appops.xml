@@ -119,4 +119,5 @@
 <pkg name="com.google.android.inputmethod.latin.dictionarypack"/>
 <pkg name="com.google.android.syncadapters.contacts"/>
 <pkg name="com.codeaurora.fmrecording"/>
+<pkg name="com.qti.antitheftdemo"/>
 </whitelist-pkgs>
