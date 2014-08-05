@@ -65,7 +65,8 @@ PRODUCT_PACKAGES += ClockworkExampleWatchFace
 
 PRODUCT_PROPERTY_OVERRIDES += \
         ro.opengles.version=131072 \
-        ro.sf.lcd_density=240
+        ro.sf.lcd_density=240 \
+        bluetooth.force_pm_timer=1000 \
 
 # screen density config, for framework
 PRODUCT_AAPT_CONFIG := small hdpi
