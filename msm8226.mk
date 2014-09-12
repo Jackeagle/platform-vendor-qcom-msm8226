@@ -6,11 +6,8 @@ DEVICE_PACKAGE_OVERLAYS := device/qcom/msm8226/overlay
 #TARGET_DISABLE_DASH := true
 #TARGET_DISABLE_OMX_SECURE_TEST_APP := true
 
-# media_profiles and media_codecs xmls for 8226
-ifeq ($(TARGET_ENABLE_QC_AV_ENHANCEMENTS), true)
-PRODUCT_COPY_FILES += device/qcom/msm8226/media/media_profiles_8226.xml:system/etc/media_profiles.xml \
-                      device/qcom/msm8226/media/media_codecs_8226.xml:system/etc/media_codecs.xml
-endif
+# media_codecs xml for 8226
+PRODUCT_COPY_FILES += device/qcom/msm8226/media/media_codecs_8226.xml:system/etc/media_codecs.xml
 
 $(call inherit-product, device/qcom/common/common.mk)
 
