@@ -92,3 +92,7 @@ $(call inherit-product-if-exists, hardware/qcom/msm8x26/msm8x26.mk)
 $(call inherit-product-if-exists, vendor/qcom/gpu/msm8x26/msm8x26-gpu-vendor.mk)
 
 $(call inherit-product, device/google/clockwork/build/wearable-mdpi-512-dalvik-heap.mk)
+
+ifeq ($(TARGET_BUILD_VARIANT), userdebug)
+    ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=0
+endif
