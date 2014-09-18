@@ -1,4 +1,12 @@
 #
+# system.prop for QM8626 platform
+#
+persist.qm8626.usbclonly.enable=1
+persist.qm8626.extleds_1.enable=1
+persist.qm8626.extleds_2.enable=1
+persist.qm8626.intleds_1.enable=1
+
+#
 # system.prop for msm8226
 #
 
@@ -18,8 +26,9 @@ persist.rild.nitz_short_ons_3=
 ril.subscription.types=NV,RUIM
 DEVICE_PROVISIONED=1
 persist.radio.msgtunnel.start=false
-# Start in cdma mode
-ro.telephony.default_network=5
+# Start in WCDMA preferred Mode
+ro.telephony.default_network=0
+
 
 #
 # system props for the cne module
