@@ -105,7 +105,3 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 PRODUCT_COPY_FILES += \
     device/qcom/msm8226/whitelist_appops.xml:system/etc/whitelist_appops.xml
-
-# Target-specific Gecko configuration
-# Enable DSP-based EC/NS for webRTC
-GECKO_CONFIGURE_ARGS+=--enable-hardware-aec
