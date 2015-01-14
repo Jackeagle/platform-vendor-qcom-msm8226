@@ -1,5 +1,6 @@
 TARGET_USES_QCOM_BSP := true
 TARGET_USES_QCA_NFC := other
+TARGET_SMARTWATCH_BUILD := true
 
 ifeq ($(TARGET_USES_QCOM_BSP), true)
 # Add QC Video Enhancements flag
@@ -50,12 +51,13 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += wcnss_service \
 		    pronto_wlan.ko
-
+ifeq ($(TARGET_SMARTWATCH_BUILD), false)
 #ANT stack
 PRODUCT_PACKAGES += \
     AntHalService \
     libantradio \
     antradio_app
+endif
 
 # NFC packages
 ifeq ($(TARGET_USES_QCA_NFC),true)
@@ -104,10 +106,16 @@ endif
 
 endif # TARGET_USES_QCA_NFC
 
-PRODUCT_BOOT_JARS += qcmediaplayer \
+ifeq ($(TARGET_SMARTWATCH_BUILD), false)
+PRODUCT_BOOT_JARS += \
+                     qcmediaplayer \
                      WfdCommon \
                      oem-services \
-                     qcom.fmradio \
+                     qcom.fmradio
+endif
+
+PRODUCT_BOOT_JARS += \
+                     oem-services \
                      org.codeaurora.Performance \
                      vcard \
                      tcmiface
