@@ -129,3 +129,12 @@ audio.offload.gapless.enabled=true
 
 #property to set minimum frequency as 787Mhz by default
 ro.min_freq_0=787200
+
+#DPI change for wear
+ro.sf.lcd_density=180
+
+#low ram support
+ro.config.low_ram=true
+
+#disable JIT for low ram
+dalvik.vm.jit.codecachesize=0
