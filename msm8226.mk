@@ -110,7 +110,6 @@ ifeq ($(TARGET_SMARTWATCH_BUILD), false)
 PRODUCT_BOOT_JARS += \
                      qcmediaplayer \
                      WfdCommon \
-                     oem-services \
                      qcom.fmradio
 endif
 
@@ -119,6 +118,7 @@ PRODUCT_BOOT_JARS += \
                      org.codeaurora.Performance \
                      vcard \
                      tcmiface
+
 
 PRODUCT_COPY_FILES += \
         frameworks/native/data/etc/android.hardware.sensor.stepcounter.xml:system/etc/permissions/android.hardware.sensor.stepcounter.xml \
