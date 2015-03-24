@@ -31,6 +31,9 @@ PRODUCT_COPY_FILES += \
     device/qcom/msm8226/audio_effects.conf:system/vendor/etc/audio_effects.conf \
     device/qcom/msm8226/mixer_paths.xml:system/etc/mixer_paths.xml
 
+PRODUCT_COPY_FILES += \
+    device/qcom/msm8226/wearable_core_hardware.xml:system/etc/permissions/wearable_core_hardware.xml
+
 PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing \
