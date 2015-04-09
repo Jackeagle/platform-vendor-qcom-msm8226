@@ -138,3 +138,6 @@ audio.offload.gapless.enabled=true
 
 #property to set minimum frequency as 787Mhz by default
 ro.min_freq_0=787200
+
+#qm8626 SW version
+ro.qm8626.version=M8626AAAAANLGD1060203.1_0_14R
