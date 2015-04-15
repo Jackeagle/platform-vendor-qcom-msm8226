@@ -127,5 +127,11 @@ use.voice.path.for.pcm.voip=true
 #enable dsp gapless mode by default
 audio.offload.gapless.enabled=true
 
+# set max background services
+ro.config.max_starting_bg=8
+
+#additional max allowed background services on bootup
+persist.added_boot_bgservices=4
+
 #property to set minimum frequency as 787Mhz by default
 ro.min_freq=787000
