@@ -131,7 +131,7 @@ audio.offload.gapless.enabled=true
 ro.min_freq_0=787200
 
 #DPI change for wear
-ro.sf.lcd_density=180
+ro.sf.lcd_density=160
 
 #low ram support
 ro.config.low_ram=true
