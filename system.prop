@@ -5,6 +5,8 @@ persist.qm8626.usbclonly.enable=1
 persist.qm8626.extleds_1.enable=1
 persist.qm8626.extleds_2.enable=1
 persist.qm8626.intleds_1.enable=1
+persist.qm8626.andled_1.enable=0
+persist.qm8626.andled_2.enable=0
 
 #
 # system.prop for msm8226
