@@ -138,3 +138,9 @@ ro.config.low_ram=true
 
 #disable JIT for low ram
 dalvik.vm.jit.codecachesize=0
+
+#property to restrict number of cameras to 2
+#Due to multimode architecture, camera on 8x26 target
+#will not work properly as there are non-zero specific profile
+#exists in dtsi file, which is needed fo JB-based camera architecture.
+persist.camera.num_cameras=2
