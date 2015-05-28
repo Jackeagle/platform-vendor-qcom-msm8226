@@ -8,7 +8,9 @@ persist.qm8626.intleds_1.enable=1
 persist.qm8626.andled_1.enable=0
 persist.qm8626.andled_2.enable=0
 #qm8626 SW version
-ro.qm8626.version=M8626AAAAANLGD1060203.1_0_14R
+ro.qm8626.version=NOT DEFINED
+#qm8626 model version
+ro.qm8626.model=0
 
 #
 # system.prop for msm8226
