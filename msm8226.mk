@@ -29,7 +29,8 @@ PRODUCT_COPY_FILES += \
     device/qcom/msm8226/synaptics_rmi4_i2c.idc:system/usr/idc/synaptics_rmi4_i2c.idc \
     device/qcom/msm8226/audio_policy.conf:system/etc/audio_policy.conf \
     device/qcom/msm8226/audio_effects.conf:system/vendor/etc/audio_effects.conf \
-    device/qcom/msm8226/mixer_paths.xml:system/etc/mixer_paths.xml
+    device/qcom/msm8226/mixer_paths.xml:system/etc/mixer_paths.xml \
+    device/qcom/msm8226/mixer_paths_wcd9330.xml:system/etc/mixer_paths_wcd9330.xml
 
 PRODUCT_COPY_FILES += \
     device/qcom/msm8226/wearable_core_hardware.xml:system/etc/permissions/wearable_qcom_hardware.xml
