@@ -32,7 +32,7 @@ PRODUCT_COPY_FILES += \
     device/qcom/msm8226/mixer_paths.xml:system/etc/mixer_paths.xml
 
 PRODUCT_COPY_FILES += \
-    device/qcom/msm8226/wearable_core_hardware.xml:system/etc/permissions/wearable_core_hardware.xml
+    device/qcom/msm8226/wearable_core_hardware.xml:system/etc/permissions/wearable_qcom_hardware.xml
 
 PRODUCT_PACKAGES += \
     libqcomvisualizer \
@@ -92,6 +92,8 @@ else
     Tag \
     com.android.nfc_extras
 endif
+
+PRODUCT_CHARACTERISTICS := nosdcard,watch
 
 # file that declares the MIFARE NFC constant
 # Commands to migrate prefs from com.android.nfc3 to com.android.nfc
