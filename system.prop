@@ -144,3 +144,36 @@ dalvik.vm.jit.codecachesize=0
 #will not work properly as there are non-zero specific profile
 #exists in dtsi file, which is needed fo JB-based camera architecture.
 persist.camera.num_cameras=2
+
+#enable QHeart sensor by default
+ro.qti.sensors.qheart=true
+
+#enable Wrist Tilt sensor by default
+ro.qti.sensors.wrist_tilt=true
+
+#disable unsupported sensors
+ro.qti.sdk.sensors.gestures=false
+ro.qti.sensors.pedometer=false
+ro.qti.sensors.pam=false
+ro.qti.sensors.scrn_ortn=false
+ro.qti.sensors.smd=false
+ro.qti.sensors.game_rv=false
+ro.qti.sensors.georv=false
+ro.qti.sensors.cmc=false
+ro.qti.sensors.bte=false
+ro.qti.sensors.fns=false
+ro.qti.sensors.qmd=false
+ro.qti.sensors.amd=false
+ro.qti.sensors.rmd=false
+ro.qti.sensors.vmd=false
+ro.qti.sensors.gtap=false
+ro.qti.sensors.tap=false
+ro.qti.sensors.facing=false
+ro.qti.sensors.tilt=false
+ro.qti.sensors.tilt_detector=false
+ro.qti.sensors.dpc=false
+ro.qti.sensors.gravity=false
+ro.qti.sensors.laccel=false
+ro.qti.sensors.orientation=false
+ro.qti.sensors.rotvec=false
+ro.qti.sensors.fast_amd=false
