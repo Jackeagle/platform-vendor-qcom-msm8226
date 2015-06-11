@@ -143,3 +143,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 PRODUCT_COPY_FILES += \
     device/qcom/msm8226/whitelist_appops.xml:system/etc/whitelist_appops.xml
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.heapgrowthlimit=96m \
+    dalvik.vm.heapsize=256m
