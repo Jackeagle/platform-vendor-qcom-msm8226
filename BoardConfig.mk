@@ -106,6 +106,3 @@ MALLOC_IMPL := dlmalloc
 TARGET_CPU_MEMCPY_BASE_OPT_DISABLE := true
 
 USE_OPENGL_RENDERER := true
-
-# Required for QM8626 first boot time
-WITH_DEXPREOPT := true
