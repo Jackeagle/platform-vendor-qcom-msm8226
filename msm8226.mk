@@ -2,6 +2,8 @@ TARGET_USES_QCOM_BSP := true
 TARGET_USES_QCA_NFC := other
 TARGET_SMARTWATCH_BUILD := true
 
+PRODUCT_CHARACTERISTICS := nosdcard,watch
+
 ifeq ($(TARGET_USES_QCOM_BSP), true)
 # Add QC Video Enhancements flag
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
@@ -93,8 +95,6 @@ else
     Tag \
     com.android.nfc_extras
 endif
-
-PRODUCT_CHARACTERISTICS := nosdcard,watch
 
 # file that declares the MIFARE NFC constant
 # Commands to migrate prefs from com.android.nfc3 to com.android.nfc
