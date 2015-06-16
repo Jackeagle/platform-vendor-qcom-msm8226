@@ -28,4 +28,5 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 <permissions>
     <feature name="android.hardware.type.watch" />
+    <feature name="android.hardware.screen.portrait" />
 </permissions>
