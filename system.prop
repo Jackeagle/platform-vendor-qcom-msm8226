@@ -16,6 +16,9 @@ ro.qm8626.model=0
 # system.prop for msm8226
 #
 
+# qcril property
+persist.qcril_gstk.disable=1
+
 # Use reference RIL for initial bringup
 #rild.libpath=/system/lib/libreference-ril.so
 rild.libpath=/vendor/lib/libril-qc-qmi-1.so
