@@ -168,6 +168,5 @@ ro.qti.sensors.tilt_detector=false
 ro.qti.sensors.dpc=false
 ro.qti.sensors.gravity=false
 ro.qti.sensors.laccel=false
-ro.qti.sensors.orientation=false
 ro.qti.sensors.rotvec=false
 ro.qti.sensors.fast_amd=false
