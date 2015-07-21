@@ -11,5 +11,6 @@
 /devices/msm_sdcc.2/mmc_host                 /storage/sdcard1         vfat    nosuid,nodev                    wait,voldmanaged=sdcard1:auto
 /dev/block/zram0 none swap defaults zramsize=536870912
 /dev/block/bootdevice/by-name/config                 /frp          emmc    defaults  defaults
+/devices/platform/msm_hsusb_host/usb2                auto          auto    defaults                                    voldmanaged=usbdisk0:auto
 #/dev/block/mmcblk0p11         /system      ext4    ro,barrier=1                                wait
 #/dev/block/mmcblk0p12       /data        ext4    nosuid,nodev,barrier=1,noauto_da_alloc      wait,check,encryptable=footer
