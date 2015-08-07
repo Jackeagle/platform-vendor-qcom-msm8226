@@ -131,6 +131,7 @@
     <ctl name="RX1 MIX1 INP2" value="ZERO" />
     <ctl name="RX1 MIX1 INP1" value="ZERO" />
     <ctl name="HPHL DAC Switch" value="0" />
+    <ctl name="HFP_INT_UL_HL Switch" value="0" />
     <ctl name="DAC1 Switch" value="0" />
     <ctl name="SPK DAC Switch" value="0" />
     <ctl name="SLIM_0_RX Channels" value="One" />
@@ -569,6 +570,7 @@
     </path>
 
     <path name="hfp-sco">
+        <ctl name="HFP_INT_UL_HL Switch" value="1" />
         <ctl name="SLIMBUS_0_RX Port Mixer INTERNAL_BT_SCO_TX" value="1" />
         <ctl name="INTERNAL_BT_SCO_RX Audio Mixer MultiMedia6" value="1" />
         <ctl name="MultiMedia6 Mixer SLIM_0_TX" value="1" />
